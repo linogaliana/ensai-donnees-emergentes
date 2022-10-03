@@ -20,7 +20,6 @@ website:
   sidebar:
     style: "docked"
     search: true
-    contents: auto
     tools:
       - icon: twitter
         href: https://twitter.com
