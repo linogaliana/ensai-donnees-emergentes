@@ -7,10 +7,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: introduction.qmd
+        text: Introduction
 
 format:
   html:
@@ -18,5 +16,35 @@ format:
     css: styles.css
     toc: true
 
+website:
+  sidebar:
+    style: "docked"
+    search: true
+    contents: auto
+    tools:
+      - icon: twitter
+        href: https://twitter.com
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/linogaliana/ensai-donnees-emergentes
+          - text: Report a Bug
+            url:  https://github.com/linogaliana/ensai-donnees-emergentes/issues
+  page-navigation: true
+  page-footer: 
+    left: "(c) 2022, Lino Galiana and Tom Seimandi" 
+    right: 
+      - icon: github
+        href: https://github.com/linogaliana/ensai-donnees-emergentes
+      - icon: twitter 
+        href: https://twitter.com/
+  reader-mode: true
+  repo-url: https://github.com/linogaliana/ensai-donnees-emergentes
+  repo-actions: [edit, issue]
+  twitter-card:
+    creator: "@linogaliana"
+  open-graph: true
 
-
+theme:
+  light: flatly
+  dark: darkly

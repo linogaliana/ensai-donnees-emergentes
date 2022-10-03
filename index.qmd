@@ -1,7 +1,9 @@
 ---
-title: "mysite"
+title: "Données émergentes (ENSAI)"
 ---
 
-This is a Quarto website.
+Ce site web centralise les contenus du cours de Master de l'ENSAI sur les données émergentes
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+:::{.callout-note}
+Ce site est encore dans une version très provisoire. Le contenu peut ainsi être amené à évoluer rapidement
+:::
