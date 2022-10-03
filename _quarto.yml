@@ -5,13 +5,17 @@ website:
   title: "Données émergentes"
   navbar:
     left:
-      - href: index.html
-        text: Home
-      - href: introduction.html
-        text: Introduction
+      - text: "Home"
+        file: index.qmd
+      - text: "Introduction"
+        file: introduction.qmd
   sidebar:
     style: "docked"
     search: true
+    contents:
+      - section: "Basics"
+        contents:
+          - introduction.qmd
     tools:
       - icon: twitter
         href: https://twitter.com
