@@ -1,0 +1,32 @@
+---
+title: "Introduction"
+---
+
+- La statistique publique est essentielle pour permettre un bon fonctionnement de l'économie et de la démocratie;
+- Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
+- Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
+- Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
+- Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
+- Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
+- Travail particulièrement important sur la qualité des données et les métadonnées pour répondre aux exigences de la statistique publique;
+- Défi technologique -> besoin d'avoir des infrastructures informatiques qui permettent de travailler avec ces données;
+- Il y a un enjeu à construire des partenariats sur la durée avec les entreprises privées pour une réutilisation durable de leurs données (aujourd'hui beaucoup de partenariats ponctuels). Pour construire ces partenariats durables, il est nécessaire de respecter les intérêts des entreprises qui détiennent les données. Il y a besoin de confiance, de garanties de confidentialité, ce qui demande un cadre légal facilitateur. La responsabilité sociale doit constituer un moteur pour avancer.
+- Sur la confidentialité des données : *privacy-enhancing technologies*.
+- Besoin de moderniser la manière de produire des statistiques officielles pour s'adapter aux nouvelles sources de données et faciliter les partenariats : méthodologie et travail sur la qualité transparents (code open-source, reproductible au maximum);
+- Fonctionnement participatif et agile pour identifier les potentiels problèmes liés à la réutilisation de données privées (besoin d'experts de ces données). Réseaux de recherche avec les partenaires privés, la recherche académique, etc.
+
+Historique:
+- Principes fondamentaux de la statistique publique établis par les Nations Unies : https://unstats.un.org/unsd/dnss/gp/fundprinciples.aspx
+- Le rôle des instituts de statistique est de fournir une image objective de la société pour faciliter les décisions informées;
+- Pour le moment, pas mal de résultats expérimentaux basés sur la réutilisation de données privées mais peu de statistiques officielles;
+- Règles de qualité fixées par le Code Européen de Bonnes Pratiques Statistiques (https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice).
+
+
+Futur:
+- L'*Open Data Directive* adoptée en 2019 identifie des jeux de données open-source à forte valeur potentielle pour la statistique publique (https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1561563110433&uri=CELEX:32019L1024);
+- Le *Data Governance Act* (adopté en Mai 2022 et appliqué à partir de Septembre 2023) : promeut le partage de données personnelles et non-personnelles en mettant en place des structures d'intermédiation :
+    - Assistance technique et légale pour faciliter la réutilisation de certaines données protégées du secteur publique;
+    - Structures d'intermédiation de la donnée;
+    - Certification pour les organisations qui pratiquent le *data altruism*.
+- Le *Data Act* (proposition en Février 2022) : règles sur qui peut accéder aux données générées au sein de l'UE dans chaque secteur économique, avec l'objectif de rendre les données plus accessibles pour tous;
+- Les textes vont dans une direction commune : encourager la réutilisation de données privées. Il est aussi nécessaire d'encourager une intensification des dialogues entre parties prenantes et la société entière;
