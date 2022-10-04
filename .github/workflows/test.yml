@@ -43,11 +43,6 @@ jobs:
           npm install --unsafe-perm=true netlify-cli -g
           netlify init
           netlify deploy --prod --dir="_site" --message "Preview deploy"      
-
-
-        with:
-          target: netlify
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         
       # - name: Publish to RStudio Connect (and render)
       #   uses: quarto-dev/quarto-actions/publish@v2
