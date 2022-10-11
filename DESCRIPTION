@@ -1,0 +1,4 @@
+Package: quarto-donnees-emergentes
+Version: 0.1
+Imports:
+    rmarkdown
