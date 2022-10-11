@@ -22,11 +22,10 @@ $$
 où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en @fig-convol). Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ est une représentation des contours de l'image $A$.
 
 ```{r, engine = 'tikz'}
-#| echo: false
 #| label: fig-convol
-#| fig-cap: |
-#| Illustration de l'opérateur de convolution 2-dimensionnel $\\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
+#| fig-cap: Illustration de l'opérateur de convolution 2-dimensionnel $\\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
 #| fig-align: center
+#| echo: false
 \usetikzlibrary{matrix,positioning,fit,backgrounds}
 \begin{tikzpicture}[mmat/.style={matrix of math nodes,column sep=-\pgflinewidth/1.5,
     row sep=-\pgflinewidth/1.5,cells={nodes={draw,inner sep=4pt,thin}},draw=#1,thick,inner sep=0pt},
