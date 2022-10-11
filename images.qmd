@@ -25,7 +25,8 @@ où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du sign
 
 ```{r, engine = 'tikz'}
 #| label: fig-convol
-#| fig-cap: "Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$."
+#| fig-cap: |
+#| Illustration de l'opérateur de convolution 2-dimensionnel $\\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
 #| fig-align: center
 \usetikzlibrary{matrix,positioning,fit,backgrounds}
 \begin{tikzpicture}[mmat/.style={matrix of math nodes,column sep=-\pgflinewidth/1.5,
@@ -115,7 +116,12 @@ Par exemple, la Direction des Statistiques d'Entreprises à l'Insee effectue de 
 
 La plupart des catégories de sociétés (les entrepreneurs individuels ne sont pas concernés par exemple) ont l'obligation de déposer annuellement leurs comptes sociaux au Registre du commerce et des sociétés (RCS), afin d'en garantir la transparence. Les documents à déposer incluent les comptes annuels (bilan actif et passif, compte de résultats et annexes), le rapport de gestion pour les sociétés cotées, les documents portant sur l'affectation du résultat, etc. Dans le cas où une société possède des filiales ou participations au moins à hauteur de 10\% du capital, elle doit inclure dans ses comptes sociaux un tableau *des filiales et participations* (voir @fig-filiales-ex) offrant une vision financière synthétique des différentes filiales et participations détenues. Ce tableau est très utile pour consolider le profilage d'un groupe, car il centralise des informations qui sont difficiles à obtenir par ailleurs.
 
-![Exemple d'un tableau *des filiales et participations* figurant dans les comptes sociaux d'une société.](img/images/filiales-ex.png.png){#fig-filiales-ex}
+::: {#fig-filiales-ex}
+![](img/images/filiales-ex.png)
+
+Exemple d'un tableau *des filiales et participations* figurant dans les comptes sociaux d'une société.
+:::
+
 
 Aujourd'hui, les profileurs de la DSE utilisent les comptes sociaux de manière manuelle. Ils récupèrent les comptes sociaux, souvent sous la forme de documents scannés, depuis une interface de programmation mise à disposition par l'Institut National de la Propriété Industrielle (INPI) et pour chaque groupe qui les intéresse, cherchent eux-mêmes l'emplacement du tableau *des filiales et participations* dans le document puis récupèrent les informations pertinentes pour la consolidation. La reconnaissance optique de caractères peut permettre de traiter automatiquement (au moins en partie) les comptes sociaux, ce qui permettrait à la fois de dégager du temps aux profileurs pour des activités à plus forte valeur ajoutée, mais aussi de consolider plus de comptes.
 
