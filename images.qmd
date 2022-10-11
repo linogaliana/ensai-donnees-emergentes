@@ -1,5 +1,7 @@
 ---
 title: "Images"
+execute:
+    echo: false
 ---
 
 Les images sont des données qui sont utilisées depuis longtemps de manière automatique. Une image pour une ordinateur est représentée par un tableau en 2 ou 3 dimensions (images en nuances de gris et images en couleur respectivement). En 2 dimensions, l'image a ainsi une longueur L et une largeur W : elle est constituée de $L \times W$ pixels, chacun associé à une valeur entière comprise entre 0 et 255 (ou parfois à une valeur décimale comprise entre 0 et 1) : images 1 et 2
@@ -19,9 +21,12 @@ G_x = \begin{bmatrix}
 \end{bmatrix} \star A
 $$
 
-où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en Figure~\ref{fig:convol}). Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ est une représentation des contours de l'image $A$.
+où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en @fig-convol). Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ est une représentation des contours de l'image $A$.
 
 ```{r, engine = 'tikz'}
+#| label: fig-convol
+#| fig-cap: "Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$."
+#| fig-align: center
 \usetikzlibrary{matrix,positioning,fit,backgrounds}
 \begin{tikzpicture}[mmat/.style={matrix of math nodes,column sep=-\pgflinewidth/1.5,
     row sep=-\pgflinewidth/1.5,cells={nodes={draw,inner sep=4pt,thin}},draw=#1,thick,inner sep=0pt},
@@ -55,11 +60,10 @@ où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du sign
 \end{tikzpicture}
 ```
 
-Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
-
 Dans les dernières années, l'apprentissage profond a permis une véritable révolution dans le domaine de la vision par ordinateur, en introduisant des modèles complexes qui parviennent à apprendre et à représenter des données sur plusieurs niveaux d'abstraction, à l'image de la manière dont le cerveau perçoit et comprend les informations multi-modales. Ainsi, les performance *state-of-the-art* ont été largement améliorées pour une multitude de tâches différentes : classification d'image, segmentation sémantique, reconnaissance faciale et détection d'objets (changeant complètement la donne en robotique par exemple ou encore rendant possible la conduite de véhicules autonomes).
 
-Une architecture de modèles a joué un rôle particulièrement important dans cette révolution : les réseaux de neurones convolutifs. Ces réseaux de neurones sont constitués d'un enchaînement de couches convolutives, chacune composée de trois étapes : 
+Une architecture de modèles a joué un rôle particulièrement important dans cette révolution : les réseaux de neurones convolutifs. Ces réseaux de neurones sont constitués d'un enchaînement de couches convolutives, chacune composée de trois étapes :
+
 - Une étape de convolution utilisant l'opérateur $\star$ décrit ci-dessus qui transforme un tenseur 3-dimensionnel de taille $(H, W, C)$ en entrée en un tenseur de taille $(H', W', C')$ ou $H'$, $W'$ et $C'$ dépendent de la taille du noyau de convolution choisi;
 - Une étape de *détection* où une fonction non-linéaire est appliquée au tenseur obtenu en sortie de l'étape de convolution (très souvent la fonction *ReLU* pour *Rectified Linear Unit*);
 - Une étape de *pooling* où chaque canal du tenseur en entrée voit sa hauteur et largeur réduite à l'aide une fonction qui remplace chaque valeur par une statistique impliquant les valeurs des pixels voisins (fréquemment, la valeur maximale dans un voisinage rectangulaire : c'est l'opération de *max pooling*).
@@ -71,7 +75,7 @@ Les réseaux de neurones convolutifs présentent plusieurs caractéristiques ess
 
 ### Segmentation sémantique
 
-La segmentation sémantique est une tâche de vision par ordinateur qui consiste à associer une étiquette ou une catégorie à chaque pixel d'une image (illustration en @fig-segmentation). Plusieurs architectures de réseaux de neurones convolutifs obtiennent des performances très élevées sur des jeux de données d'évaluation de référence, comme l'architecture `DeepLabV3` (https://arxiv.org/abs/1706.05587). Les principaux frameworks de Deep Learning fournissent des implémentations de modèles de segmentation sémantique (avec ou sans coefficients pré-entraînés) : c'est le cas du package `Python` `torchvision` par exemple qui propose une implémentation des modèles `DeepLabV3`, `FCN` et `LRASPP`.
+La segmentation sémantique est une tâche de vision par ordinateur qui consiste à associer une étiquette ou une catégorie à chaque pixel d'une image (illustration en @fig-segmentation). Plusieurs architectures de réseaux de neurones convolutifs obtiennent des performances très élevées sur des jeux de données d'évaluation de référence, comme l'architecture [`DeepLabV3`](https://arxiv.org/abs/1706.05587). Les principaux frameworks de Deep Learning fournissent des implémentations de modèles de segmentation sémantique (avec ou sans coefficients pré-entraînés) : c'est le cas du package `Python` `torchvision` par exemple qui propose une implémentation des modèles `DeepLabV3`, `FCN` et `LRASPP`.
 
 ::: {#fig-segmentation layout-ncol=2}
 ![](img/images/image-segmentation-input.jpeg){height="100"}
@@ -103,7 +107,7 @@ La reconnaissance optique de caractères (souvent abrégé par OCR pour *Optical
 
 Tesseract est un logiciel pour la reconnaissance de caractères *open source* depuis 2015. Tesseract offre plusieurs moteurs depuis sa version 4 : en plus du moteur historique, un moteur basé sur des réseaux de neurones LSTM est aujourd'hui disponible.
 
-\subsection{Application : extraction d'informations de documents scannés photographiés}
+#### Application : extraction d'informations de documents scannés photographiés
 
 Des documents scannés ou photographies peuvent souvent constituer une source d'information précieuse pour la production de statistiques publiques.
 
@@ -116,6 +120,7 @@ La plupart des catégories de sociétés (les entrepreneurs individuels ne sont 
 Aujourd'hui, les profileurs de la DSE utilisent les comptes sociaux de manière manuelle. Ils récupèrent les comptes sociaux, souvent sous la forme de documents scannés, depuis une interface de programmation mise à disposition par l'Institut National de la Propriété Industrielle (INPI) et pour chaque groupe qui les intéresse, cherchent eux-mêmes l'emplacement du tableau *des filiales et participations* dans le document puis récupèrent les informations pertinentes pour la consolidation. La reconnaissance optique de caractères peut permettre de traiter automatiquement (au moins en partie) les comptes sociaux, ce qui permettrait à la fois de dégager du temps aux profileurs pour des activités à plus forte valeur ajoutée, mais aussi de consolider plus de comptes.
 
 Une chaîne de traitement complète possible pour l'extraction d'un tableaux filiales et participations est décrite ci-dessous :
+
 - On récupère l'exemplaire des comptes sociaux d'intérêt via un appel à l'API de l'INPI ;
 - Un document est en général constitué de plusieurs pages. Pour identifier la page sur laquelle se trouve le tableau des *filiales et participations*, tout le texte de chaque page du document est extrait à l'aide d'un moteur de reconnaissance de caractères. Puis un modèle de forêt aléatoire qui a été entraîné sur des observations annotées à la main prend en entrée la totalité des mots présents sur chaque page, pour renvoyer en sortie une probabilité que le tableau des *filiales et participations* y soit présent. Pour un document donné, on retient la page avec la probabilité de sortie la plus élevée si cette dernière dépasse un certain seuil fixé empiriquement.
 - L'extraction à proprement parler du tableau se fait ensuite en plusieurs étapes :
