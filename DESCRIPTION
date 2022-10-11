@@ -1,0 +1,4 @@
+Type: project
+Description: Quarto website project.
+Depends:
+    rmarkdown
