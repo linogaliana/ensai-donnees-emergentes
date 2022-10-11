@@ -9,6 +9,8 @@ website:
         file: index.qmd
       - text: "Introduction"
         file: introduction.qmd
+      - text: "Images"
+        file: images.qmd
   sidebar:
     style: "docked"
     search: true

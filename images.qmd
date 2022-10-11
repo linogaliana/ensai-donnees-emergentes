@@ -1,0 +1,140 @@
+---
+title: "Images"
+---
+
+Les images sont des données qui sont utilisées depuis longtemps de manière automatique. Une image pour une ordinateur est représentée par un tableau en 2 ou 3 dimensions (images en nuances de gris et images en couleur respectivement). En 2 dimensions, l'image a ainsi une longueur L et une largeur W : elle est constituée de $L \times W$ pixels, chacun associé à une valeur entière comprise entre 0 et 255 (ou parfois à une valeur décimale comprise entre 0 et 1) : images 1 et 2
+Une image en couleur est constituée de 3 canaux (RGB pour *Red*, *Green* et *Blue*). Chacun des $L \times W$ pixels de l'image est ainsi associé à 3 valeurs entières comprises entre 0 et 225 (ou à 3 valeurs décimales comprises entre 0 et 1).
+
+Le domaine de la vision par ordinateur (*computer vision*) a vu le jour dans les années 1960 avec le développement des premiers algorithmes cherchant à extraire de l'information d'images. Par exemple, Sobel et Feldman introduisent en 1968 la méthode suivante pour faire de la détection de contours sur une image $A$. On calcule 
+
+$$
+G_x = \begin{bmatrix}
++1 & 0 & -1\\
++2 & 0 & -2\\
++1 & 0 & -1
+\end{bmatrix} \star A \quad \text{et} \quad G_y = \begin{bmatrix}
++1 & +2 & +1\\
+0 & 0 & 0\\
+-1 & -2 & -1
+\end{bmatrix} \star A
+$$
+
+où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en Figure~\ref{fig:convol}). Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ est une représentation des contours de l'image $A$.
+
+```{r, engine = 'tikz'}
+\begin{tikzpicture}[mmat/.style={matrix of math nodes,column sep=-\pgflinewidth/1.5,
+    row sep=-\pgflinewidth/1.5,cells={nodes={draw,inner sep=4pt,thin}},draw=#1,thick,inner sep=0pt},
+    mmat/.default=black,
+    node distance=0.3em]
+    \matrix[mmat](mat1){
+            \;0 & \;1 & \;1 & \;1 & \;0 \\ 
+            \;0 & \;0 & \;1 & \;1 & \;1 \\ 
+            \;0 & \;0 & \;0 & \;1 & \;1 \\ 
+            \;0 & \;0 & \;0 & \;1 & \;1 \\ 
+            \;0 & \;0 & \;1 & \;1 & \;0 \\ 
+            };
+    \node[fit=(mat1-1-2)(mat1-3-4),inner sep=0pt,draw,red,thick](f1){};        
+    \node[right=of mat1] (mul) {$\star$};      
+    \matrix[mmat=blue,fill=blue!20,right=of mul](mat2){    
+        \;1 & \;0 & \text{-1} \\ 
+        \;2 & \;0 & \text{-2} \\ 
+        \;1 & \;0 & \text{-1} \\ };
+    \node[right=of mat2] (eq) {$=$};       
+    \matrix[mmat,right=of eq](mat3){    
+        \;3 & |[draw=green,thick,fill=green!20,alias=4]|\;3 & \;0 \\ 
+        \;1 & \;4 & \;3 \\ 
+        \;1 & \;4 & \;2 \\ 
+    };
+    \foreach \Anchor in {south west,north west,south east,north east}
+    {\draw[blue,densely dotted] (f1.\Anchor) -- (mat2.\Anchor); 
+    \draw[green,densely dotted] (4.\Anchor) -- (mat2.\Anchor);}
+    \begin{scope}[on background layer]
+    \fill[red!20] (f1.north west) rectangle (f1.south east);
+    \end{scope}
+\end{tikzpicture}
+```
+
+Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
+
+Dans les dernières années, l'apprentissage profond a permis une véritable révolution dans le domaine de la vision par ordinateur, en introduisant des modèles complexes qui parviennent à apprendre et à représenter des données sur plusieurs niveaux d'abstraction, à l'image de la manière dont le cerveau perçoit et comprend les informations multi-modales. Ainsi, les performance *state-of-the-art* ont été largement améliorées pour une multitude de tâches différentes : classification d'image, segmentation sémantique, reconnaissance faciale et détection d'objets (changeant complètement la donne en robotique par exemple ou encore rendant possible la conduite de véhicules autonomes).
+
+Une architecture de modèles a joué un rôle particulièrement important dans cette révolution : les réseaux de neurones convolutifs. Ces réseaux de neurones sont constitués d'un enchaînement de couches convolutives, chacune composée de trois étapes : 
+- Une étape de convolution utilisant l'opérateur $\star$ décrit ci-dessus qui transforme un tenseur 3-dimensionnel de taille $(H, W, C)$ en entrée en un tenseur de taille $(H', W', C')$ ou $H'$, $W'$ et $C'$ dépendent de la taille du noyau de convolution choisi;
+- Une étape de *détection* où une fonction non-linéaire est appliquée au tenseur obtenu en sortie de l'étape de convolution (très souvent la fonction *ReLU* pour *Rectified Linear Unit*);
+- Une étape de *pooling* où chaque canal du tenseur en entrée voit sa hauteur et largeur réduite à l'aide une fonction qui remplace chaque valeur par une statistique impliquant les valeurs des pixels voisins (fréquemment, la valeur maximale dans un voisinage rectangulaire : c'est l'opération de *max pooling*).
+\end{itemize}
+
+Les tenseurs obtenus en sortie des couches convolutives sont appelés *activation maps* ou *feature maps*. Chaque *feature map* peut s'interpréter comme une carte qui indique les endroits où on peut trouver une *feature* particulière (par exemple un bord, une texture, une partie d'un objet, etc.) au sein de l'image. Les features pertinentes (c'est-à-dire les coefficients des filtres de convolution utilisés) sont apprises par le réseau de neurones au cours de la phase d'entraînement.
+
+Les réseaux de neurones convolutifs présentent plusieurs caractéristiques essentielles pour des tâches de vision par ordinateur, qui expliquent en partie leur succès : une invariance (relative) à la translation, la rotation et à l'échelle. Ces caractéristiques permettent aux modèles d'abstraire l'identité d'un objet de détails spécifiques aux images données en entrée tels que la position et l'orientation de cet objet par rapport à la caméra.
+
+### Segmentation sémantique
+
+La segmentation sémantique est une tâche de vision par ordinateur qui consiste à associer une étiquette ou une catégorie à chaque pixel d'une image (illustration en @fig-segmentation). Plusieurs architectures de réseaux de neurones convolutifs obtiennent des performances très élevées sur des jeux de données d'évaluation de référence, comme l'architecture `DeepLabV3` (https://arxiv.org/abs/1706.05587). Les principaux frameworks de Deep Learning fournissent des implémentations de modèles de segmentation sémantique (avec ou sans coefficients pré-entraînés) : c'est le cas du package `Python` `torchvision` par exemple qui propose une implémentation des modèles `DeepLabV3`, `FCN` et `LRASPP`.
+
+::: {#fig-segmentation layout-ncol=2}
+![](img/images/image-segmentation-input.jpeg){height="100"}
+
+![](img/images/image-segmentation-output.png){height="100"}
+
+Segmentation sémantique effectuée sur une photo de chat (partie gauche de la Figure). Sur le masque de segmentation (partie droite de la Figure), les pixels verts sont associés à la classe *chat* tandis que les pixels roses sont associés à la classe *arrière-plan*. Source : https://huggingface.co/tasks/image-segmentation.
+:::
+
+### Application : données d'observation satellitaire
+
+Les activités humaines impactent l'environnement, et vice versa des chocs environnementaux peuvent impacter les activités humaines. Les données issues de satellites (on parle souvent de données d'*Earth Observation*, ce qui comprend aussi les images issues de radars ou les orthophotographies par exemple) permettent d'observer des changements environnementaux et potentiellement d'en tirer des enseignements à diffuser sous la forme de statistiques publiques. En outre, ces données ont beaucoup de potentiel lorsqu'elles sont utilisées en combinaison avec d'autres sources de données lorsqu'il s'agit de pallier des insuffisances ou des manques concernant les données traditionnellement utilisées pour la statistique publique (voir par exemple les travaux de Steele et al. qui combinent données de satellites et données de téléphonie mobile pour estimer des taux de pauvreté). Par exemple, et ce sera repris en détail plus tard, l'utilisation de données issues de satellite peut permettre d'améliorer la granularité spatiale et temporelles de statistiques publiées aujourd'hui sur la production agricole.
+
+Il faut toutefois noter que les données d'*Earth Observation* présentent des difficultés d'utilisation non-négligeables dans un contexte de production statistique. Tout d'abord, il faut au moment de la production de la statistique désirée s'assurer que l'on parvient à des résultats statistiquement robustes. En outre, produire des statistiques de manière récurrente à partir d'une source de données demande d'avoir du recul sur le fonctionnement de la chaîne de traitement en production. Comme les données d'*Earth Observation* ne sont aujourd'hui utilisées que par peu d'instituts statistiques, il est difficile d'avoir un tel recul sans soi-même avoir une chaîne de traitement qui tourne depuis plusieurs années. Enfin, pour de nombreuses applications, on souhaite utiliser des images avec une résolution élevée mais aussi exploiter la haute fréquence temporelle de passage de certains satellites. Dans un tel cadre les données d'*Earth Observation* ont souvent un volume très important, ce qui demande d'avoir les ressources adaptées pour les analyser.
+
+Des acteurs publient des données satellitaires en *open data*. C'est le cas par exemple de la NASA avec son programme historique Landsat. Les dernières générations des satellites Landsat recueillent des images dans une dizaine de bandes spectrales (bandes visibles mais aussi bandes infrarouges) avec une résolution spatiale de 30 mètres (pour les bandes visibles). Sentinel-2 est un programme de l'Agence spatiale européenne lancé en 2015. Les images des satellites Sentinel-2 sont aussi disponibles en *open data*, sur 12 bandes avec une résolution spatiale de 10 mètres, plus fine que celle des images de Landsat. La périodicité de la couverture des satellites Sentinel-2 est relativement faible : ces derniers repassent au-dessus des mêmes zones tous les cinq jours. Des entreprises privées collectent aussi des images avec leurs propres satellites, parfois avec des meilleures résolutions que les images disponibles en libre accès, ce qui peut être nécessaire en fonction du cas d'usage envisagé. De manière générale, il y a toutefois un arbitrage à faire entre le détail local des mesures (résolution radiométrique, nombre de bandes spectrales) et la résolution spatiale des images. La richesse des images issues de satellites réside plutôt dans la première dimensions, alors que les orthophotographies par exemple sont à privilégier si on désire une plus haute résolution spatiale.
+
+Le traitement d'images de satellites se divise de manière classique en trois parties : d'abord vient le pré-traitement des données, qui inclut le stockage, le *data managment*, le contrôle de la qualité des données, l'inclusion d'autres sources et l'identification d'outils appropriés pour l'analyse. Ce pré-traitement est suivi par une phase d'analyse, où l'on définit les indicateurs à calculer, les données à utiliser et où l'on applique la méthode analytique choisie. Enfin, au cours de la phase d'évaluation, on collecte et on interprète les résultats de l'analyse.
+
+Des méthodes historiques existent pour analyser des images de satellites (pour *in fine* produire des statistiques) : par exemple l'utilisation de modèle physiques pour prédire la valeur d'une variable d'intérêt à partir de l'observation empirique de certaine bandes, ou encore de méthodes d'analyse d'images traditionnelles où des informations spatiales, relatives à des motifs, à des textures, etc. sert à segmenter l'image sous supervision humaine (OBIA). Récemment, le machine learning (et en particulier le deep learning) a fourni des outils d'analyse puissants facilement applicables aux images satellites.
+
+Les cas d'usage potentiels d'utilisation de ces données pour la statistique publique touchent de nombreux thèmes, qui incluent la biodiversité, la supervision des forêts, de l'agriculture, du taux d'humidité des sols, les échanges d'énergie entre le sol et l'atmosphère, la gestion environnementale des sites miniers, l'urbanisation, les infrastructures, les stocks de marchandises, la pollution environnementale, la quantité et qualité de l'eau, les algues et récifs coralliens, la productivité de l'eau côtière et océanique, les courants marins, les zones de remontée et de descente des eaux, la qualité de l'air atmosphérique, la gestion des risques de catastrophes, la comptabilité environnementale, etc. En particulier, l'analyse d'images satellite peut permettre de calculer des indicateurs comme la proportion de surface agricole en agriculture intensive ou en agriculture durable, le pourcentage de masses d'eau présentant une bonne qualité de l'eau ambiante, le changement dans l'étendue des écosystèmes liés à l'eau au fil du temps, la couverture forestière dans le cadre d'une gestion forestière durable, la perte nette permanente de forêts, etc.
+
+Un des cas d'usage les plus pertinents aujourd'hui pour la statistique publique est l'identification de cultures et l'estimation de la production agricole.
+
+### La reconnaissance optique de caractères
+
+La reconnaissance optique de caractères (souvent abrégé par OCR pour *Optical character recognition*) désigne la tâche de conversion de texte manuscrit ou imprimé en texte encodé par un ordinateur. C'est une tâche essentielle pour exploiter des documents disponibles sous la forme d'images numériques.
+
+Tesseract est un logiciel pour la reconnaissance de caractères *open source* depuis 2015. Tesseract offre plusieurs moteurs depuis sa version 4 : en plus du moteur historique, un moteur basé sur des réseaux de neurones LSTM est aujourd'hui disponible.
+
+\subsection{Application : extraction d'informations de documents scannés photographiés}
+
+Des documents scannés ou photographies peuvent souvent constituer une source d'information précieuse pour la production de statistiques publiques.
+
+Par exemple, la Direction des Statistiques d'Entreprises à l'Insee effectue de manière périodique un *profilage* des groupes de sociétés. Pour la statistique publique la notion d'entreprise est souvent associée à une définition purement juridique, c'est-à-dire à la notion d'unité légale inscrite au répertoire Siren. Toutefois, aujourd'hui certaines unités légales sont détenues par d’autres et peuvent ainsi perdre une partie de leur autonomie. Le *profilage* consiste à identifier au sein des groupes les entreprises au sens économique, puis à collecter et calculer des statistiques sur ces nouveaux contours.
+
+La plupart des catégories de sociétés (les entrepreneurs individuels ne sont pas concernés par exemple) ont l'obligation de déposer annuellement leurs comptes sociaux au Registre du commerce et des sociétés (RCS), afin d'en garantir la transparence. Les documents à déposer incluent les comptes annuels (bilan actif et passif, compte de résultats et annexes), le rapport de gestion pour les sociétés cotées, les documents portant sur l'affectation du résultat, etc. Dans le cas où une société possède des filiales ou participations au moins à hauteur de 10\% du capital, elle doit inclure dans ses comptes sociaux un tableau *des filiales et participations* (voir @fig-filiales-ex) offrant une vision financière synthétique des différentes filiales et participations détenues. Ce tableau est très utile pour consolider le profilage d'un groupe, car il centralise des informations qui sont difficiles à obtenir par ailleurs.
+
+![Exemple d'un tableau *des filiales et participations* figurant dans les comptes sociaux d'une société.](img/images/filiales-ex.png.png){#fig-filiales-ex}
+
+Aujourd'hui, les profileurs de la DSE utilisent les comptes sociaux de manière manuelle. Ils récupèrent les comptes sociaux, souvent sous la forme de documents scannés, depuis une interface de programmation mise à disposition par l'Institut National de la Propriété Industrielle (INPI) et pour chaque groupe qui les intéresse, cherchent eux-mêmes l'emplacement du tableau *des filiales et participations* dans le document puis récupèrent les informations pertinentes pour la consolidation. La reconnaissance optique de caractères peut permettre de traiter automatiquement (au moins en partie) les comptes sociaux, ce qui permettrait à la fois de dégager du temps aux profileurs pour des activités à plus forte valeur ajoutée, mais aussi de consolider plus de comptes.
+
+Une chaîne de traitement complète possible pour l'extraction d'un tableaux filiales et participations est décrite ci-dessous :
+- On récupère l'exemplaire des comptes sociaux d'intérêt via un appel à l'API de l'INPI ;
+- Un document est en général constitué de plusieurs pages. Pour identifier la page sur laquelle se trouve le tableau des *filiales et participations*, tout le texte de chaque page du document est extrait à l'aide d'un moteur de reconnaissance de caractères. Puis un modèle de forêt aléatoire qui a été entraîné sur des observations annotées à la main prend en entrée la totalité des mots présents sur chaque page, pour renvoyer en sortie une probabilité que le tableau des *filiales et participations* y soit présent. Pour un document donné, on retient la page avec la probabilité de sortie la plus élevée si cette dernière dépasse un certain seuil fixé empiriquement.
+- L'extraction à proprement parler du tableau se fait ensuite en plusieurs étapes :
+    - D'abord l'image est pré-traitée : dans le cas où elle a été de travers, elle est remise droite, si on repère une zone de l'image où du texte blanc figure sur une zone sombre, les couleurs sont inversées, etc.
+    - Ensuite on applique le modèle de segmentation sémantique TableNet à l'image, qui retourne deux masques : le premier masque indique l'emplacement des tableaux au sein de l'image, et le deuxième indique l'emplacement des colonnes au sein de l'image. Ce modèle a été entraîné à partir du jeu de données annotées [Marmot](https://www.icst.pku.edu.cn/cpdp/sjzy/) disponible en libre accès sur Internet et optionnellement à partir de données supplémentaires des comptes sociaux annotées à la main;
+    - Les masques sont post-traités dans l'étape suivante où des petits artefacts sont retirés, la table et les colonnes sont remplis lorsque des *trous* apparaissent sur les masques, etc.
+    - Le contenu de chaque colonne est extrait (chaque caractère accompagné de sa position sur l'image) grâce à un moteur de reconnaissance optique de caractères;
+    - Les colonnes sont alignées pour reconstituer la table aussi bien que possible;
+    - On identifie les colonnes de la table grâce à l'utilisation d'expressions régulières et d'une distance textuelle;
+    - Le tableau avec les noms de colonnes nettoyés est enfin exporté (par exemple en format csv).
+
+
+::: {layout-ncol=2}
+![](img/images/table_mask.png){height="100"}
+
+![](img/images/column_mask.png){height="100"}
+
+Exemple de masques bruts obtenus en sortie de TableNet. À gauche, le masque indiquant l'emplacement de la table. À droite, le masque indiquand l'emplacement des colonnes.
+:::
+
+Un autre exemple d'extraction d'informations de documents photographiés qui peut servir à la statistique publique est l'extraction du contenu de tickets de caisse. Un cas d'usage existe aujourd'hui à l'Insee. La Direction des statistiques démographiques et sociales réalise l'enquête Budget de famille dont la prochaine édition aura lieu en 2026. Cette enquête vise à reconstituer toute la comptabilité des ménages et en particulier leurs dépenses. Pour ce faire, les ménages enquêtés se voient confier un carnet de dépenses qu'ils doivent remplir pendant une certaine période. Pour certaines dépenses les carnets sont renseignés à la main par un membre du ménage; pour d'autres, le ménage a la possibilité d'inclure dans le carnet des tickets de caisse. Jusqu'à présent les enquêteurs étaient chargés de recopier le contenu des tickets de caisse pour rendre ces données exploitables. Toutefois, il existe aujourd'hui des méthodes pour automatiser cette extraction en utilisant des moteurs de reconnaissance optique de caractères.
+
+Une première idée envisageable est d'utiliser un moteur d'OCR pour récupérer ligne par ligne le texte figurant sur un ticket de caisse puis d'extraire l'information sous forme structurée avec une approche basée sur des règles. Les tickets de caisse se ressemblant en général beaucoup, cette approche fonctionne convenablement sur cette tâche quelque soit le ticket, mais elle présente tout de même des défauts de généralisabilité. Une approche *Deep Learning end-to-end* est préférable, même si elle nécessite des données annotées. De telles méthodes ont été testées dans le cadre de compétitions (notamment sur les jeux de données SROIE 2019 et Cord) et ont donné de très bons résultats.
