@@ -2,6 +2,7 @@
 title: "Introduction"
 ---
 
+
 L'histoire de la statistique est une suite d'évolutions
 de la discipline afin que des données émergentes deviennent
 traditionnelles. 
@@ -23,6 +24,7 @@ astronomiques a ainsi permis de construire
 la méthode des moindres carrés et 
 le concept de loi normale, appréhendée
 à partir des erreurs d'observations.
+
 L'accès à des recensements par des universitaires
 à la fin
 du XIXe siècle a été un élément moteur
@@ -42,6 +44,7 @@ temps que discipline autonome.
 Les avancées de la statistique au cours
 du XXe siècle sont intimement liées
 à la génération des enquêtes ou des sondages.
+
 Les notions d'échantillonnage, de représentativité,
 ou encore de marges d'erreur, qui sont au coeur de la
 statistique moderne, ont permis de rendre traditionnel
@@ -51,6 +54,7 @@ encore très
 utilisées dans la production statistique moderne ou 
 dans les
 études économiques et sociologiques. 
+
 La prolifération de traces numériques, parce
 qu'elle a créé de nouvelles opportunités pour
 la puissance publique ou pour des acteurs privés
@@ -69,9 +73,32 @@ développent les innovations dans le domaine de
 la _data-science_
 est d'une ampleur inédite du fait
 de la multiplicité des données collectées
-et des acteurs impliqués. 
+et des acteurs impliqués.
 
-- La statistique publique est essentielle pour permettre un bon fonctionnement de l'économie et de la démocratie;
+La puissance publique est une productrice
+historique de données. Les
+registres administratifs ou 
+comptables sont une source
+de données très appréciée des
+historiens. Si elles n'atteignent 
+pas les volumétries actuelles, 
+ces sources sont néanmoins
+les ancètres de nos données administratives actuelles
+Les recensements de population sont également
+une des sources 
+Le comptage de la population et des impôts
+fait partie intégrante du processus
+de constitution de la puissance
+publique centralisatrice (Desrosières). 
+La 
+statistique publique, si elle est aujourd'hui
+entendue beaucoup plus largement que par le passé,
+est un élément essentiel pour 
+pour permettre un bon fonctionnement de l'économie et de la démocratie.
+Le slogan de l'Insee, _"mesurer pour comprendre"_,
+correspond bien à cette idée.  
+
+
 - Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
 - Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
 - Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
