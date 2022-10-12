@@ -45,11 +45,23 @@ du XXe siècle sont intimement liées
 Les notions d'échantillonnage, de représentativité,
 ou encore de marges d'erreur, qui sont au coeur de la
 statistique moderne, ont permis de rendre traditionnel
-ce nouveau mode de collecte. Ces enquêtes sont aujourd'hui
+ce nouveau mode de collecte. Ces enquêtes sont
+aujourd'hui
 encore très
 utilisées dans la production statistique moderne ou 
 dans les
 études économiques et sociologiques. 
+La prolifération de traces numériques, parce
+qu'elle a créé de nouvelles opportunités pour
+la puissance publique ou pour des acteurs privés
+de valoriser des données, est un moteur 
+d'évolution de la statistique. 
+L'émergence du concept
+de _data-science_, qu'on le considère
+comme un ensemble de pratiques ou uniquement comme
+un _buzzword_, est intimement lié à la multiplication
+des traces numériques produites sur internet. Ces 
+traces ne sont d'ailleurs pas les premières 
 
 - La statistique publique est essentielle pour permettre un bon fonctionnement de l'économie et de la démocratie;
 - Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
