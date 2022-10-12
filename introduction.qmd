@@ -2,6 +2,55 @@
 title: "Introduction"
 ---
 
+L'histoire de la statistique est une suite d'évolutions
+de la discipline afin que des données émergentes deviennent
+traditionnelles. 
+Le XIXe siècle, qui est celui
+où la statistique s'est constituée en temps
+que discipline autonome et s'est dotée d'une partie
+des concepts qui en font aujourd'hui le fondement,
+est ainsi une période où de nombreuses données
+ont émergées et ont pu entraîner des révolutions scientifiques. 
+Parmi celles-ci, la construction de la loi normale,
+qui constitue aujourd'hui l'objet central
+de la statistique, correspond au besoin de construire
+de nouveaux concepts et 
+outils afin de structurer dans une théorie commune
+un ensemble de nouvelles données. 
+La manière dont Gauss a collecté et 
+synthétisé un ensemble d'observations 
+astronomiques a ainsi permis de construire 
+la méthode des moindres carrés et 
+le concept de loi normale, appréhendée
+à partir des erreurs d'observations.
+L'accès à des recensements par des universitaires
+à la fin
+du XIXe siècle a été un élément moteur
+de la constitution de la sociologie en temps
+que discipline autonome. 
+Les registres de décès ont ainsi permis
+à Durkheim de participer aux débats sociologiques
+sur le suicide et de proposer une
+interprétation sociologique
+de ses causes à rebourd des 
+approches psychologisantes qui 
+étaient fréquentes à l'époque. 
+Avant Durkheim, l'usage novateur
+des monographies (XXX) a permis de
+dessiner les prémisses de la sociologie en
+temps que discipline autonome.
+Les avancées de la statistique au cours
+du XXe siècle sont intimement liées
+à la génération des enquêtes ou des sondages.
+Les notions d'échantillonnage, de représentativité,
+ou encore de marges d'erreur, qui sont au coeur de la
+statistique moderne, ont permis de rendre traditionnel
+ce nouveau mode de collecte. Ces enquêtes sont aujourd'hui
+encore très
+utilisées dans la production statistique moderne ou 
+dans les
+études économiques et sociologiques. 
+
 - La statistique publique est essentielle pour permettre un bon fonctionnement de l'économie et de la démocratie;
 - Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
 - Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
