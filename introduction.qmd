@@ -222,13 +222,14 @@ de production - il y a des éléments connexes à notre problématique
 aussi certains qui le dépassent. Nous n'allons donc pas nous concentrer sur
 ceux-ci bien qu'il se peut que nous évoquions à plusieurs reprises ces enjeux. 
 
-# Nouvelles données : objectiver des phénomènes socioéconomiques
+# Nouvelles données : innover pour objectiver des phénomènes socioéconomiques
 
 Les nouvelles données permettent ainsi de faire évoluer la production statistique
 en amenant à essayer d'objectiver des phénomènes qui l'étaient difficilement
 par le passé.  
+Le fait qu'elles n'aient pas été produites initialement pour être traitées à 
+des fins de statistique publique implique
 
-- Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
 - Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
 - Travail particulièrement important sur la qualité des données et les métadonnées pour répondre aux exigences de la statistique publique;
