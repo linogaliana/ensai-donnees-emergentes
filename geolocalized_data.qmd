@@ -38,7 +38,26 @@ Les données de téléphonie mobile en sont un bon exemple. On distingue en gén
 
 Ces deux types de données contiennent la même information spatiale : chaque observation contient des informations sur l'antenne radio avec laquelle le téléphone est en communication. Les données CDR permettent de produire des statistiques intéressantes sur les populations présentes et les déplacements de la population. Par exemple, @galiana-20 a observé à partir de comptages issus des données CDR que la répartition de la population sur le territoire s’est significativement modifiée à la mise en place du confinement en mars 2020, au début de la pandémie de Covid-19. Pendant le confinement, la population a davantage passé la nuit dans son département de résidence qu’avant le confinement. Au moment du déconfinement, les mêmes données de CDR indiquent que les mouvements de population sur le territoire ont repris partiellement, le sûrcroit de population se trouvant dans son département de résidence diminuant de moitié par rapport à la période de confinement.
 
-Les données de signalisation permettent d'aller plus loin, par exemple en estimant des populations présente avec une fréquence temporelle élevée. Pour un maillage territorial donné, par exemple des carreaux de 200 mètres de côté, les opérateurs téléphoniques peuvent modéliser leur réseau de manière à  estimer la probabilité qu'un téléphone se trouvant au sein d'un carreau $i$ soit détecté dans une cellule (aire couverte par une antenne) $j$. Ceci permet d'avoir une estimation du lieu où se trouvent tous les téléphones en lien avec le réseau quasiment en continu. En repondérant les nombres de téléphones estimés dans chaque tuile en fonction du nombre du nombre de téléphones considérés comme résidant dans chaque tuile et la population effectivement résidente de chaque tuile (obtenue grâce aux données fiscales géolocalisées), il est possible d'avoir une estimation en temps réelle de la population présente pour le maillage territorial choisi [@ricciato-20].
+Les données de signalisation permettent d'aller plus loin, par exemple en estimant des populations présente avec une fréquence temporelle élevée [@ricciato-20]. Pour un maillage territorial donné, par exemple des carreaux de 200 mètres de côté, les opérateurs téléphoniques peuvent modéliser leur réseau de manière à  estimer la probabilité qu'un téléphone se trouvant au sein d'un carreau $i$ soit détecté dans une cellule (aire couverte par une antenne) $j$. Ceci permet d'avoir une estimation du lieu où se trouvent tous les téléphones en lien avec le réseau quasiment en continu. En repondérant les nombres de téléphones estimés dans chaque tuile en fonction du nombre du nombre de téléphones considérés comme résidant dans chaque tuile et la population effectivement résidente de chaque tuile (obtenue grâce aux données fiscales géolocalisées), il est possible d'avoir une estimation en temps réelle de la population présente pour le maillage territorial choisi.
+
+
+::: {#fig-france-pops}
+<p float="left">
+  <img src="gif/france_day_densities.gif" width="400"/>
+  <img src="gif/france_week_densities.gif" width="400"/>
+</p>
+
+Estimation des variations de densité de population présente (nombre de personnes présentes par kilomètre carré), heure par heure dans une même journée (à fauche) et jour par jour dans une même semaine en France métropolitaine.
+:::
+
+::: {#fig-paris-pops}
+<p float="left">
+  <img src="gifs/paris_day_densities.gif" width="400"/>
+  <img src="gifs/paris_week_densities.gif" width="400"/>
+</p>
+
+Estimation des variations de densité de population présente (nombre de personnes présentes par kilomètre carré), heure par heure dans une même journée (à fauche) et jour par jour dans une même semaine à Paris et ses environs.
+:::
 
 Il ressort de cette méthodologie que l'utilisation de données de téléphonie mobile pour la production de statistiques publiques pose des questions :
 
