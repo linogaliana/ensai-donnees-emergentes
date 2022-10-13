@@ -222,18 +222,29 @@ de production - il y a des éléments connexes à notre problématique
 aussi certains qui le dépassent. Nous n'allons donc pas nous concentrer sur
 ceux-ci bien qu'il se peut que nous évoquions à plusieurs reprises ces enjeux. 
 
-# Nouvelles données : innover pour objectiver des phénomènes socioéconomiques
+# Innover pour traiter ces données
 
 Les nouvelles données permettent ainsi de faire évoluer la production statistique
 en amenant à essayer d'objectiver des phénomènes qui l'étaient difficilement
 par le passé.  
 Le fait qu'elles n'aient pas été produites initialement pour être traitées à 
-des fins de statistique publique implique
+des fins de statistique publique implique un surcroit de travail et de précautions
+méthodologiques pour en assurer la qualité et l'exploitation.
+Il est également nécessaire de travailler sur les métadonnées, c'est-à-dire XXXX,
+pour répondre aux exigences de la statistique publique. 
+
+La volumétrie et la (dé)structuration des nouvelles sources de données 
+a de forts enjeux informatiques. Les innovations dans
+ce domaine sont à un rythme impressionnant. Les acteurs
+majeurs du numérique, qui sont les principaux acteurs de la collecte
+de données, sont ainsi les principaux développeurs des langages de _data-science_
+modernes. Ces derniers sont des solutions logicielles pour faciliter le traitement
+de tel ou tel type de données. 
+
+
 
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
 - Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
-- Travail particulièrement important sur la qualité des données et les métadonnées pour répondre aux exigences de la statistique publique;
-- Défi technologique -> besoin d'avoir des infrastructures informatiques qui permettent de travailler avec ces données;
 - Il y a un enjeu à construire des partenariats sur la durée avec les entreprises privées pour une réutilisation durable de leurs données (aujourd'hui beaucoup de partenariats ponctuels). Pour construire ces partenariats durables, il est nécessaire de respecter les intérêts des entreprises qui détiennent les données. Il y a besoin de confiance, de garanties de confidentialité, ce qui demande un cadre légal facilitateur. La responsabilité sociale doit constituer un moteur pour avancer.
 - Sur la confidentialité des données : *privacy-enhancing technologies*.
 - Besoin de moderniser la manière de produire des statistiques officielles pour s'adapter aux nouvelles sources de données et faciliter les partenariats : méthodologie et travail sur la qualité transparents (code open-source, reproductible au maximum);
