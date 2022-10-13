@@ -15,9 +15,12 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Basics"
+      - section: "Introduction"
         contents:
           - introduction.qmd
+      - section: "Analyse d'images"
+        contents:
+          - images.qmd
     tools:
       - icon: twitter
         href: https://twitter.com
