@@ -2,14 +2,249 @@
 title: "Introduction"
 ---
 
-- La statistique publique est essentielle pour permettre un bon fonctionnement de l'économie et de la démocratie;
-- Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
-- Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
-- Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
+
+L'histoire de la statistique est une suite d'évolutions
+de la discipline afin que des données émergentes deviennent
+traditionnelles. 
+Le XIXe siècle, qui est celui
+où la statistique s'est constituée en temps
+que discipline autonome et s'est dotée d'une partie
+des concepts qui en font aujourd'hui le fondement,
+est ainsi une période où de nombreuses données
+ont émergées et ont pu entraîner des révolutions scientifiques. 
+Parmi celles-ci, la construction de la loi normale,
+qui constitue aujourd'hui l'objet central
+de la statistique, correspond au besoin de construire
+de nouveaux concepts et 
+outils afin de structurer dans une théorie commune
+un ensemble de nouvelles données. 
+La manière dont Gauss a collecté et 
+synthétisé un ensemble d'observations 
+astronomiques a ainsi permis de construire 
+la méthode des moindres carrés et 
+le concept de loi normale, appréhendée
+à partir des erreurs d'observations.
+
+L'accès à des recensements par des universitaires
+à la fin
+du XIXe siècle a été un élément moteur
+de la constitution de la sociologie en temps
+que discipline autonome. 
+Les registres de décès ont ainsi permis
+à Durkheim de participer aux débats sociologiques
+sur le suicide et de proposer une
+interprétation sociologique
+de ses causes à rebourd des 
+approches psychologisantes qui 
+étaient fréquentes à l'époque. 
+Avant Durkheim, l'usage novateur
+des monographies (XXX) a permis de
+dessiner les prémisses de la sociologie en
+temps que discipline autonome.
+Les avancées de la statistique au cours
+du XXe siècle sont intimement liées
+à la génération des enquêtes ou des sondages.
+
+Les notions d'échantillonnage, de représentativité,
+ou encore de marges d'erreur, qui sont au coeur de la
+statistique moderne, ont permis de rendre traditionnel
+ce nouveau mode de collecte. Ces enquêtes sont
+aujourd'hui
+encore très
+utilisées dans la production statistique moderne ou 
+dans les
+études économiques et sociologiques. 
+
+La prolifération de traces numériques, parce
+qu'elle a créé de nouvelles opportunités pour
+la puissance publique ou pour des acteurs privés
+de valoriser des données, est un moteur 
+d'évolution de la statistique. 
+L'émergence du concept
+de _data-science_, qu'on le considère
+comme un ensemble de pratiques ou uniquement comme
+un _buzzword_, est intimement lié à la multiplication
+des traces numériques.
+Les nouvelles disciplines ou méthodes qui se sont développées récemment
+sont intrinsèquement liées aux données
+émergentes.
+La vitesse à laquelle se 
+développent les innovations dans le domaine de
+la _data-science_
+est d'une ampleur inédite du fait
+de la multiplicité des données collectées
+et des acteurs impliqués.
+
+## La production renouvelée de données de la puissance publique
+
+La puissance publique est une productrice
+historique de données. Les
+registres administratifs ou 
+comptables sont une source
+de données très appréciée des
+historiens. Si elles n'atteignent 
+pas les volumétries actuelles, 
+ces sources sont néanmoins
+les ancètres de nos données administratives actuelles.
+Les recensements de population sont également
+une des productoins historiques de données. 
+Le comptage de la population et des impôts
+fait partie intégrante du processus
+de constitution de la puissance
+publique centralisatrice (Desrosières). 
+La 
+statistique publique, si elle est aujourd'hui
+entendue beaucoup plus largement que par le passé,
+et qu'elle dispose d'une indépendance vis-à-vis
+d'autres branches de l'Etat,
+est un élément essentiel pour 
+pour permettre un bon fonctionnement de l'économie et de la démocratie.
+Le slogan de l'Insee, _"mesurer pour comprendre"_,
+correspond bien à cette idée.  
+Les statistiques officielles essaient d'objectiver les phénomènes
+socioéconomiques par la collecte de données et la construction
+de concepts cohérents avec le phénomène mesuré. 
+
+Les enquêtes sont historiquement une
+source privilégiée puisque
+la conception de celles-ci, en amont de la collecte et 
+des retraitements post-collecte, est
+justement effectuée en fonction des 
+réutilisations futures. 
+Les questions sont ainsi conçues pour 
+s'approcher au plus près des phénomènes qu'on 
+désire quantifier et 
+l'échantillonnage puis les redressements post-collecte
+permettront de contrôler la population
+sur laquelle portent les statistiques construites. 
+L'inconvénient est que cette production nécessite des moyens
+et un temps conséquents (en amont de la collecte, lors de celle-ci puis
+à l'issue de celle-ci). De plus, les enquêtes ne sont pas à l'abri
+d'erreurs dans la collecte, qu'il s'agisse d'omissions ou réponses
+erronnées, qu'elles soient volontaires ou non. 
+A ces problèmes s'ajoute la baisse historique des taux de réponse
+[@riviere2018]. 
+
+L'Etat n'accumule pas uniquement de la connaissance sur sa population
+par le biais d'enquête. Les registres des impôts, de l'assurance maladie, etc.
+sont des sources de gestion par lesquelles chaque individu communique
+un certain nombre d'informations sur lui. On parle
+de données administratives pour regrouper cet ensemble
+de sources qui sont produites par la puissance publique
+mais dont la collecte répond à des enjeux de 
+gestion mais pas à des besoins de statistique publique.
+La définition qu'en donnait @desrosieres2004, 
+résume bien ceci: _"une source administrative est issue d'une instituion dont la finalité n'est pas de produire une telle information, mais dont les activités de gestion impliquent la tenue, selon des règles générales, de fichiers ou de registres individuels, dont l'agrégation n'est qu'un sous-produit"_.
+Les besoins de la statistique publique 
+ne sont donc pas à la source de la collecte mais on peut utiliser celle-ci
+comme opportunité pour enrichir la connaissance de phénomènes 
+socio-économiques. 
+Certaines informations disponibles dans ces données sont très
+génériques et communes à de nombreuses bases de gestion (l'état civil notamment), 
+ce qui peut faciliter l'association entre elles, 
+alors que d'autres sont propres à chaque source. Outre la possibilité de
+disposer d'information sur une population plus importante, la différence
+principale entre ces
+sources de données,
+historiquement collectées
+par papier et de plus en plus par collecte numérique, et les enquêtes est
+que les premières ne sont pas conçues initialement
+à des fins de statistique donc le statisticien n'en contrôle pas
+la conceptualisation et la collecte.
+Néanmoins, ces sources peuvent fournir des informations très 
+précieuses à la statistique publique. Si on est en mesure de relier celles-ci à
+une enquête, il devient possible d'enrichir ou de corriger certaines informations
+collectées si les concepts présents dans l'enquête correspondent à ceux de la 
+source administrative. 
+
+Les données administratives deviennent ainsi de plus en plus 
+fréquemment mobilisées dans la production officielle
+de statistiques ou dans les études économiques. 
+La numérisation de l'économie et
+des démarches administratives, parce qu'elle a facilité
+la constitution de bases et l'association entre
+celles-ci, a accéléré 
+le mouvement de constitution de grands répertoires 
+administratifs. Parmi les principaux exploités par la statistique
+publique :
+la DSN, Fideli, le SNDS... La construction de ces sources,
+car celles-ci nécessitent pour leur usage à des fins
+statistiques une recnstruction, 
+implique également un changement des institutions collectant
+la donnée. Ce n'est plus l'Insee qui collecte directement la
+donnée (que ce soit à son compte ou pour le compte d'autres 
+institutions comme les services statistiques ministériels)
+mais des ministères. Ces derniers peuvent, ou non,
+exploiter ces données à leur propre compte mais aussi
+mettre à disposition la donnée brute ou une version
+retravaillée de celle-ci.
+Par exemple, la Direction Générale des Finances Publiques (DGFiP)
+est, par son rôle de collecte des impôts, un acteur central
+dans la constitution de bases sur les revenus qui permettent
+de produire de nombreuses statistiques socioéconomiques.
+De même, la Caisse Nationale d'Assurance Maladie (CNAM)
+est, par son rôle de gestionnaire du système français de sécurité sociale,
+un élément central dans la constitution 
+du système national des données de santé (SNDS).
+
+:::{.callout-note}
+## Les DADS et la DSN
+
+https://www.insee.fr/fr/metadonnees/source/serie/s1163
+https://www.insee.fr/fr/information/3647025?sommaire=3647035
+:::
+
+La multiplication de traces numériques collectées non plus
+seulement par les acteurs publics mais aussi par des 
+acteurs privés a permis de produire de nouvelles
+sources de données, à une fréquence ou à une échelle inédite.
+A ce premier facteur qu'est l'intensification de la production
+de statistique, s'ajoute la demande croissante de la 
+population et des décideurs publics pour des statistiques
+plus détaillées et disponibles plus rapidement. 
+Cela a ainsi amené à une intensification de la disponibilité
+de statistiques, dont la production n'est plus le monopole 
+de la puissance publique. 
+Afin de pouvoir produire ces statistiques, tout en satisfaisant
+aux critères usuels de qualité sur lesquels nous reviendrons, 
+la statistique publique se doit d'innover dans la collecte
+traditionnelle, l'utilisation de nouvelles statistiques
+et concepts ou dans les processus de valorisation de données
+auquel elle accédait déjà. Parmi ces trois facteurs, nous 
+allons principalement nous concentrer sur le deuxième, 
+c'est-à-dire la valorisation de nouvelles sources de données, qu'il
+s'agisse de données produites par l'administration ou de données
+privées. Le premier point - l'innvation dans les méthodes de collecte
+traditionnelles - renvoie, entre autres, à la question du multimode [refs?].
+Enfin, en ce qui concerne le troisième élément - la rénovation des processus
+de production - il y a des éléments connexes à notre problématique
+(certaines méthodes sont intrinsèquement liées à de nouvelles sources) mais
+aussi certains qui le dépassent. Nous n'allons donc pas nous concentrer sur
+ceux-ci bien qu'il se peut que nous évoquions à plusieurs reprises ces enjeux. 
+
+# Innover pour traiter ces données
+
+Les nouvelles données permettent ainsi de faire évoluer la production statistique
+en amenant à essayer d'objectiver des phénomènes qui l'étaient difficilement
+par le passé.  
+Le fait qu'elles n'aient pas été produites initialement pour être traitées à 
+des fins de statistique publique implique un surcroit de travail et de précautions
+méthodologiques pour en assurer la qualité et l'exploitation.
+Il est également nécessaire de travailler sur les métadonnées, c'est-à-dire XXXX,
+pour répondre aux exigences de la statistique publique. 
+
+La volumétrie et la (dé)structuration des nouvelles sources de données 
+a de forts enjeux informatiques. Les innovations dans
+ce domaine sont à un rythme impressionnant. Les acteurs
+majeurs du numérique, qui sont les principaux acteurs de la collecte
+de données, sont ainsi les principaux développeurs des langages de _data-science_
+modernes. Ces derniers sont des solutions logicielles pour faciliter le traitement
+de tel ou tel type de données. 
+
+
+
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
 - Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
-- Travail particulièrement important sur la qualité des données et les métadonnées pour répondre aux exigences de la statistique publique;
-- Défi technologique -> besoin d'avoir des infrastructures informatiques qui permettent de travailler avec ces données;
 - Il y a un enjeu à construire des partenariats sur la durée avec les entreprises privées pour une réutilisation durable de leurs données (aujourd'hui beaucoup de partenariats ponctuels). Pour construire ces partenariats durables, il est nécessaire de respecter les intérêts des entreprises qui détiennent les données. Il y a besoin de confiance, de garanties de confidentialité, ce qui demande un cadre légal facilitateur. La responsabilité sociale doit constituer un moteur pour avancer.
 - Sur la confidentialité des données : *privacy-enhancing technologies*.
 - Besoin de moderniser la manière de produire des statistiques officielles pour s'adapter aux nouvelles sources de données et faciliter les partenariats : méthodologie et travail sur la qualité transparents (code open-source, reproductible au maximum);
@@ -21,6 +256,7 @@ Historique:
 - Pour le moment, pas mal de résultats expérimentaux basés sur la réutilisation de données privées mais peu de statistiques officielles;
 - Règles de qualité fixées par le Code Européen de Bonnes Pratiques Statistiques (https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice).
 
+Exemples: [Epicov](https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/enquete-epicov-epidemiologie-et-conditions-de-vie-sous-le-covid-19)
 
 Futur:
 - L'*Open Data Directive* adoptée en 2019 identifie des jeux de données open-source à forte valeur potentielle pour la statistique publique (https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1561563110433&uri=CELEX:32019L1024);
