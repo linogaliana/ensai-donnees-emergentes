@@ -43,8 +43,8 @@ Les données de signalisation permettent d'aller plus loin, par exemple en estim
 
 ::: {#fig-france-pops}
 <p float="left">
-  <img src="gif/france_day_densities.gif" width="400"/>
-  <img src="gif/france_week_densities.gif" width="400"/>
+  <img src="gif/france_day_densities_cropped.gif" width="400"/>
+  <img src="gif/france_week_densities_cropped.gif" width="400"/>
 </p>
 
 Estimation des variations de densité de population présente (nombre de personnes présentes par kilomètre carré), heure par heure dans une même journée (à fauche) et jour par jour dans une même semaine en France métropolitaine.
@@ -52,8 +52,8 @@ Estimation des variations de densité de population présente (nombre de personn
 
 ::: {#fig-paris-pops}
 <p float="left">
-  <img src="gifs/paris_day_densities.gif" width="400"/>
-  <img src="gifs/paris_week_densities.gif" width="400"/>
+  <img src="gif/paris_day_densities.gif" width="400"/>
+  <img src="gif/paris_week_densities.gif" width="400"/>
 </p>
 
 Estimation des variations de densité de population présente (nombre de personnes présentes par kilomètre carré), heure par heure dans une même journée (à fauche) et jour par jour dans une même semaine à Paris et ses environs.
