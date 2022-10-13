@@ -194,8 +194,39 @@ https://www.insee.fr/fr/metadonnees/source/serie/s1163
 https://www.insee.fr/fr/information/3647025?sommaire=3647035
 :::
 
+La multiplication de traces numériques collectées non plus
+seulement par les acteurs publics mais aussi par des 
+acteurs privés a permis de produire de nouvelles
+sources de données, à une fréquence ou à une échelle inédite.
+A ce premier facteur qu'est l'intensification de la production
+de statistique, s'ajoute la demande croissante de la 
+population et des décideurs publics pour des statistiques
+plus détaillées et disponibles plus rapidement. 
+Cela a ainsi amené à une intensification de la disponibilité
+de statistiques, dont la production n'est plus le monopole 
+de la puissance publique. 
+Afin de pouvoir produire ces statistiques, tout en satisfaisant
+aux critères usuels de qualité sur lesquels nous reviendrons, 
+la statistique publique se doit d'innover dans la collecte
+traditionnelle, l'utilisation de nouvelles statistiques
+et concepts ou dans les processus de valorisation de données
+auquel elle accédait déjà. Parmi ces trois facteurs, nous 
+allons principalement nous concentrer sur le deuxième, 
+c'est-à-dire la valorisation de nouvelles sources de données, qu'il
+s'agisse de données produites par l'administration ou de données
+privées. Le premier point - l'innvation dans les méthodes de collecte
+traditionnelles - renvoie, entre autres, à la question du multimode [refs?].
+Enfin, en ce qui concerne le troisième élément - la rénovation des processus
+de production - il y a des éléments connexes à notre problématique
+(certaines méthodes sont intrinsèquement liées à de nouvelles sources) mais
+aussi certains qui le dépassent. Nous n'allons donc pas nous concentrer sur
+ceux-ci bien qu'il se peut que nous évoquions à plusieurs reprises ces enjeux. 
 
-Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
+# Nouvelles données : objectiver des phénomènes socioéconomiques
+
+Les nouvelles données permettent ainsi de faire évoluer la production statistique
+en amenant à essayer d'objectiver des phénomènes qui l'étaient difficilement
+par le passé.  
 
 - Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
