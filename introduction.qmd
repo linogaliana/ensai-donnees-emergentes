@@ -132,8 +132,11 @@ un certain nombre d'informations sur lui. On parle
 de données administratives pour regrouper cet ensemble
 de sources qui sont produites par la puissance publique
 mais dont la collecte répond à des enjeux de 
-gestion mais pas à des besoins de statistique publique. Cette dernière
-n'est pas à la source de la collecte mais peut utiliser celle-ci
+gestion mais pas à des besoins de statistique publique.
+La définition qu'en donnait @desrosieres2004, 
+résume bien ceci: _"une source administrative est issue d'une instituion dont la finalité n'est pas de produire une telle information, mais dont les activités de gestion impliquent la tenue, selon des règles générales, de fichiers ou de registres individuels, dont l'agrégation n'est qu'un sous-produit"_.
+Les besoins de la statistique publique 
+ne sont donc pas à la source de la collecte mais on peut utiliser celle-ci
 comme opportunité pour enrichir la connaissance de phénomènes 
 socio-économiques. 
 Certaines informations disponibles dans ces données sont très
@@ -153,6 +156,36 @@ précieuses à la statistique publique. Si on est en mesure de relier celles-ci 
 une enquête, il devient possible d'enrichir ou de corriger certaines informations
 collectées si les concepts présents dans l'enquête correspondent à ceux de la 
 source administrative. 
+
+Les données administratives deviennent ainsi de plus en plus 
+fréquemment mobilisées dans la production officielle
+de statistiques ou dans les études économiques. 
+La numérisation de l'économie et
+des démarches administratives, parce qu'elle a facilité
+la constitution de bases et l'association entre
+celles-ci, a accéléré 
+le mouvement de constitution de grands répertoires 
+administratifs. Parmi les principaux exploités par la statistique
+publique :
+la DSN, Fideli, le SNDS... La construction de ces sources,
+car celles-ci nécessitent pour leur usage à des fins
+statistiques une recnstruction, 
+implique également un changement des institutions collectant
+la donnée. Ce n'est plus l'Insee qui collecte directement la
+donnée (que ce soit à son compte ou pour le compte d'autres 
+institutions comme les services statistiques ministériels)
+mais des ministères. Ces derniers peuvent, ou non,
+exploiter ces données à leur propre compte mais aussi
+mettre à disposition la donnée brute ou une version
+retravaillée de celle-ci.
+Par exemple, la Direction Générale des Finances Publiques (DGFiP)
+est, par son rôle de collecte des impôts, un acteur central
+dans la constitution de bases sur les revenus qui permettent
+de produire de nombreuses statistiques socioéconomiques.
+De même, la Caisse Nationale d'Assurance Maladie (CNAM)
+est, par son rôle de gestionnaire du système français de sécurité sociale,
+un élément central dans la constitution 
+du système national des données de santé (SNDS).
 
 :::{.callout-note}
 ## Les DADS et la DSN
