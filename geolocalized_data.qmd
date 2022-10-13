@@ -1,0 +1,52 @@
+---
+title: "Données géolocalisées"
+bibliography: references.bib
+---
+
+### Introduction
+
+Disposer de données géolocalisées pour produire de la statistique publique est un besoin qui se fait de plus en plus fort. Pour cause, un intérêt croissant est accordé aux caractéristiques spatiales des phénomènes que la statistique publique a pour rôle de décrire. Le comité d'experts des Nations Unies sur la gestion de l'information géospatiale mondiale (UN-GGIM) a d'ailleurs *reconnu l’importance cruciale d’intégrer les informations géospatiales aux statistiques et aux données socio-économiques et le développement d’une infrastructure statistique géospatiale*.
+
+Un premier apport fondamental des données géolocalisées est qu'elles permettent de calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques. On parle de données carroyées, publiées sur des carreaux pouvant aller de 200 mètres à plusieurs kilomètres de côté. Une telle granularité permet de capter certains phénomènes démographiques ou socio-économiques qui ne sont pas détectables au niveau de l'IRIS ou de la commune.
+
+Plusieurs grands répertoires de données de l'Insee sont ainsi géolocalisés aujourd'hui :
+
+- Filosofi (pour Fichier localisé social et fiscal) est un fichier de synthèse de sources fiscales (déclarations de revenus des ménages, taxe d'habitation, fichier d'imposition des personnes) enrichi par les données sur les prestations sociales fournies par les organismes sociaux, pour un peu plus de 26 millions de ménages fiscaux en France. Les résidences des ménages y sont géolocalisées ;
+- Fidéli (pour Fichier démographique sur les logements et les individus) peut se définir comme une base annuelle exhaustive de données statistiques sur les logements - qui sont géolocalisés - et de leurs occupants ;
+- La Base Permanente des Equipements (BPE) est une source qui fournit le niveau de services rendus à la population sur un territoire, en répertoriant un large éventail d'équipements et de services accessibles au public sur l'ensemble de la France au 1er janvier de chaque année. La plupart des types d'équipement (commerce, services, santé, etc.) sont géolocalisés dans la base accessible en *open data* ;
+- Les établissements du répertoire Sirene sont géolocalisés (hors Mayotte) et ces données sont mises à disposition des utilisateurs en *open data*. La géolocalisation des établissements actifs de 200 salariés ou plus a été systématiquement vérifiée par des gestionnaires de reprise de géolocalisation, ainsi que celle des établissements de 20 à 199 salariés pour lesquels la géolocalisation automatique est incertaine ;
+- Le Recensement de la Population conduit aujourd'hui à une publication de statistiques à la maille des IRIS. Une première diffusion de données carroyées à partir du recensement suite à une phase de géolocalisation est prévue pour 2024.
+
+En général, la géolocalisation est réalisée par une combinaison d'un appariement avec un référentiel d’adresses géolocalisées construit à partir du Répertoire d’Immeubles Localisés (RIL) pour les besoins du Recensement de la Population dans les communes de plus de 10 000 habitants, et de la géolocalisation des parcelles cadastrales. Une reprise manuelle peut être faite dans les cas où la géolocalisation n'est pas possible ou s'est faite avec un faible niveau de confiance.
+
+:::{.callout-note}
+Une attention particulière doit être portée lors de la publication d'informations à un niveau fin à la protection de la vie privée et au respect du secret statistique.
+:::
+
+De nombreux acteurs privées collectent des données qui sont géolocalisées (en général en grande quantité) et qui ont un fort potentiel pour la statistique publique. Dans le cadre de partenariats, l'Insee peut obtenir des accès temporaires (parfois indirects) à de telles données. 
+
+:::{.callout-note}
+Méthodologie : @feuillet-18.
+:::
+
+### Données de téléphonie mobile
+
+Les données de téléphonie mobile en sont un bon exemple. On distingue en général 2 types de données de téléphonie mobile : 
+
+- Les *Call Detail Records* (CDR) qui sont générées lors des communications actives d'un utilisateur à travers son téléphone mobile (appel, envoi de SMS, etc.);
+- Les données de signalisation passive qui sont collectées par les opérateurs principalement à des fins d'optimisation et de surveillance de leurs réseaux. Ces données de signalisation sont caractérisées par une fréquence temporelle bien supérieure à celle des données CDR.
+
+Ces deux types de données contiennent la même information spatiale : chaque observation contient des informations sur l'antenne radio avec laquelle le téléphone est en communication. Les données CDR permettent de produire des statistiques intéressantes sur les populations présentes et les déplacements de la population. Par exemple, @galiana-20 a observé à partir de comptages issus des données CDR que la répartition de la population sur le territoire s’est significativement modifiée à la mise en place du confinement en mars 2020, au début de la pandémie de Covid-19. Pendant le confinement, la population a davantage passé la nuit dans son département de résidence qu’avant le confinement. Au moment du déconfinement, les mêmes données de CDR indiquent que les mouvements de population sur le territoire ont repris partiellement, le sûrcroit de population se trouvant dans son département de résidence diminuant de moitié par rapport à la période de confinement.
+
+Les données de signalisation permettent d'aller plus loin, par exemple en estimant des populations présente avec une fréquence temporelle élevée. Pour un maillage territorial donné, par exemple des carreaux de 200 mètres de côté, les opérateurs téléphoniques peuvent modéliser leur réseau de manière à  estimer la probabilité qu'un téléphone se trouvant au sein d'un carreau $i$ soit détecté dans une cellule (aire couverte par une antenne) $j$. Ceci permet d'avoir une estimation du lieu où se trouvent tous les téléphones en lien avec le réseau quasiment en continu. En repondérant les nombres de téléphones estimés dans chaque tuile en fonction du nombre du nombre de téléphones considérés comme résidant dans chaque tuile et la population effectivement résidente de chaque tuile (obtenue grâce aux données fiscales géolocalisées), il est possible d'avoir une estimation en temps réelle de la population présente pour le maillage territorial choisi [@ricciato-20].
+
+Il ressort de cette méthodologie que l'utilisation de données de téléphonie mobile pour la production de statistiques publiques pose des questions :
+
+- Question de la qualité : les données disponibles ne concernent qu'un sous-champ de la population (par exemple les clients d'un opérateur en particulier). Dès lors, il est nécessaire d'évaluer la représentativité de ce sous-champ par rapport à la population générale pour s'assurer de la validité (partielle) des résultats;
+- Question de la perennité : les données viennent de tiers privés et l'Insee n'a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Dans ce contexte il n'y a pas de garantie que les indicateurs restent comparables au cours du temps. Les questions légales autour des données personnelles sont aussi à prendre en compte sur cette question de la perennité. Aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l'utilisation de données téléphoniques de signalisation pour la statistique publique. Même si elles venaient à le devenir, il n'y a aucune garantie qu'on ne revienne pas quelques années après à la situation actuelle. Ces aspects légaux ramènent aussi à une question d'éthique.
+
+### Données de réseaux sociaux
+
+Les réseaux sociaux sont une autre source privée très riche d'informations géolocalisées. Twitter propose une API qui permet de récupérer des tweets à partir de requêtes simples à construire. Ainsi, il est possible de récupérer tous les tweets contenant un ou plusieurs mots clés, en excluant les retweets et les tweets sans information de géolocalisation. Tous les tweets ne contiennent pas d'information sur la position de l'appareil utilisé au moment de l'envoi : il faut que l'utilisateur ait activé cette fonctionnalité. On peut avec de telles requêtes de connaître la position et l'heure exactes de l'envoi des tweets - géolocalisés - portant sur un sujet. Malgré les biais de sélection qui peuvent exister (les personnes qui tweetent, et a fortiori les personnes qui tweetent en partageant leur localisation ne constituent a priori pas un échantillon représentatif de la population générale), ...
+
+### Données de suivi de vols ou navires
