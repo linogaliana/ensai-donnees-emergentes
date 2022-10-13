@@ -75,6 +75,8 @@ est d'une ampleur inédite du fait
 de la multiplicité des données collectées
 et des acteurs impliqués.
 
+## La production renouvelée de données de la puissance publique
+
 La puissance publique est une productrice
 historique de données. Les
 registres administratifs ou 
@@ -83,9 +85,9 @@ de données très appréciée des
 historiens. Si elles n'atteignent 
 pas les volumétries actuelles, 
 ces sources sont néanmoins
-les ancètres de nos données administratives actuelles
+les ancètres de nos données administratives actuelles.
 Les recensements de population sont également
-une des sources 
+une des productoins historiques de données. 
 Le comptage de la population et des impôts
 fait partie intégrante du processus
 de constitution de la puissance
@@ -93,14 +95,37 @@ publique centralisatrice (Desrosières).
 La 
 statistique publique, si elle est aujourd'hui
 entendue beaucoup plus largement que par le passé,
+et qu'elle dispose d'une indépendance vis-à-vis
+d'autres branches de l'Etat,
 est un élément essentiel pour 
 pour permettre un bon fonctionnement de l'économie et de la démocratie.
 Le slogan de l'Insee, _"mesurer pour comprendre"_,
 correspond bien à cette idée.  
+Les statistiques officielles essaient d'objectiver les phénomènes
+socioéconomiques par la collecte de données et la construction
+de concepts cohérents avec le phénomène mesuré. 
 
+Les enquêtes sont historiquement une
+source privilégiée puisque
+la conception de celles-ci, en amont de la collecte et 
+des retraitements post-collecte, est
+justement effectuée en fonction des 
+réutilisations futures. 
+Les questions sont ainsi conçues pour 
+s'approcher au plus près des phénomènes qu'on 
+désire quantifier et 
+l'échantillonnage puis les redressements post-collecte
+permettront de contrôler la population
+sur laquelle portent les statistiques construites. 
+L'inconvénient est que cette production nécessite des moyens
+et un temps conséquents (en amont de la collecte, lors de celle-ci puis
+à l'issue de celle-ci). De plus, les enquêtes ne sont pas à l'abri
+d'erreurs dans la collecte, qu'il s'agisse d'omissions ou réponses
+erronnées, qu'elles soient volontaires ou non. 
 
 - Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
 - Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
+
 - Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
 - Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
