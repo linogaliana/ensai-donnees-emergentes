@@ -123,6 +123,29 @@ et un temps conséquents (en amont de la collecte, lors de celle-ci puis
 d'erreurs dans la collecte, qu'il s'agisse d'omissions ou réponses
 erronnées, qu'elles soient volontaires ou non. 
 
+
+L'Etat n'accumule pas uniquement de la connaissance sur sa population
+par le biais d'enquête. Les registres des impôts, de l'assurance maladie, etc.
+sont des sources de gestion par lesquelles chaque individu communique
+un certain nombre d'informations sur lui. Certaines sont très
+génériques et communes à de nombreuses bases de gestion (l'état civil notamment) 
+alors que d'autres sont propres à chaque source. Ces sources de données,
+historiquement collectées
+par papier et de plus en plus par collecte numérique, ne sont pas conçues initialement
+à des fins de statistique. Néanmoins, elles peuvent fournir des informations très 
+précieuses à la statistique publique. Si on est en mesure de relier celles-ci à
+une enquête, il devient possible d'enrichir ou de corriger certaines informations
+collectées si les concepts présents dans l'enquête correspondent à ceux de la 
+source administrative.  
+
+:::{.callout-note}
+## Les DADS et la DSN
+
+https://www.insee.fr/fr/metadonnees/source/serie/s1163
+https://www.insee.fr/fr/information/3647025?sommaire=3647035
+:::
+
+
 - Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
 - Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
 
@@ -142,6 +165,7 @@ Historique:
 - Pour le moment, pas mal de résultats expérimentaux basés sur la réutilisation de données privées mais peu de statistiques officielles;
 - Règles de qualité fixées par le Code Européen de Bonnes Pratiques Statistiques (https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice).
 
+Exemples: [Epicov](https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/enquete-epicov-epidemiologie-et-conditions-de-vie-sous-le-covid-19)
 
 Futur:
 - L'*Open Data Directive* adoptée en 2019 identifie des jeux de données open-source à forte valeur potentielle pour la statistique publique (https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1561563110433&uri=CELEX:32019L1024);
