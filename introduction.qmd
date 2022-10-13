@@ -123,21 +123,36 @@ et un temps conséquents (en amont de la collecte, lors de celle-ci puis
 d'erreurs dans la collecte, qu'il s'agisse d'omissions ou réponses
 erronnées, qu'elles soient volontaires ou non. 
 A ces problèmes s'ajoute la baisse historique des taux de réponse
-@riviere2018. 
+[@riviere2018]. 
 
 L'Etat n'accumule pas uniquement de la connaissance sur sa population
 par le biais d'enquête. Les registres des impôts, de l'assurance maladie, etc.
 sont des sources de gestion par lesquelles chaque individu communique
-un certain nombre d'informations sur lui. Certaines sont très
-génériques et communes à de nombreuses bases de gestion (l'état civil notamment) 
-alors que d'autres sont propres à chaque source. Ces sources de données,
+un certain nombre d'informations sur lui. On parle
+de données administratives pour regrouper cet ensemble
+de sources qui sont produites par la puissance publique
+mais dont la collecte répond à des enjeux de 
+gestion mais pas à des besoins de statistique publique. Cette dernière
+n'est pas à la source de la collecte mais peut utiliser celle-ci
+comme opportunité pour enrichir la connaissance de phénomènes 
+socio-économiques. 
+Certaines informations disponibles dans ces données sont très
+génériques et communes à de nombreuses bases de gestion (l'état civil notamment), 
+ce qui peut faciliter l'association entre elles, 
+alors que d'autres sont propres à chaque source. Outre la possibilité de
+disposer d'information sur une population plus importante, la différence
+principale entre ces
+sources de données,
 historiquement collectées
-par papier et de plus en plus par collecte numérique, ne sont pas conçues initialement
-à des fins de statistique. Néanmoins, elles peuvent fournir des informations très 
+par papier et de plus en plus par collecte numérique, et les enquêtes est
+que les premières ne sont pas conçues initialement
+à des fins de statistique donc le statisticien n'en contrôle pas
+la conceptualisation et la collecte.
+Néanmoins, ces sources peuvent fournir des informations très 
 précieuses à la statistique publique. Si on est en mesure de relier celles-ci à
 une enquête, il devient possible d'enrichir ou de corriger certaines informations
 collectées si les concepts présents dans l'enquête correspondent à ceux de la 
-source administrative.  
+source administrative. 
 
 :::{.callout-note}
 ## Les DADS et la DSN
@@ -147,8 +162,7 @@ https://www.insee.fr/fr/information/3647025?sommaire=3647035
 :::
 
 
-- Jusqu'à présent la statistique publique repose en grande partie sur l'utilisation d'enquêtes (parfois de bases de données administratives);
-- Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
+Notre environnement change de plus en plus rapidement et nous devons répondre à des problèmes de plus en plus globaux -> Demande de plus en plus forte pour des statistiques plus détaillées et à jour, à la fois de la part de la population et des décideurs publics;
 
 - Pour pouvoir produire ces statistiques, besoin d'innovation (d'ailleurs aussi pour les communiquer). Une partie de l'innovation -> exploitation de nouvelles sources de données qui n'étaient pas utilisées par le passé pour produire de la statistique publique.
 - Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.

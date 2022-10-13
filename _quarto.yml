@@ -40,6 +40,9 @@ website:
     creator: "@linogaliana"
   open-graph: true
 
+
+bibliography: biblio.bib
+
 format:
   html:
     theme: cosmo
