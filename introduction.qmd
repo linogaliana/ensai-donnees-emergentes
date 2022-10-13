@@ -122,7 +122,8 @@ et un temps conséquents (en amont de la collecte, lors de celle-ci puis
 à l'issue de celle-ci). De plus, les enquêtes ne sont pas à l'abri
 d'erreurs dans la collecte, qu'il s'agisse d'omissions ou réponses
 erronnées, qu'elles soient volontaires ou non. 
-
+A ces problèmes s'ajoute la baisse historique des taux de réponse
+@riviere2018. 
 
 L'Etat n'accumule pas uniquement de la connaissance sur sa population
 par le biais d'enquête. Les registres des impôts, de l'assurance maladie, etc.
