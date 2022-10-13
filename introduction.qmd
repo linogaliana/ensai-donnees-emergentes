@@ -240,17 +240,44 @@ majeurs du numérique, qui sont les principaux acteurs de la collecte
 de données, sont ainsi les principaux développeurs des langages de _data-science_
 modernes. Ces derniers sont des solutions logicielles pour faciliter le traitement
 de tel ou tel type de données. 
+Par exemple, `TensorFlow` a été développé par `Google`, `PyTorch` par 
+`Meta`, `Airflow` par `Airbnb`. 
+
+# Collaboration avec de nouveaux acteurs
+
+Ces nouvelles sources de données sont collectées par de nouveaux acteurs, qu'il 
+s'agisse d'administrations, d'acteurs privés ou d'autres acteurs
+tiers (ONG, associations, instituts de recherche, etc.). 
+Ces données sont parfois déjà valorisées par ces acteurs: certains acteurs
+proposent des solutions commerciales qui revendent certains agrégats
+issus des données qu'ils collectent.
+
+Pour la statistique publique, il y a donc un enjeu à 
+construire des partenariats pour accéder sur la durée 
+à des données collectées par d'autres. Les
+exploitations de nouvelles sources ayant été 
+principalement expérimentales,
+les partenariats entre l'administration et les 
+entreprises ont jusqu'à présent été souvent
+ponctuels. Les données de caisse, c'est-à-dire
+les données de supermarchés qui sont collectées 
+automatiquement en caisse, sont une exception. Une réglementation
+européenne imposant leur usage pour la constitution des statistiques
+d'inflation et des séries de prix, l'accès pérenne à celles-ci a été
+nécessaire [lien vers site/publi insee ?].
+
+Pour construire ces partenariats durables,
+il est nécessaire de respecter les intérêts des entreprises qui détiennent les données.
+Il y a besoin de confiance, de garanties de confidentialité, ce qui demande un cadre légal facilitateur.
+La responsabilité sociale doit constituer un moteur pour avancer.
 
 
-
-- Par exemple, données qui sont en libre accès sur Internet ou qui sont détenues par des organisation privées (ou encore ONG, think tanks, instituts de recherche, ...) : réutilisation de données qui n'ont pas pour objectif premier la production de statistiques.
-- Innovation parfois nécessaire pour collecter ces données mais aussi souvent pour les traiter;
-- Il y a un enjeu à construire des partenariats sur la durée avec les entreprises privées pour une réutilisation durable de leurs données (aujourd'hui beaucoup de partenariats ponctuels). Pour construire ces partenariats durables, il est nécessaire de respecter les intérêts des entreprises qui détiennent les données. Il y a besoin de confiance, de garanties de confidentialité, ce qui demande un cadre légal facilitateur. La responsabilité sociale doit constituer un moteur pour avancer.
 - Sur la confidentialité des données : *privacy-enhancing technologies*.
 - Besoin de moderniser la manière de produire des statistiques officielles pour s'adapter aux nouvelles sources de données et faciliter les partenariats : méthodologie et travail sur la qualité transparents (code open-source, reproductible au maximum);
 - Fonctionnement participatif et agile pour identifier les potentiels problèmes liés à la réutilisation de données privées (besoin d'experts de ces données). Réseaux de recherche avec les partenaires privés, la recherche académique, etc.
 
-Historique:
+# Historique
+
 - Principes fondamentaux de la statistique publique établis par les Nations Unies : https://unstats.un.org/unsd/dnss/gp/fundprinciples.aspx
 - Le rôle des instituts de statistique est de fournir une image objective de la société pour faciliter les décisions informées;
 - Pour le moment, pas mal de résultats expérimentaux basés sur la réutilisation de données privées mais peu de statistiques officielles;
