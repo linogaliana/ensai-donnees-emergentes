@@ -32,19 +32,23 @@ Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre d
 
 rôle du centralisateur
 
+![](./img/images/dsn-schema.png)
+
 --> transformer en tableau
 C’est typiquement le rôle du Gip-MDS8 avec la plate-forme net-entreprises qui permet d’effectuer des déclarations sociales comme la Déclaration sociale nominative (DSN)9. Mais on peut aussi citer l’ATIH10 avec la plate-forme e-PMSI11, conçue pour le recueil et l’analyse des informations sur l’hospitalisation, ou le SANDRE12, qui garantit l’interopérabilité des systèmes d’information relatifs à l’eau (même si dans les deux cas le formalisme déclaratif est moins affirmé que pour la DSN). Gérer de telles infrastructures de recueil d’information de façon industrielle est un métier en soi qui requiert une grande technicité (informatique, maîtrise d’ouvrage, droit), une organisation rodée et réactive, et une gouvernance incluant organismes utilisateurs et contributeurs. Les administrations utilisatrices sont par exemple les organismes fiscaux ou sociaux dans le cas des déclarations sociales, la Caisse Nationale d’Assurance Maladie (Cnam) et les hôpitaux dans le cas des données PMSI, l’Agence Française pour la Biodiversité ou les Agences de l’Eau dans le cas du SANDRE.
-
-photo à un instant t, mais aussi d’une sélection des variables et des unités qui l’intéressen
-
-Un travail de reconstitution et même de consolidation,
-
 
 
 ## Usage de la donnée administrative
 
 L’usage peut aller au-delà de l’administration concernée.
 la déclaration sociale nominative est utilisée par la DGFIP, les institutions de prévoyance, les organismes de retraite, l’Acoss, pour leurs propres usages de gestion ; les données de SIRENE servent de référence, de preuve pour les entreprises, elles sont utilisées par les chambres de commerce et d’industrie ou par les greffes des tribunaux de commerce.
+
+
+photo à un instant t, mais aussi d’une sélection des variables et des unités qui l’intéressen
+
+Un travail de reconstitution et même de consolidation,
+TRANSFORMER LES DONNÉES POUR RÉPONDRE AUX BESOINS DE LA STATISTIQUE
+
 
 ## Avantages et inconvénients
 
@@ -73,6 +77,8 @@ redéfinition de certains concepts à partir de plusieurs champs
 
 Les membres du service statistique public bénéficient d’une disposition importante qui facilite énormément le travail du statisticien. Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la loi du 7 juin 1951. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge des répondants.
 
+L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi n° 51-711 de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi n° 2016 -1321 de 2016 pour une République numérique.
+
 ## La DSN
 
 @Humbert2018
@@ -97,12 +103,32 @@ déclaration mensuelle unique, reflet de la paie M-1
 possibilité de correction
 
 ![](img/images/dsn-diff.png)
+From @Humbert2018
+
 
 ## Avantage
 
 Source unique cohérente entre administrations
-Réduction charge pour entreprises
+Par exemple, avec la DSN, on est sûr que les employeurs et les salariés sont identifiés de la même façon quel que soit l’organisme destinataire de l’information
+[@Rennes2018]
+
+Réduction charge pour entreprises ("dites le nous bien une seule fois")
+ex @Rennes2018: Par exemple, depuis janvier 2018, les entreprises n’ont plus obligation de fournir leur effectif salarié de fin de période, celui-ci pouvant être recalculé directement par les organismes destinataires à partir des informations individuelles transmises sur les salariés.
+
 Données mensuelle: meilleur suivi des changements infra-annuels
+Auparavant, les entreprises transmettaient des données multiples à diverses échéances et à différents organismes, globalisées par établissement.
+
+la DSN n’a pas vocation à servir un besoin spécifique, mais au contraire à couvrir différents usages.
+Adminstrations utilisatrices (Insee, DARES, Pole Emploi, etc.) : Tous ces systèmes d’informations reçoivent une liste spécifique de données, fixée par arrêté selon leurs missions et doivent se synchroniser au fur et à mesure de l’élargissement du périmètre
+Dès 2019, la DSN sera le support du prélèvement à la source pour les salariés.
+
+## Challenge
+
+Volumétrie conséquente
+
+DSN transfère une partie de la charge des entreprises vers les systèmes d’information en aval.
+Volumétrie: environ 1To par an, sans la fonction publique
+
 
 # References
 
