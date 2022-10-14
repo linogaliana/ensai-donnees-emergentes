@@ -19,14 +19,19 @@ changement de paradigme
 
 Contrairement aux données statistiques dont le seul but est d’informer, leurs consœurs administratives doivent leur existence aux actions qu’elles permettent de déclencher.
 
-diff avec big data
-e terme «  administrative  » revient d’abord à qualifier les données par leur origine, et plus que cela par leur statut. Il signifie qu’elles viennent de la sphère administrative en général
-
 bases de données de gestion, toujours susceptibles d’être mises à jour.
 
 Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée6. Mais elles peuvent aussi découler de déclarations administratives.
 déclaration administrative, c’est l’obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites... ce qui réduit, sans non plus l’annihiler, le risque de non-déclaration
+
+## diff avec big data
+
+Le terme «  administrative  » revient d’abord à qualifier les données par leur origine, et plus que cela par leur statut. Il signifie qu’elles viennent de la sphère administrative en général
+
+différence de degré plutôt que de nature
+
+5V du big data
 
 ## Processus de production
 
@@ -64,6 +69,10 @@ inconvénients:
 toutes les étapes ainsi décrites sont sous la responsabilité du concentrateur, et échappent donc au service statistique. Champ, données, formulaire, tout cela peut évoluer dans le temps, sans que le statisticien ait le moindre contrôle sur ces aspects.
 
 - metadonnees (salgado)
+data such as administrative and digital data generated without statistical structural metadata embrace variables with a faint connection with target indicators and aggregates.
+The first determining factor for the differences in these data sources is the presence/absence of statistical metadata, i.e. metadata for statistical purposes. Not only is it relevant to understand what this means but also especially to identify the reason why this is introducing differences. Data such as survey data generated with statistical structural metadata embrace variables following strict definitions directly related to target indicators and aggregates under analysis (unemployment rates, price indices, tourism statistics, . . . ). These definitions are operationalised in careful designs of questionnaire items. Data are processed using survey methodology, which provides a rigorous inferential framework connecting data sets with target populations at stake.
+non-negligible amount of preprocessing is required prior to incorporate digital data into the statistical production process.
+@salgado
 
 - plus de travail en aval (mais moins en amont une fois l'investissement sur
 l'automatisation de la collecte et du retraitement fait)
@@ -79,6 +88,10 @@ Les membres du service statistique public bénéficient d’une disposition impo
 
 L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi n° 51-711 de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi n° 2016 -1321 de 2016 pour une République numérique.
 
+## Autres différences avec les données classiques
+
+- Economic value: Traditional survey data has little economic value for a data holder/provider in comparison with digital data.
+- Confidentiality and privacy issues naturally arise.
 # Exemples 
 
 4 exemples de nature différente:
@@ -89,6 +102,15 @@ L’utilisation de déclarations ou de sources administratives à des fins stati
 - SNDS: mise en cohérence de données de gestion hospitalières et assurance maladie, enjeu encore plus fort de confidentialité
 
 ## La DSN
+
+:::{.callout-note}
+## Les DADS et la DSN
+
+https://www.insee.fr/fr/metadonnees/source/serie/s1163
+https://www.insee.fr/fr/information/3647025?sommaire=3647035
+:::
+
+
 
 @Humbert2018
 @Renne2018
@@ -137,6 +159,16 @@ Volumétrie conséquente
 
 DSN transfère une partie de la charge des entreprises vers les systèmes d’information en aval.
 Volumétrie: environ 1To par an, sans la fonction publique
+
+Relier le concept administratif à une réalité économique
+éviter l'"artefact" au sens de Bourdieu
+
+## Sirene
+
+:::{.callout-note}
+## Les autres répertoires de la statistique publique
+
+:::
 
 
 # References

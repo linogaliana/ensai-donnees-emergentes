@@ -76,6 +76,9 @@ est d'une ampleur inédite du fait
 de la multiplicité des données collectées
 et des acteurs impliqués.
 
+IBM estimated that about 2.5 quintillion bytes of data are generated each day (Yakbuksi, 2013).
+n his brilliant history of statistics, Taming Chance, Ian Hacking (1990: 45) speaks of the beginning of an ‘avalanche of numbers’.
+
 ## La production renouvelée de données de la puissance publique
 
 La puissance publique est une productrice
@@ -93,6 +96,10 @@ Le comptage de la population et des impôts
 fait partie intégrante du processus
 de constitution de la puissance
 publique centralisatrice (Desrosières). 
+
+Curiously enough, the Kish tablet from the Sumerian empire (ca 3500 bC), one of the earliest examples of human writing, seems to be an administrative record for statistical purposes
+
+
 La 
 statistique publique, si elle est aujourd'hui
 entendue beaucoup plus largement que par le passé,
@@ -140,6 +147,7 @@ Les besoins de la statistique publique
 ne sont donc pas à la source de la collecte mais on peut utiliser celle-ci
 comme opportunité pour enrichir la connaissance de phénomènes 
 socio-économiques. 
+[citer Connelly et al. et Einav et al. ]
 Certaines informations disponibles dans ces données sont très
 génériques et communes à de nombreuses bases de gestion (l'état civil notamment), 
 ce qui peut faciliter l'association entre elles, 
@@ -187,13 +195,6 @@ De même, la Caisse Nationale d'Assurance Maladie (CNAM)
 est, par son rôle de gestionnaire du système français de sécurité sociale,
 un élément central dans la constitution 
 du système national des données de santé (SNDS).
-
-:::{.callout-note}
-## Les DADS et la DSN
-
-https://www.insee.fr/fr/metadonnees/source/serie/s1163
-https://www.insee.fr/fr/information/3647025?sommaire=3647035
-:::
 
 La multiplication de traces numériques collectées non plus
 seulement par les acteurs publics mais aussi par des 
