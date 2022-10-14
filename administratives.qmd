@@ -30,7 +30,14 @@ Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre d
 Le terme «  administrative  » revient d’abord à qualifier les données par leur origine, et plus que cela par leur statut. Il signifie qu’elles viennent de la sphère administrative en général
 
 différence de degré plutôt que de nature
-
+différence principale: avec les données administratives, on connaît le champ 
+par le fait qu'elle sont issues de collecte d'une population bien ciblée
+vs
+big data: population sous-jacente inconnue, basée sur la part de marché
+du service. Pas de possibilité d'apparier de manière automatique ces données 
+avec les données administratives
++ en principe: une observation par unité par "vague" administrative vs 
+multiples observaions d'un individu dans big data (une par activité)
 5V du big data
 
 ## Processus de production
