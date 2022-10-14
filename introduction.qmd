@@ -2,6 +2,7 @@
 title: "Introduction"
 ---
 
+## Les données émergentes dans le temps long
 
 L'histoire de la statistique est une suite d'évolutions
 de la discipline afin que des données émergentes deviennent

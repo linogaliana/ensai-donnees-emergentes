@@ -1,0 +1,110 @@
+---
+title: "Données administratives"
+---
+
+Comme développé dans l'introduction, les données
+administratives sont des données de gestion
+produite par l'administration. 
+
+processus de production statistique et administratif diffèrent.
+
+baisse généralisée des taux de réponse1 et de restrictions budgétaires
+changement de paradigme
+
+
+# Contexte
+
+
+## Nature des données
+
+Contrairement aux données statistiques dont le seul but est d’informer, leurs consœurs administratives doivent leur existence aux actions qu’elles permettent de déclencher.
+
+diff avec big data
+e terme «  administrative  » revient d’abord à qualifier les données par leur origine, et plus que cela par leur statut. Il signifie qu’elles viennent de la sphère administrative en général
+
+bases de données de gestion, toujours susceptibles d’être mises à jour.
+
+Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée6. Mais elles peuvent aussi découler de déclarations administratives.
+déclaration administrative, c’est l’obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
+Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites... ce qui réduit, sans non plus l’annihiler, le risque de non-déclaration
+
+## Processus de production
+
+rôle du centralisateur
+
+--> transformer en tableau
+C’est typiquement le rôle du Gip-MDS8 avec la plate-forme net-entreprises qui permet d’effectuer des déclarations sociales comme la Déclaration sociale nominative (DSN)9. Mais on peut aussi citer l’ATIH10 avec la plate-forme e-PMSI11, conçue pour le recueil et l’analyse des informations sur l’hospitalisation, ou le SANDRE12, qui garantit l’interopérabilité des systèmes d’information relatifs à l’eau (même si dans les deux cas le formalisme déclaratif est moins affirmé que pour la DSN). Gérer de telles infrastructures de recueil d’information de façon industrielle est un métier en soi qui requiert une grande technicité (informatique, maîtrise d’ouvrage, droit), une organisation rodée et réactive, et une gouvernance incluant organismes utilisateurs et contributeurs. Les administrations utilisatrices sont par exemple les organismes fiscaux ou sociaux dans le cas des déclarations sociales, la Caisse Nationale d’Assurance Maladie (Cnam) et les hôpitaux dans le cas des données PMSI, l’Agence Française pour la Biodiversité ou les Agences de l’Eau dans le cas du SANDRE.
+
+photo à un instant t, mais aussi d’une sélection des variables et des unités qui l’intéressen
+
+Un travail de reconstitution et même de consolidation,
+
+
+
+## Usage de la donnée administrative
+
+L’usage peut aller au-delà de l’administration concernée.
+la déclaration sociale nominative est utilisée par la DGFIP, les institutions de prévoyance, les organismes de retraite, l’Acoss, pour leurs propres usages de gestion ; les données de SIRENE servent de référence, de preuve pour les entreprises, elles sont utilisées par les chambres de commerce et d’industrie ou par les greffes des tribunaux de commerce.
+
+## Avantages et inconvénients
+
+avantages:
+- exhaustivité
+- automatisation = plus haute fréquence
+- moins de biais de réponse (mais pas absent, exemple déclaration fiscale même si
+peut avoir plus de conséquences)
+
+inconvénients:
+
+- pas de contrôle du champ et de la définition du concept
+toutes les étapes ainsi décrites sont sous la responsabilité du concentrateur, et échappent donc au service statistique. Champ, données, formulaire, tout cela peut évoluer dans le temps, sans que le statisticien ait le moindre contrôle sur ces aspects.
+
+- metadonnees (salgado)
+
+- plus de travail en aval (mais moins en amont une fois l'investissement sur
+l'automatisation de la collecte et du retraitement fait)
+contrôle qualité (différent de celui du gestionnaire)
+transformation de données (ressemble à du post-collecte)
+redéfinition de certains concepts à partir de plusieurs champs
+
+## Cadre légal
+
+@isnard2018
+
+Les membres du service statistique public bénéficient d’une disposition importante qui facilite énormément le travail du statisticien. Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la loi du 7 juin 1951. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge des répondants.
+
+## La DSN
+
+@Humbert2018
+@Renne2018
+
+adossant la collecte des données au processus générateur de la collecte des cotisations sociales, c’est-à-dire le processus de paie, elle garantit une bien meilleure qualité de l’information recueillie.
+projet de simplification administrative qui s’est étalé sur près de dix ans.
+environ 96  % des entreprises du secteur privé.
+
+satisfaire le plus grand nombre possible d’obligations déclaratives existant dans le champ social au sens large, tout en réduisant le nombre de demandes d’informations distinctes auxquelles sont confrontées les entreprises
+
+## Avant la DNS
+
+DADS
+déclarations sociales font partie des tâches administratives imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017
+
+Les déclarations sociales reposaient sur des formulaires Cerfa dont le contenu était fixé par les textes fondant la collecte des données utiles aux organismes de protection sociale et à l’administration pour l’exercice de leurs missions. Non seulement les déclarants étaient amenés à fournir plusieurs fois la même information, mais ils devaient surtout fournir une information qui n’était pas naturellement produite par leur système de gestion, ce qui était source d’incohérences et d’erreurs dans les déclarations. La DSN met en œuvre une logique fondamentalement différente : elle s’approche au plus près du fait générateur des rémunérations et cotisations sociales dans le domaine de la protection sociale, la paie. Elle repose sur un modèle unique de cette dernière et un échange de données primaires de gestion entre l’émetteur, qui fait la paie, et tous les organismes et administrations qui ont besoin de ces données sociales pour recouvrer des cotisations et servir des droits. Elle opère donc un déplacement de la charge de traitement des données de l’amont (l’entreprise déclarante) vers l’aval
+
+principe clé : chaque salarié de l’établissement déclaré doit apparaître dans la DSN.
+
+déclaration mensuelle unique, reflet de la paie M-1
+possibilité de correction
+
+![](img/images/dsn-diff.png)
+
+## Avantage
+
+Source unique cohérente entre administrations
+Réduction charge pour entreprises
+Données mensuelle: meilleur suivi des changements infra-annuels
+
+# References
+
+::: {#refs}
+:::
