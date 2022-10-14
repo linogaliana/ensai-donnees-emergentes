@@ -7,7 +7,13 @@ bibliography: references.bib
 
 Disposer de données géolocalisées pour produire de la statistique publique est un besoin qui se fait de plus en plus fort. Pour cause, un intérêt croissant est accordé aux caractéristiques spatiales des phénomènes que la statistique publique a pour rôle de décrire. Le comité d'experts des Nations Unies sur la gestion de l'information géospatiale mondiale (UN-GGIM) a d'ailleurs *reconnu l’importance cruciale d’intégrer les informations géospatiales aux statistiques et aux données socio-économiques et le développement d’une infrastructure statistique géospatiale*.
 
-Un premier apport fondamental des données géolocalisées est qu'elles permettent de calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques. On parle de données carroyées, publiées sur des carreaux pouvant aller de 200 mètres à plusieurs kilomètres de côté. Une telle granularité permet de capter certains phénomènes démographiques ou socio-économiques qui ne sont pas détectables au niveau de l'IRIS ou de la commune.
+Un premier apport fondamental des données géolocalisées est qu'elles permettent de calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques. On parle de données carroyées, publiées sur des carreaux pouvant aller de 200 mètres à plusieurs kilomètres de côté [voir @fig-carroyees]. Une telle granularité permet de capter certains phénomènes démographiques ou socio-économiques qui ne sont pas détectables au niveau de l'IRIS ou de la commune.
+
+::: {#fig-carroyees}
+![](img/geolocalized_data/carte_densite.png){ width=70% }
+
+Carte des densités de population sur des carreaux de largeur d'un kilomètre à Lyon et ses alentours en 2017 (calculées à partir de Filosofi). Source : [géoportail](https://www.geoportail.gouv.fr/donnees/densite-de-population)
+:::
 
 ### Les données publiques géolocalisées
 
@@ -125,4 +131,9 @@ Défis :
   - La couverture des émetteurs-récepteurs terrestres est limitée aux zones proches du rivage. En haute mer, des récepteurs satellites sont utilisés pour empêcher les problèmes de transmissions mais ces derniers peuvent tout de même se produire ;
 - Les données brutes sont complexes et demandent de manière générale des pré-traitements lourds pour être utilisables. Des fournisseurs de données privées collectent, nettoient et vendent les données traitées (mais à des prix élevés). Des données pré-traitées sont aussi mises à disposition des Instituts statistiques nationaux sur la *UN Global Platform* ;
 - La taille des données constitue un fort enjeu. En effet, 310 milliards de transmissions sont effectuées chaque année. Une infrastructure adaptée est indispensable pour pouvoir traiter les données brutes ;
+:::
+
+### References
+
+::: {#refs}
 :::
