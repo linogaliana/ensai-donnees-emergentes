@@ -53,7 +53,7 @@ website:
   open-graph: true
 
 
-bibliography: biblio.bib
+bibliography: references.bib
 
 format:
   html:
