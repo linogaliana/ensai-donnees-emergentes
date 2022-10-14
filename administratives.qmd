@@ -79,6 +79,15 @@ Les membres du service statistique public bénéficient d’une disposition impo
 
 L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi n° 51-711 de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi n° 2016 -1321 de 2016 pour une République numérique.
 
+# Exemples 
+
+4 exemples de nature différente:
+
+- la DSN: base de gestion transmise à l'Insee et la DARES pour la production
+- SIRENE: répertoire géré par l'Insee, utilisé par d'autres acteurs
+- Fideli: agrégation et mise en ochérent de plusieurs sources
+- SNDS: mise en cohérence de données de gestion hospitalières et assurance maladie, enjeu encore plus fort de confidentialité
+
 ## La DSN
 
 @Humbert2018
@@ -90,7 +99,7 @@ environ 96  % des entreprises du secteur privé.
 
 satisfaire le plus grand nombre possible d’obligations déclaratives existant dans le champ social au sens large, tout en réduisant le nombre de demandes d’informations distinctes auxquelles sont confrontées les entreprises
 
-## Avant la DNS
+### Avant la DNS
 
 DADS
 déclarations sociales font partie des tâches administratives imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017
@@ -106,7 +115,7 @@ possibilité de correction
 From @Humbert2018
 
 
-## Avantage
+### Avantage
 
 Source unique cohérente entre administrations
 Par exemple, avec la DSN, on est sûr que les employeurs et les salariés sont identifiés de la même façon quel que soit l’organisme destinataire de l’information
@@ -122,7 +131,7 @@ la DSN n’a pas vocation à servir un besoin spécifique, mais au contraire à 
 Adminstrations utilisatrices (Insee, DARES, Pole Emploi, etc.) : Tous ces systèmes d’informations reçoivent une liste spécifique de données, fixée par arrêté selon leurs missions et doivent se synchroniser au fur et à mesure de l’élargissement du périmètre
 Dès 2019, la DSN sera le support du prélèvement à la source pour les salariés.
 
-## Challenge
+### Challenge
 
 Volumétrie conséquente
 
