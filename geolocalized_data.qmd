@@ -82,13 +82,26 @@ Estimation des variations de densité de population présente (nombre de personn
 :::{.callout-note}
 Il ressort de cette méthodologie que l'utilisation de données de téléphonie mobile pour la production de statistiques publiques pose des questions :
 
-- **Question de la qualité** : les données disponibles ne concernent qu'un sous-champ de la population (par exemple les clients d'un opérateur en particulier), ce qui engendre en général des biais de sélection. Dès lors, il est nécessaire d'évaluer la représentativité de ce sous-champ par rapport à la population générale pour s'assurer de la validité (partielle) des résultats;
-- **Question de la perennité** : les données viennent de tiers privés et l'Insee n'a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Dans ce contexte il n'y a pas de garantie que les indicateurs restent comparables au cours du temps. Les questions légales autour des données personnelles sont aussi à prendre en compte sur cette question de la perennité. Aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l'utilisation de données téléphoniques de signalisation pour la statistique publique. Même si elles venaient à le devenir, il n'y a aucune garantie qu'on ne revienne pas quelques années après à la situation actuelle. Ces aspects légaux ramènent aussi à une **question d'éthique**.
+- **Questions sur la qualité** : les données disponibles ne concernent qu'un sous-champ de la population (par exemple les clients d'un opérateur en particulier), ce qui engendre en général des biais de sélection. Dès lors, il est nécessaire d'évaluer la représentativité de ce sous-champ par rapport à la population générale pour s'assurer de la validité (partielle) des résultats;
+- **Questions sur la perennité** : les données viennent de tiers privés et l'Insee n'a donc aucun contrôle sur des possibles changements de format ou de méthode de collection des données. Dans ce contexte il n'y a pas de garantie que les indicateurs restent comparables au cours du temps. 
+- **Questions d'éthique** : avant d'utiliser ces données personnelles, il faut s'assurer que l'usage qui en est fait est proportionné et que la production statistique qui en résulte a une valeur ajoutée pour la population. 
+- **Questions légales** : les aspects légaux autour des données personnelles sont aussi à prendre en compte, en lien d'ailleurs avec les questions d'éthique et les questions sur la pérennité. Aujourd'hui la législation européenne et son application dans la loi française ne sont pas favorables à l'utilisation de données téléphoniques de signalisation pour la statistique publique. Même si elles venaient à le devenir, il n'y a aucune garantie qu'on ne revienne pas quelques années après à la situation actuelle.
 :::
 
 ### Données de réseaux sociaux
 
-Les réseaux sociaux sont une autre source privée très riche d'informations géolocalisées. Twitter propose une API qui permet de récupérer des tweets à partir de requêtes simples à construire. Ainsi, il est possible de récupérer tous les tweets contenant un ou plusieurs mots clés, en excluant les retweets et les tweets sans information de géolocalisation. Tous les tweets ne contiennent pas d'information sur la position de l'appareil utilisé au moment de l'envoi : il faut que l'utilisateur ait activé cette fonctionnalité. On peut avec de telles requêtes de connaître la position et l'heure exactes de l'envoi des tweets - géolocalisés - portant sur un sujet. Malgré les biais de sélection qui peuvent exister (les personnes qui tweetent, et a fortiori les personnes qui tweetent en partageant leur localisation ne constituent a priori pas un échantillon représentatif de la population générale), ...
+Les réseaux sociaux sont une autre source privée très riche d'informations parfois géolocalisées. Les données issues de réseaux sociaux ont potentiellement des applications intéressantes pour la statistique publique :
+  - En complément des données de téléphonie mobile, elles peuvent participer à l'estimation de populations présentes en temps réel, avec un apport particulier pour le tourisme (les touristes sont souvent absents des données de téléphonie mobile et ont tendance à être très actifs sur les réseaux sociaux) ;
+  - Elles peuvent servir à estimer le niveau de bien-être de la population à partir de méthodes d'analyse de sentiment, de manière différenciée géographiquement ;
+  - Elles peuvent servir à analyser l'opinion publique à propos de sujets ou d'évènements particulier. Par exemple, CBS (l'Institution national de statistiques des Pays-Bas) utilise un indicateur de sentiment calculé à partir de données issues de réseaux sociaux pour complémenter un indicateur de confiance des consommateurs lui calculé à partir de données d'enquête [@brakel-17].
+
+Aujourd'hui plusieurs réseaux sociaux fournissent des interfaces pour accéder à leurs données. Par exemple, Twitter propose une API qui permet de récupérer des tweets à partir de requêtes simples à construire. Il est ainsi possible de récupérer tous les tweets contenant un ou plusieurs mots clés, en excluant les retweets et les tweets sans information de géolocalisation. Tous les tweets ne contiennent pas d'information sur la position de l'appareil utilisé au moment de l'envoi : il faut que l'utilisateur ait activé cette fonctionnalité. On peut avec de telles requêtes de connaître la position et l'heure exactes de l'envoi des tweets - géolocalisés - portant sur un sujet.
+
+:::{.callout-note}
+Des forts biais de sélection peuvent exister lorsque l'on exploite les données de réseaux sociaux. Dans le cas de Twitter par exemple, les personnes qui tweetent, et a fortiori les personnes qui tweetent en partageant leur localisation ne constituent a priori pas un échantillon représentatif de la population générale. C'est encore davantage le cas sur un sujet en particulier. A priori, les gens qui communiquent sur ce sujet sont plus souvent concernés directement que la population générale. 
+
+Pour publier des indicateurs relevant de la statistique publique et calculés entièrement à partir de données de réseaux sociaux, il est nécessaire d'adopter un cadre de contrôle qualité très strict, en commençant par dresser une liste exhaustive des différents biais possibles [@olteanu-19].
+:::
 
 ### Données de suivi de navires ou de vols
 
@@ -97,3 +110,19 @@ Les données AIS sont des données de localisation de navires. AIS fait référe
 - Des données sur les caractéristiques des navires : identifiant, nom, type de vaisseau, taille, nationalité, etc. 
 - Des données géospatiales : localisation, vitesse, etc.
 - Des données techniques supplémentaires : source de la transmission, date et heure, etc.
+
+Des applications potentielles impliquant l'utilisation des données AIS existent pour la statistique publique et pourraient être explorées par l'Insee :
+
+- Prévisions à court-terme (*nowcasting*) sur le commerce domestique et/ou international : les données AIS sont disponibles quasiment en temps réel, ce qui les rend adaptées pour faire des prévisions à court-terme. Par exemple, l'ONS (Institut statistique du Royaume-Uni) a étudie en continu l'activité maritime de 10 grands ports britanniques, en se concentrant sur deux indicateurs : le *temps passé au port* et le *trafic total*. Ces indicateurs offrent une mesure rapide du niveau de l'activité de transport maritime, qui est liée au commerce de marchandises. Ils sont à prendre en compte lors de l'élaboration d'indicateurs conjoncturels.
+- De manière similaire, le Fond Monétaire International a estimé des volumes d'échanges commerciaux à partir de données AIS et a constaté une forte corrélation avec des statistiques officielles sur le commerce, au niveau de pays individuels aussi bien qu'au niveau mondial [@cerdeiro-20].
+- Estimation des émissions de gaz à effet de serre liés au transport maritime. En appariant les données AIS avec des données relatives aux types de moteurs et à la consommation de carburant, il est possible de calculer les émissions de chaque navire. Utiliser les données AIS permet de discriminer les transports nationaux des transports internationaux [@imo-20].
+
+:::{.callout-note}
+Défis :
+
+- Des problèmes de qualité existent et demandent des pré-traitements spécifiques :
+  - Données corrompues à cause d'un équipement défectueux ou de conflits lors de la transmission de signaux ;
+  - La couverture des émetteurs-récepteurs terrestres est limitée aux zones proches du rivage. En haute mer, des récepteurs satellites sont utilisés pour empêcher les problèmes de transmissions mais ces derniers peuvent tout de même se produire ;
+- Les données brutes sont complexes et demandent de manière générale des pré-traitements lourds pour être utilisables. Des fournisseurs de données privées collectent, nettoient et vendent les données traitées (mais à des prix élevés). Des données pré-traitées sont aussi mises à disposition des Instituts statistiques nationaux sur la *UN Global Platform* ;
+- La taille des données constitue un fort enjeu. En effet, 310 milliards de transmissions sont effectuées chaque année. Une infrastructure adaptée est indispensable pour pouvoir traiter les données brutes ;
+:::
