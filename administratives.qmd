@@ -2,14 +2,31 @@
 title: "Données administratives"
 ---
 
+La 
+baisse généralisée au niveau
+européen des taux de réponse[^1] [@LuitenHoxde, @beck2022],
+qui accroît les coûts de collecte et
+rend plus difficile celle-ci sur certaines
+sous-populations, notamment les plus jeunes, 
+nécessite de trouver des solutions pour 
+répondre à la demande toujours accrue de 
+statistique officielle. 
+
+[^1]: Par exemple, le taux de réponse a baissé pour les enquêtes en face-à-face Cadre de vie et sécurité de 72 % à 66 % entre
+2012 et 2021. En ce qui concerne SRCV, le taux 
+de réponse est passé de 85 % à 80 % entre 2010 et 2019. Des événements
+ponctuels comme la crise du Covid-19 peuvent de plus avoir des
+effets très forts sur le taux de réponse. 
+Par exemple, en 2020, à la date du 23 avril, le taux de réponse à l’enquête sur la production industrielle en mars, qui sert d'indicateur avancé de l'activité économique,
+était inférieur d’environ 20 points de pourcentage à ce qui est habituellement observé lors d’un mois habituel (voir [blog de l'Insee](https://blog.insee.fr/suivre-la-conjoncture-lorsque-les-entreprises-repondent-moins-aux-enquetes/)).
+
+
 Comme développé dans l'introduction, les données
 administratives sont des données de gestion
 produite par l'administration. 
 
 processus de production statistique et administratif diffèrent.
 
-baisse généralisée des taux de réponse1 et de restrictions budgétaires
-changement de paradigme
 
 
 # Contexte
