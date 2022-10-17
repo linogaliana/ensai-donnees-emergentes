@@ -9,6 +9,8 @@ website:
         file: index.qmd
       - text: "Introduction"
         file: introduction.qmd
+      - text: "Données administratives"
+        file: administratives.qmd
       - text: "Données géolocalisées"
         file: geolocalized_data.qmd
       - text: "Images"
@@ -20,6 +22,9 @@ website:
       - section: "Introduction"
         contents:
           - introduction.qmd
+      - section: "Données administratives"
+        contents:
+          - administratives.qmd
       - section: "Analyse d'images"
         contents:
           - images.qmd
@@ -33,12 +38,12 @@ website:
           - text: Report a Bug
             url:  https://github.com/linogaliana/ensai-donnees-emergentes/issues
   page-navigation: true
-  page-footer: 
-    left: "(c) 2022, Lino Galiana and Tom Seimandi" 
-    right: 
+  page-footer:
+    left: "(c) 2022, Lino Galiana and Tom Seimandi"
+    right:
       - icon: github
         href: https://github.com/linogaliana/ensai-donnees-emergentes
-      - icon: twitter 
+      - icon: twitter
         href: https://twitter.com/
   reader-mode: true
   repo-url: https://github.com/linogaliana/ensai-donnees-emergentes
@@ -48,7 +53,7 @@ website:
   open-graph: true
 
 
-bibliography: biblio.bib
+bibliography: references.bib
 
 format:
   html:

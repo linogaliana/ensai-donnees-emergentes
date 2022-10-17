@@ -1,6 +1,5 @@
 ---
 title: "Images"
-bibliography: references.bib
 ---
 
 ### Introduction
