@@ -46,15 +46,32 @@ administratives, leurs différences avec d'autres sources
 de données et les apports de celles-ci à la production
 de savoir statistique.  
 
+
 # Contexte
 
 
 ## Nature des données
 
-Contrairement aux données statistiques dont le seul but est d’informer,
-leurs consœurs administratives doivent leur existence aux actions qu’elles permettent de déclencher.
+Les données statistiques traditionnelles (sondage ou recensement)
+sont produites pour informer. Cette finalité guide la conception
+de celles-ci, que ce soit au niveau du _design_, des concepts
+mesurés ou des retraitements post-collecte. 
+La logique des données administratives est toute autre.
+Il s'agit de bases dont la finalité de construction est
+la gestion, c'est-à-dire l'enregistrement d'événements
+pour déclencher des actions (remboursement, paiement, etc.). 
 
-bases de données de gestion, toujours susceptibles d’être mises à jour.
+Cet aspect transactionnel de la donnée adminstrative change ainsi 
+le processus de production. Ces bases sont susceptibles d'être mises
+à jour à plusieurs échéances. D'abord, leur structure n'est
+pas figée dans le temps. Selon les événements à enregistrer, la
+structure du fichier de données évoluera. Par exemple, un nouveau
+crédit d'impôt amènera à l'ajout d'une catégorie dans les déclarations
+fiscales ce qui se traduira par un changement du fichier de gestion. 
+A ce premier facteur d'évolution peut s'ajouter des changements à
+plus brève échéance. 
+
+
 
 Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée. Mais elles peuvent aussi découler de déclarations administratives.
 
