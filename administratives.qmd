@@ -69,14 +69,40 @@ structure du fichier de données évoluera. Par exemple, un nouveau
 crédit d'impôt amènera à l'ajout d'une catégorie dans les déclarations
 fiscales ce qui se traduira par un changement du fichier de gestion. 
 A ce premier facteur d'évolution peut s'ajouter des changements à
-plus brève échéance. 
+plus brève échéance. La collecte de données administratives est un
+processus vivant. Les données sont généralement modifiables
+au cours d'un exercice de gestion voire au-delà. La
+donnée n'est stabilisée qu'après plusieurs cycles de gestion
+et sa continuité, au niveau de l'unité statistique, ne va
+pas de soi. Par exemple, une entreprise changeant de 
+SIRENE pour une raison
+liée à un changement administratif (par exemple une fusion)
+ne sera identifiable dans différents millésimes de données
+administratives que si on est en mesure de relier 
+les différents identifiants sous lequel elle apparaît. 
 
+Les données administratives peuvent provenir de plusieurs origines.
+Elles sont en premier lieu issues de processus de gestion interne à l’administration concernée.
+Par exemple, pour être en mesure de gérer les remboursements liés au système de 
+protection sociale français, l'assurance maladie collecte et enregistre de nombreuses
+informations sur les actes médicaux. Cette collecte est automatisée grâce à la carte
+vitale et au système d'information de l'assurance maladie ou passe par des déclarations papiers
+normalisées.
 
+Une seconde source d'origine des données administratives sont les 
+déclarations administratives[^2] [@riviere2018].
+Par exemple, les déclarations fiscales des ménages
+sont annuelles, avec un calendrier déterminé à l'avance (qui dépend du format, papier ou internet). 
+Ce calendrier inclut d'ailleurs des possibilités allongées de retour sur la donnée fournie. 
+L'obligation de certaines déclarations administratives
+se traduit par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites.
+Ceci réduit le risque de non-déclaration ou de déclaration faussée mais ne l’annihile pas non plus.
+Selon la nature de la donnée, ces poursuites peuvent être pénales et les amendes non négligeables. 
 
-Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée. Mais elles peuvent aussi découler de déclarations administratives.
+[^2]: Obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 
-déclaration administrative, c’est l’obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
-Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites... ce qui réduit, sans non plus l’annihiler, le risque de non-déclaration
+Changement mode collecte: automatique via (auto)déclaration
+enjeu normalisation
 
 ## diff avec big data
 
@@ -154,7 +180,9 @@ L’utilisation de déclarations ou de sources administratives à des fins stati
 
 - Economic value: Traditional survey data has little economic value for a data holder/provider in comparison with digital data.
 - Confidentiality and privacy issues naturally arise.
+
 # Exemples 
+
 
 4 exemples de nature différente:
 
@@ -162,6 +190,12 @@ L’utilisation de déclarations ou de sources administratives à des fins stati
 - SIRENE: répertoire géré par l'Insee, utilisé par d'autres acteurs
 - Fideli: agrégation et mise en ochérent de plusieurs sources
 - SNDS: mise en cohérence de données de gestion hospitalières et assurance maladie, enjeu encore plus fort de confidentialité
+
+
+:::{.callout-note}
+## Les autres répertoires de la statistique publique
+
+:::
 
 ## La DSN
 
@@ -227,10 +261,16 @@ Relier le concept administratif à une réalité économique
 
 ## Sirene
 
-:::{.callout-note}
-## Les autres répertoires de la statistique publique
+L’utilité du numéro SIRET est multiple. S’il constitue avant tout la preuve juridique de l’existence d’un établissement, il permet également d’effectuer un certain nombre de démarches commerciales et administratives. 
 
-:::
+Ainsi, il sert à : 
+
+    Émettre des factures, mais aussi des documents commerciaux. En effet, il est obligatoire de faire apparaître le numéro sur chacun de ces documents. En outre, si l’entreprise à un site internet, le numéro doit apparaître dans les mentions légales.
+    Obtenir des informations officielles sur les sociétés. Grâce au SIRET, tout prestataire ou client peut vérifier la fiabilité des données que l’entreprise lui fournit, via une recherche sur internet notamment.
+    Prouver l’existence légale de la compagnie. Ce numéro permet en effet de l’identifier auprès de ses clients, prestataires, co-contractants et par l’administration fiscale.
+    Produire des statistiques à partir de la base SIRENE et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
+
+
 
 
 # References
