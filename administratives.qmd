@@ -33,20 +33,31 @@ Pour cette dernière, la donnée est produite de sorte
 à des fins de production de statistique ou de recherche
 n'est pas le moteur de leur construction. L'exploitation
 de cette donnée est une affaire d'opportunité. 
+Cette perte de contrôle du processus de production, qui
+fait que l'exploitant de la donnée se retrouve en aval
+de son processus de production, a tout de même des bénéfices : 
+l'exhaustivité sur une population cible et
+la plus haute fréquence de ces données. 
+Ceci explique que ces données deviennent de plus en plus importantes
+dans la production de statistique officielle. 
 
-
-
+Ce chapitre revient sur le contexte d'utilisation des données
+administratives, leurs différences avec d'autres sources
+de données et les apports de celles-ci à la production
+de savoir statistique.  
 
 # Contexte
 
 
 ## Nature des données
 
-Contrairement aux données statistiques dont le seul but est d’informer, leurs consœurs administratives doivent leur existence aux actions qu’elles permettent de déclencher.
+Contrairement aux données statistiques dont le seul but est d’informer,
+leurs consœurs administratives doivent leur existence aux actions qu’elles permettent de déclencher.
 
 bases de données de gestion, toujours susceptibles d’être mises à jour.
 
-Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée6. Mais elles peuvent aussi découler de déclarations administratives.
+Les données administratives peuvent provenir de plusieurs origines. Elles sont souvent issues de processus de gestion interne à l’administration concernée. Mais elles peuvent aussi découler de déclarations administratives.
+
 déclaration administrative, c’est l’obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 Cette obligation se traduit en effet par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites... ce qui réduit, sans non plus l’annihiler, le risque de non-déclaration
 
