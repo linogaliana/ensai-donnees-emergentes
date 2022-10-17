@@ -49,7 +49,6 @@ de savoir statistique.
 
 # Contexte
 
-
 ## Nature des données
 
 Les données statistiques traditionnelles (sondage ou recensement)
@@ -98,28 +97,129 @@ L'obligation de certaines déclarations administratives
 se traduit par un pouvoir coercitif, pouvant prendre diverses formes, comme celle d’engager des poursuites.
 Ceci réduit le risque de non-déclaration ou de déclaration faussée mais ne l’annihile pas non plus.
 Selon la nature de la donnée, ces poursuites peuvent être pénales et les amendes non négligeables. 
+L'existence de ces moyens coercitifs permet d'anticiper
+une information exhaustive sur la sous-population concernée par la donnée et
+honnête[^3]. 
 
 [^2]: Obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 
+[^3]: Certaines enquêtes, reconnues d'utilité publique, comme l'enquête
+emploi, le recensement ou encore l'enquête ressources et conditions
+de vie (SRCV), sont obligatoires. Bien que cela permette d'avoir des taux
+de réponse élevés, cela n'assure pas un taux de 100%. Comme cela a été
+évoqué précédemment, le taux de réponse de SRCV 
+est par exemple passé de 85 % à 80 % entre 2010 et 2019. 
+Pour plus d'informations sur les enquêtes obligatoires, voir
+[la description du CNIS](https://www.cnis.fr/obligation-de-reponse/)
+et la liste des enquêtes concernées 
+parmi [les enquêtes auprès des particuliers](https://www.insee.fr/fr/information/5390996).
+
+Si les données administratives sont devenues centrales dans le champ
+de la production statistique, c'est certes de par leur nature
+exhaustive mais aussi du fait de leur disponibilité à faible coût marginal.
+Les données administratives étant collectées et centralisées dans un 
+système informatique à des fins de gestion, leur mise à disposition
+pour d'autres usages, s'il soulève certains enjeux sur lesquels
+nous reviendrons comme les questions de confidentialité,
+est marginalement peu coûteux. L'utilisation de ces données
+est ainsi une affaire d'opportunité: comme ces données
+sont disponibles et, sous un certain cadre juridique et technique,
+peuvent être ré-utilisables à d'autres fins, si elles fournissent 
+une information de qualité, il est utile pour la production
+statistique de les exploiter.
+
+## Quelle différence avec les autres sources de données numériques ?
+
+Cette propriété des données administratives qu'est le coût
+marginal faible 
+rapproche celles-ci des traces numériques.
+Les entreprises du numérique 
+ont pu centrer leur modèle économique
+autour de la collecte et de la valorisation
+de données justement parce que la collecte
+de nouvelles informations est d'un cût marginal 
+nul. 
+Il en va de même avec les données de gestion: la collecte
+d'une information supplémentaire sur une unité ou d'une unité
+supplémentaire n'est pas coûteuse. Dans le monde de la donnée
+numérique, il est certes nécessaire d'engager des investissements
+pour être en mesure de collecter des données de manière massive
+ou mettre à l'échelle un processus de collecte devenu plus
+ambitieux que le plan initial mais la donnée marginale
+ne coûte pas très cher puisque, comme nous allons le voir,
+la collecte de celle-ci est reportée
+sur un tiers. 
+
+Dès lors, la distinction entre données administratives et données
+numériques, telles qu'on peut formaliser le _buzzword_ "big-data",
+apparaît floue. La distinction entre les données "administratives"
+et les données numériques 
+revient en premier lieu à qualifier les données par leur origine.
+La donnée administrative est une donnée produite par
+la sphère administrative. Dans sa nature, son processus de
+production ne diffère pas de celui de la donnée privée. Dans les deux
+cas, un acteur effectue une activité (par exemple déclarer quelque chose)
+et cette activité va être transformée en information plus ou moins 
+normalisée pour intégrer un système d'information et être stockée
+dans les serveurs d'un acteur centralisateur. Dans les deux cas, 
+la personne dont la donnée a été collectée pourra éventuellement 
+corriger l'information et/ou produire de nouvelles activités. 
+
+La différence entre données administratives et données
+privée est ainsi plutôt une différence de degré que de nature. 
+Les données administratives sont généralement collectées à plus faible fréquence.
+Par exemple, le rythme de collecte de nombreuses données est annuel pour 
+correspondre aux rythmes des campagnes fiscales. Mais certaines sources sont
+à des rythmes plus fréquents. Par exemple la DSN, sur laquelle nous reviendrons, 
+est collectée à un rythme annuel. Certaines données sont mêmes enregistrées
+à des rythmes qui n'ont pas grand chose à envier avec les traces numériques
+du _big data_. Par exemple, les systèmes d'information SIVIC et SIDEP, relativement
+celui de suivi des entrées à l'hôpital des personnes malades du Covid et celui des
+tests, étaient mis à jour quotidiennement. De même, le système
+d'information de l'assurance maladie est mis à jour en continu en fonction
+des nouveaux événements qui appellent un remboursement. Bien qu'on n'associe
+pas forcément les données administratives avec une collecte en temps réel, il
+ne s'agit ainsi pas d'un critère les discriminant vis à vis des traces numériques. 
+
+La différence principale, peut-être, entre les données administratives
+et les données privées est que pour les premières, le champ est connu
+par le fait que celles-ci sont issues d'une collecte d'une population
+bien ciblée. Comme indiqué précédemment, comme la collecte de données
+administrative est souvent assortie de prérogatives légales, la population
+cible est généralement bien identifiée. Dans le monde de la donnée privée,
+comme c'est l'activité qui génère la donnée, le champ dépend de la base
+d'utilisateurs. Selon le type de données, celle-ci peut être plus ou
+moins large. Même parmi les données privées où les populations sont
+les plus larges, la couverture de la population n'est pas parfaite.
+Par exemple, 
+les smartphones sont largement
+partagés dans la population. Néanmoins, cette
+technologie a un moindre taux de pénétration dans
+certaines population, notamment les plus
+agées. De plus, les opérateurs ont des parts de marché potentiellement 
+hétérogènes (en fonction de critères d'âge ou territoriaux).
+Pour les opérateurs,
+il est difficile d'évaluer le champ de leur clientèle puisque cette
+information nécessite une enquête, et ainsi souffre de taux de réponse
+imparfaits ou de réponses incorrectes. 
+Le champ est donc incertain
+puisqu'il n'est pas possible pour les producteurs
+de données privées d'apparier de manière automatique ces données 
+avec les données administratives.
+Même s'il n'est pas toujours possible d'apparier des données administratives
+entre elles pour des raisons légales, le fait de fournir des informations
+communes dans différentes sources (état civil voire NIR)
+à un même acteur (l'Etat), facilite l'association entre les sources
+lorsque celle-ci est autorisée. 
+
+
+## Processus de production
+
+Avec les données administratives, 
+un 
 Changement mode collecte: automatique via (auto)déclaration
 enjeu normalisation
 
-## diff avec big data
-
-Le terme «  administrative  » revient d’abord à qualifier les données par leur origine, et plus que cela par leur statut. Il signifie qu’elles viennent de la sphère administrative en général
-
-différence de degré plutôt que de nature
-différence principale: avec les données administratives, on connaît le champ 
-par le fait qu'elle sont issues de collecte d'une population bien ciblée
-vs
-big data: population sous-jacente inconnue, basée sur la part de marché
-du service. Pas de possibilité d'apparier de manière automatique ces données 
-avec les données administratives
-+ en principe: une observation par unité par "vague" administrative vs 
-multiples observaions d'un individu dans big data (une par activité)
-5V du big data
-
-## Processus de production
 
 rôle du centralisateur
 
