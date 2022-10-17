@@ -272,17 +272,33 @@ enjeu normalisation
 
 ## Usage de la donnée administrative
 
-L’usage peut aller au-delà de l’administration concernée.
-la déclaration sociale nominative est utilisée par la DGFIP, les institutions de prévoyance, les organismes de retraite, l’Acoss, pour leurs propres usages de gestion ; les données de SIRENE servent de référence, de preuve pour les entreprises, elles sont utilisées par les chambres de commerce et d’industrie ou par les greffes des tribunaux de commerce.
+L'usage de ces données est de deux nature: l'usage à des fins
+de gestion (la finalité pour laquelle elles sont construites)
+et l'usage à des fins d'analyse (la finalité fortuite).
+Ces peut aller au-delà de l’administration concernée.
+Par exemple,
+la déclaration sociale nominative n'est
+pas utilisée exclusivement par le Ministère du Travail mais aussi
+par la DGFIP, les institutions de prévoyance, les organismes de retraite, l’Acoss, pour leurs propres usages de gestion ; les données de SIRENE servent de référence, de preuve pour les entreprises, elles sont utilisées par les chambres de commerce et d’industrie ou par les greffes des tribunaux de commerce [@riviere2018].
+
+Cette situation change la place du statisticien
+dans le processus de production de la statistique officielle. 
+Il convient de transformer en aval les données pour répondre 
+aux besoins de l'analyse statistique. 
+Cela implique un contrôle qualité ex-post, éventuellement
+un travail de reconstitution et de consolidation. 
+
+Cette situation change également la place des chercheurs dans
+le processus de production de la donnée. Comme le statisticien,
+le chercheur n'est plus associé à l'amont de la production de données.
+Cependant celui-ci est, généralement, encore plus en aval que le statisticien public. 
+Il reçoit les données généralement consolidées, anonymisées et éventuellement appariées
+entre différentes sources. A cet égard, les données administratives
+scandinaves sont parmi les données les plus utilisées par les chercheurs sur
+le marché du travail car elles constituent une source depuis longtemps 
+centralisée et mise à disposition de manière anonymisée. 
 
 
-photo à un instant t, mais aussi d’une sélection des variables et des unités qui l’intéressen
-
-Un travail de reconstitution et même de consolidation,
-TRANSFORMER LES DONNÉES POUR RÉPONDRE AUX BESOINS DE LA STATISTIQUE
-
-Partage aux chercheurs
-Norway, Finland and Sweden an effective infrastructure is already in place for the linkage and sharing of administrative data for research purposes
 
 ## Avantages et inconvénients
 
