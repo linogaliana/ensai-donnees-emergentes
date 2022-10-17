@@ -49,6 +49,10 @@ de savoir statistique.
 
 # Contexte
 
+> In this world, nothing is certain except death and taxes
+> 
+> Benjamin Franklin
+
 ## Nature des données
 
 Les données statistiques traditionnelles (sondage ou recensement)
@@ -232,18 +236,37 @@ sans valeur de marché mais avec une valeur sociale.
 
 ## Processus de production
 
-Avec les données administratives, 
-un 
+Le processus de production de la donnée administrative est différent de
+celui de la donnée traditionnelle. La différence
+principale est la place
+centrale d'une autorité gestionnaire, qui centralise la donnée, 
+dans le modèle de production des données administratives [@riviere2018]. 
+Cet acteur doit être distingué de l'administration qui exploite le 
+flux, que ce soit à des fins de gestion ou d'exploitation statistique. 
+
+La Table @tbl-autorites-tbl-autorites-centralisatrices donne quelques
+exemples de plateformes centralisatrices. Ces dernières ne se contentent
+pas de centraliser ou mettre à disposition la donnée, elles ont aussi
+en charge la normalisation de celle-ci à partir de systèmes d'informations
+diverses.
+
+
+| Donnée | Autorité centralisatrice |
+|------|------|
+| DSN    |  Gip-MDS     | 
+| Données hospitalières    | ATIH-10    |
+| SI gestion eaux    | SANDRE12   |
+
+: Exemples d'autorités centralisatrices [@riviere2018] {#tbl-autorites-centralisatrices}
+
 Changement mode collecte: automatique via (auto)déclaration
 enjeu normalisation
 
-
-rôle du centralisateur
+Par exemple, l'image ci-dessous, empruntée à XXX,
+résume la place du GIP-MDS dans le processus de 
+production de la DSN:
 
 ![](./img/images/dsn-schema.png)
-
---> transformer en tableau
-C’est typiquement le rôle du Gip-MDS8 avec la plate-forme net-entreprises qui permet d’effectuer des déclarations sociales comme la Déclaration sociale nominative (DSN)9. Mais on peut aussi citer l’ATIH10 avec la plate-forme e-PMSI11, conçue pour le recueil et l’analyse des informations sur l’hospitalisation, ou le SANDRE12, qui garantit l’interopérabilité des systèmes d’information relatifs à l’eau (même si dans les deux cas le formalisme déclaratif est moins affirmé que pour la DSN). Gérer de telles infrastructures de recueil d’information de façon industrielle est un métier en soi qui requiert une grande technicité (informatique, maîtrise d’ouvrage, droit), une organisation rodée et réactive, et une gouvernance incluant organismes utilisateurs et contributeurs. Les administrations utilisatrices sont par exemple les organismes fiscaux ou sociaux dans le cas des déclarations sociales, la Caisse Nationale d’Assurance Maladie (Cnam) et les hôpitaux dans le cas des données PMSI, l’Agence Française pour la Biodiversité ou les Agences de l’Eau dans le cas du SANDRE.
 
 
 ## Usage de la donnée administrative
