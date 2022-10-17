@@ -212,6 +212,23 @@ communes dans différentes sources (état civil voire NIR)
 à un même acteur (l'Etat), facilite l'association entre les sources
 lorsque celle-ci est autorisée. 
 
+Les 5V du big-data, initialement listés dans un rapport de MacKinsey,
+ne sont en effet pas l'apanage des données privées. 
+Il y a peut-être une différence de degré avec le big-data mais certainement pas 
+de nature:
+
+- _Volume_: certaines données administratives représentent des volumes conséquents.
+La DSN  représente ainsi plus d'1To de données par an ;
+- _Vélocité_: certaines données, notamment celles de l'assurance maladie, sont à haute fréquence ;
+- _Variété_: l'Etat collecte et exploite des données de nature très différente ;
+- _Véracité_: les données collectées par l'Etat ne sont pas à l'abri d'erreurs mais ces dernières,
+qu'elles soient volontaires ou non, pouvant être couteuses, les données sont normalement de meilleure
+qualité que celles auto-déclarées sans contrôle ex-post ;
+- _Valeur_: les données collectées par l'Etat sont d'une grande valeur même si elles ne sont pas
+monétisées. La valorisation par l'Etat n'est bien-sûr pas individuelle mais la collecte de données
+qui sont ensuite agrégées permet de créer une statistique publique, qui est un bien public, 
+sans valeur de marché mais avec une valeur sociale.
+
 
 ## Processus de production
 
