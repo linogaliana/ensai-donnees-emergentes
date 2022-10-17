@@ -13,7 +13,7 @@ répondre à la demande toujours accrue de
 statistique officielle. 
 
 [^1]: Par exemple, le taux de réponse a baissé pour les enquêtes en face-à-face Cadre de vie et sécurité de 72 % à 66 % entre
-2012 et 2021. En ce qui concerne SRCV, le taux 
+2012 et 2021. En ce qui concerne SRCV (statistiques sur les ressources et les conditions de vie), le taux 
 de réponse est passé de 85 % à 80 % entre 2010 et 2019. Des événements
 ponctuels comme la crise du Covid-19 peuvent de plus avoir des
 effets très forts sur le taux de réponse. 
@@ -24,8 +24,16 @@ Par exemple, en 2020, à la date du 23 avril, le taux de réponse à l’enquêt
 Comme développé dans l'introduction, les données
 administratives sont des données de gestion
 produite par l'administration. 
+Le processus de production statistique, où la collecte
+de donnée est construite de manière à mesurer
+le plus objectivement possible un phénomène cible, 
+diffère du processus de production administratif. 
+Pour cette dernière, la donnée est produite de sorte
+à faciliter la gestion. L'exploitation de celle-ci 
+à des fins de production de statistique ou de recherche
+n'est pas le moteur de leur construction. L'exploitation
+de cette donnée est une affaire d'opportunité. 
 
-processus de production statistique et administratif diffèrent.
 
 
 
