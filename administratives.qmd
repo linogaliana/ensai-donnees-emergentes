@@ -244,7 +244,7 @@ dans le modèle de production des données administratives [@riviere2018].
 Cet acteur doit être distingué de l'administration qui exploite le 
 flux, que ce soit à des fins de gestion ou d'exploitation statistique. 
 
-La Table @tbl-autorites-tbl-autorites-centralisatrices donne quelques
+La Table @tbl-autorites-centralisatrices donne quelques
 exemples de plateformes centralisatrices. Ces dernières ne se contentent
 pas de centraliser ou mettre à disposition la donnée, elles ont aussi
 en charge la normalisation de celle-ci à partir de systèmes d'informations
@@ -259,14 +259,15 @@ diverses.
 
 : Exemples d'autorités centralisatrices [@riviere2018] {#tbl-autorites-centralisatrices}
 
-Changement mode collecte: automatique via (auto)déclaration
-enjeu normalisation
-
 Par exemple, l'image ci-dessous, empruntée à XXX,
 résume la place du GIP-MDS dans le processus de 
 production de la DSN:
 
 ![](./img/images/dsn-schema.png)
+
+Changement mode collecte: automatique via (auto)déclaration
+enjeu normalisation
+
 
 
 ## Usage de la donnée administrative
