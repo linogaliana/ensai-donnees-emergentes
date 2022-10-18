@@ -1,0 +1,12 @@
+---
+title: "Données textuelles et non structurées"
+---
+
+
+webscraping, réseaux sociaux, champs textuels (enquête, production automatisée, données privées), modèles de langage (GPT-3) et tchatbot 
+
+
+# References
+
+::: {#refs}
+:::
