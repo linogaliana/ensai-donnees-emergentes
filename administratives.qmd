@@ -407,31 +407,84 @@ centralisée et mise à disposition de manière anonymisée.
 
 
 
-## Avantages et inconvénients
+## En conclusion, quels avantages et inconvénients ?
 
-avantages:
-- exhaustivité
-- automatisation = plus haute fréquence
-- moins de biais de réponse (mais pas absent, exemple déclaration fiscale même si
-peut avoir plus de conséquences)
+La production et l'usage de données administratives
+se sont généralisés. La numérisation croissante
+de l'économie est amené à confirmer cette 
+tendance. L'utilisation par la statistique
+publique de données privées, sous leur forme
+structurée, n'est qu'un prolongement de cette
+dynamique. Ces dernières permettent d'enrichir
+l'information dont dispose l'administration
+avec des informations collectées dans
+le cadre d'activités économiques qui n'ont
+pas lieu avec l'administration.
 
-inconvénients:
+Les avantages des données administratives sont multiples. 
+En premier lieu, la collecte automatisée de celle-ci,
+associée à un pouvoir public coercitif, permet d'atteindre
+sur un champ d'unités statistiques bien définies (usuellement
+par le biais d'un décret), une forme d'exhaustivité.
+Cette dernière permet de construire des statistiques plus 
+fines. Si aujourd'hui il est possible pour des chercheurs
+de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty...), 
+c'est parce que l'aspect exhaustif des données permet
+d'avoir des groupements suffisamment nombreux pour assurer la confidentialité
+de ces groupes. 
 
-- pas de contrôle du champ et de la définition du concept
-toutes les étapes ainsi décrites sont sous la responsabilité du concentrateur, et échappent donc au service statistique. Champ, données, formulaire, tout cela peut évoluer dans le temps, sans que le statisticien ait le moindre contrôle sur ces aspects.
+Une fois payé le coût d'investtisement pour automatiser la production statistique
+à partir de données de gestion, les données administratives
+ouvrent la voie à la production à plus haute fréquence
+de statistiques officielles.
+La production annuelle ou infra-annuelle de statistiques
+n'est possible qu'avec un nombre restreint d'enquêtes, dont
+les résultats peuvent être connus avec retard. 
+La publication quotidienne par le service statistique du Ministère de la Santé
+(la DREES) et Santé Publique France d'indicateurs sur la pandémie
+est un bon exemple de l'intérêt de ces données. Ces dernières ont permis
+un suivi très fin par la puissance publique mais aussi par la société civile des
+évolutions de l'épidémie. 
 
-- metadonnees (salgado)
-data such as administrative and digital data generated without statistical structural metadata embrace variables with a faint connection with target indicators and aggregates.
-The first determining factor for the differences in these data sources is the presence/absence of statistical metadata, i.e. metadata for statistical purposes. Not only is it relevant to understand what this means but also especially to identify the reason why this is introducing differences. Data such as survey data generated with statistical structural metadata embrace variables following strict definitions directly related to target indicators and aggregates under analysis (unemployment rates, price indices, tourism statistics, . . . ). These definitions are operationalised in careful designs of questionnaire items. Data are processed using survey methodology, which provides a rigorous inferential framework connecting data sets with target populations at stake.
-non-negligible amount of preprocessing is required prior to incorporate digital data into the statistical production process.
-@salgado
+Un autre avantage des données administratives est que les informations 
+qui sont disponibles dans celles-ci sont certes diverses (nous reviendrons
+sur cela dans le prochain chapitre à travers quelques exemples) mais elles sont,
+sur certains champs, très fiables. Elles souffrent normalement moins de biais
+de réponses même si elles n'en sont pas exemptées (les déclarations erronées
+à l'administration fiscale existent, qu'il s'agisse d'un comportement volontaire
+ou non). 
 
-- plus de travail en aval (mais moins en amont une fois l'investissement sur
-l'automatisation de la collecte et du retraitement fait)
-contrôle qualité (différent de celui du gestionnaire)
-transformation de données (ressemble à du post-collecte)
-redéfinition de certains concepts à partir de plusieurs champs
-
+Ces données soulèvent de nouveaux défis pour la statistique publique. 
+En premier lieu, elles amènent à redéfinir le rôle du métier
+dans le processus de production de la donnée. Ceci est vrai dans le
+monde de la donnée administrative mais aussi dans le domaine des
+données privées. 
+Comme l'utilisateur de données ne contrôle pas le champ ou la
+définition du concept mesuré, c'est le concentrateur, cet acteur
+dont l'activité est spécialisée autour de la collecte et de 
+la gestion du flux, qui intervient à cet étape. Il peut ainsi
+être amené à faire évoluer le champ, la définition du phénomène
+mesuré ou encore le formulaire sans
+que l'analyste de donnée n'ait son mot à dire.
+Pour reprendre l'exemple des données quotidiennes, l'apparition de
+variants à plusieurs reprises a amené à des évolutions, parfois
+sans préavis, du type de donnée collectée, enregistrée.
+Les données déjà collectées n'ayant pas vocation à intégrer
+ces informations qui n'avaient pas de sens au moment de la collecte,
+c'est à l'analyste de données de faire des choix méthodologiques pour
+reconstruire une série cohérente.
+Le statisticien, parce qu'il intervient plus en aval, change donc de rôle.
+Les données administratives n'étant pas construites pour mesurer un
+phénomène qui a du sens pour le statisticien public (ou l'analyste de la 
+donnée privée), c'est à lui de reconstruire à partir de l'information
+de gestion la réalité statistique derrière [@salgado]. Le travail
+de l'analyse de données va au donc au delà de la simple reconstruction
+de variable, ou du contrôle qualité, il est également nécessaire
+de réfléchir au concept mesuré pour ne pas construire d'"artefact", 
+au sens de Bourdieu. 
+Cette problématique se pose, de la même manière,
+à la recherche et à l'exploitation
+de données privées.
 
 
 # References
