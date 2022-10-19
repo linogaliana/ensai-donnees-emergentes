@@ -234,6 +234,70 @@ qui sont ensuite agrégées permet de créer une statistique publique, qui est u
 sans valeur de marché mais avec une valeur sociale.
 
 
+Finalement, il y a peu de différence entre les données administratives
+et certaines données privées disponibles sous forme 
+structurée. Par exemple, les données générées par les paiements par
+cartes bancaires (données du GIE CB ) <!---- citer des publis ----->
+ne sont pas d'une nature très différente de données
+administratives. Comme celles-ci, il s'agit de données
+structurées issues d'un organisme centralisateur (le GIE CB)
+et mises à disposition consolidées pour la statistique publique. 
+
+### Une donnée plus sensible
+
+L'aspect exhaustif, sur un certain champ d'unités et d'informations
+de gestion,
+des données
+administratives peut les rendre, au niveau individuel, assez sensibles. 
+La question de la confidentialité et de la sensibilité
+des données fournie à l'administration n'est pas nouvelle,  
+il s'agit de la raison d'être du secret statistique défini dans
+l'une des lois les plus importantes de la statistique
+publique, à savoir la loi de 1951.
+Les informations fournies dans le cadre de certaines enquêtes peuvent
+être sensibles (informations sur le revenu ou le patrimoine, la santé,
+l'appartenance à certains groupes sociaux...).
+Cependant, l'aspect non exhaustif des enquêtes rend plus difficile 
+la réidentification après la phase d'anonymisation.
+Avec les 
+données administratives, l'information fournie peut parfois être
+moins précise mais le caractère exhaustif de celles-ci fait
+qu'en combinant plusieurs sources de données la réindeitification
+est facilitée. 
+
+La question de la confidentialité est donc, au même titre que pour
+les données privées, devenu un enjeu dans le domaine des données
+administratives. Il est à noter que par rapport aux données
+privées cette question ne se pose pas au même niveau.
+Au niveau de la collecte de données, c'est-à-dire de la
+transformation d'une activité en donnée de gestion, là
+où l'utilisateur d'un service numérique bénéficie d'une
+relative liberté dans les données collectées du fait du RGPD, 
+ce n'est pas le cas pour l'utilisateur d'un service
+géré par l'Etat. Ce privilège de l'Etat s'appuie sur des
+décrets qui définissent des missions de service public.
+Cependant, au niveau des traitements mis en oeuvre, 
+du stockage puis de la diffusion de la donnée,
+des conditions restrictives s'appliquent aussi
+à l'Etat. 
+Exemple: SNDS
+
+
+:::{.callout-note}
+
+## Cadre légal
+
+Cet encadré résume des éléments juridiques par @isnard2018
+
+Les membres du service statistique public (SSP)
+bénéficient d’une disposition importante qui facilite énormément le travail du statisticien.
+Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la __loi de 1951__. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge des répondants.
+
+L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi pour une République numérique (2016).
+
+:::
+
+
 ## Processus de production
 
 Le processus de production de la donnée administrative est différent de
@@ -281,6 +345,48 @@ la déclaration sociale nominative n'est
 pas utilisée exclusivement par le Ministère du Travail mais aussi
 par la DGFIP, les institutions de prévoyance, les organismes de retraite, l’Acoss, pour leurs propres usages de gestion ; les données de SIRENE servent de référence, de preuve pour les entreprises, elles sont utilisées par les chambres de commerce et d’industrie ou par les greffes des tribunaux de commerce [@riviere2018].
 
+### Un usage accru pour apparier des sources
+
+Certaines sources administratives ont un rôle
+particulier dans le processus de production
+statistique car elle permettent d'identifier
+des unités statistiques dans plusieurs sources. 
+Le Répertoire national d’identification des personnes physiques (RNIPP),
+le répertoire Sirene pour les entreprises
+ou encore XXX pour les logements, sont 
+des sources qui permettent de relier des unités
+statistiques entre plusieurs sources. 
+On parle d'appariements pour désigner ce type 
+d'opérations où plusieurs sources de données
+sont associées grâce à une information
+commune. Cela peut se faire sur la base d'une 
+information exacte, en général un identifiant
+unique fourni par un des référentiels,
+ou de manière floue à partir d'informations
+non uniques mais qui, combinées, peuvent aider 
+à identifier une unité (nom, raison sociale d'une
+entreprise, adresse, etc.). 
+
+Ces répertoires administratifs
+sont ainsi des sources
+devenues centrales dans le processus
+de production statistique. Ils permettent
+d'enrichir d'autres sources administratives,
+ou des enquêtes, d'informations administratives.
+Ces dernières peuvent ainsi permettre d'alléger
+certains questionnaires d'enquêtes ou de 
+concentrer ceux-ci sur des informations qui
+ne sont pas disponibles dans les sources
+administratives.
+
+importance pour appariements (CSNS)
+https://www.insee.fr/fr/information/5388962
+Enjeu du NIR haché
+
+
+
+### Un changement de la place de l'analyste de la donnée
+
 Cette situation change la place du statisticien
 dans le processus de production de la statistique officielle. 
 Il convient de transformer en aval les données pour répondre 
@@ -300,134 +406,85 @@ centralisée et mise à disposition de manière anonymisée.
 
 
 
-## Avantages et inconvénients
 
-avantages:
-- exhaustivité
-- automatisation = plus haute fréquence
-- moins de biais de réponse (mais pas absent, exemple déclaration fiscale même si
-peut avoir plus de conséquences)
+## En conclusion, quels avantages et inconvénients ?
 
-inconvénients:
+La production et l'usage de données administratives
+se sont généralisés. La numérisation croissante
+de l'économie est amené à confirmer cette 
+tendance. L'utilisation par la statistique
+publique de données privées, sous leur forme
+structurée, n'est qu'un prolongement de cette
+dynamique. Ces dernières permettent d'enrichir
+l'information dont dispose l'administration
+avec des informations collectées dans
+le cadre d'activités économiques qui n'ont
+pas lieu avec l'administration.
 
-- pas de contrôle du champ et de la définition du concept
-toutes les étapes ainsi décrites sont sous la responsabilité du concentrateur, et échappent donc au service statistique. Champ, données, formulaire, tout cela peut évoluer dans le temps, sans que le statisticien ait le moindre contrôle sur ces aspects.
+Les avantages des données administratives sont multiples. 
+En premier lieu, la collecte automatisée de celle-ci,
+associée à un pouvoir public coercitif, permet d'atteindre
+sur un champ d'unités statistiques bien définies (usuellement
+par le biais d'un décret), une forme d'exhaustivité.
+Cette dernière permet de construire des statistiques plus 
+fines. Si aujourd'hui il est possible pour des chercheurs
+de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty...), 
+c'est parce que l'aspect exhaustif des données permet
+d'avoir des groupements suffisamment nombreux pour assurer la confidentialité
+de ces groupes. 
 
-- metadonnees (salgado)
-data such as administrative and digital data generated without statistical structural metadata embrace variables with a faint connection with target indicators and aggregates.
-The first determining factor for the differences in these data sources is the presence/absence of statistical metadata, i.e. metadata for statistical purposes. Not only is it relevant to understand what this means but also especially to identify the reason why this is introducing differences. Data such as survey data generated with statistical structural metadata embrace variables following strict definitions directly related to target indicators and aggregates under analysis (unemployment rates, price indices, tourism statistics, . . . ). These definitions are operationalised in careful designs of questionnaire items. Data are processed using survey methodology, which provides a rigorous inferential framework connecting data sets with target populations at stake.
-non-negligible amount of preprocessing is required prior to incorporate digital data into the statistical production process.
-@salgado
+Une fois payé le coût d'investtisement pour automatiser la production statistique
+à partir de données de gestion, les données administratives
+ouvrent la voie à la production à plus haute fréquence
+de statistiques officielles.
+La production annuelle ou infra-annuelle de statistiques
+n'est possible qu'avec un nombre restreint d'enquêtes, dont
+les résultats peuvent être connus avec retard. 
+La publication quotidienne par le service statistique du Ministère de la Santé
+(la DREES) et Santé Publique France d'indicateurs sur la pandémie
+est un bon exemple de l'intérêt de ces données. Ces dernières ont permis
+un suivi très fin par la puissance publique mais aussi par la société civile des
+évolutions de l'épidémie. 
 
-- plus de travail en aval (mais moins en amont une fois l'investissement sur
-l'automatisation de la collecte et du retraitement fait)
-contrôle qualité (différent de celui du gestionnaire)
-transformation de données (ressemble à du post-collecte)
-redéfinition de certains concepts à partir de plusieurs champs
+Un autre avantage des données administratives est que les informations 
+qui sont disponibles dans celles-ci sont certes diverses (nous reviendrons
+sur cela dans le prochain chapitre à travers quelques exemples) mais elles sont,
+sur certains champs, très fiables. Elles souffrent normalement moins de biais
+de réponses même si elles n'en sont pas exemptées (les déclarations erronées
+à l'administration fiscale existent, qu'il s'agisse d'un comportement volontaire
+ou non). 
 
-## Cadre légal
-
-@isnard2018
-
-Les membres du service statistique public bénéficient d’une disposition importante qui facilite énormément le travail du statisticien. Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la loi du 7 juin 1951. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge des répondants.
-
-L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi n° 51-711 de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi n° 2016 -1321 de 2016 pour une République numérique.
-
-## Autres différences avec les données classiques
-
-- Economic value: Traditional survey data has little economic value for a data holder/provider in comparison with digital data.
-- Confidentiality and privacy issues naturally arise.
-
-# Exemples 
-
-
-4 exemples de nature différente:
-
-- la DSN: base de gestion transmise à l'Insee et la DARES pour la production
-- SIRENE: répertoire géré par l'Insee, utilisé par d'autres acteurs
-- Fideli: agrégation et mise en ochérent de plusieurs sources
-- SNDS: mise en cohérence de données de gestion hospitalières et assurance maladie, enjeu encore plus fort de confidentialité
-
-
-:::{.callout-note}
-## Les autres répertoires de la statistique publique
-
-:::
-
-## La DSN
-
-:::{.callout-note}
-## Les DADS et la DSN
-
-https://www.insee.fr/fr/metadonnees/source/serie/s1163
-https://www.insee.fr/fr/information/3647025?sommaire=3647035
-:::
-
-
-
-@Humbert2018
-@Renne2018
-
-adossant la collecte des données au processus générateur de la collecte des cotisations sociales, c’est-à-dire le processus de paie, elle garantit une bien meilleure qualité de l’information recueillie.
-projet de simplification administrative qui s’est étalé sur près de dix ans.
-environ 96  % des entreprises du secteur privé.
-
-satisfaire le plus grand nombre possible d’obligations déclaratives existant dans le champ social au sens large, tout en réduisant le nombre de demandes d’informations distinctes auxquelles sont confrontées les entreprises
-
-### Avant la DNS
-
-DADS
-déclarations sociales font partie des tâches administratives imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017
-
-Les déclarations sociales reposaient sur des formulaires Cerfa dont le contenu était fixé par les textes fondant la collecte des données utiles aux organismes de protection sociale et à l’administration pour l’exercice de leurs missions. Non seulement les déclarants étaient amenés à fournir plusieurs fois la même information, mais ils devaient surtout fournir une information qui n’était pas naturellement produite par leur système de gestion, ce qui était source d’incohérences et d’erreurs dans les déclarations. La DSN met en œuvre une logique fondamentalement différente : elle s’approche au plus près du fait générateur des rémunérations et cotisations sociales dans le domaine de la protection sociale, la paie. Elle repose sur un modèle unique de cette dernière et un échange de données primaires de gestion entre l’émetteur, qui fait la paie, et tous les organismes et administrations qui ont besoin de ces données sociales pour recouvrer des cotisations et servir des droits. Elle opère donc un déplacement de la charge de traitement des données de l’amont (l’entreprise déclarante) vers l’aval
-
-principe clé : chaque salarié de l’établissement déclaré doit apparaître dans la DSN.
-
-déclaration mensuelle unique, reflet de la paie M-1
-possibilité de correction
-
-![](img/images/dsn-diff.png)
-From @Humbert2018
-
-
-### Avantage
-
-Source unique cohérente entre administrations
-Par exemple, avec la DSN, on est sûr que les employeurs et les salariés sont identifiés de la même façon quel que soit l’organisme destinataire de l’information
-[@Rennes2018]
-
-Réduction charge pour entreprises ("dites le nous bien une seule fois")
-ex @Rennes2018: Par exemple, depuis janvier 2018, les entreprises n’ont plus obligation de fournir leur effectif salarié de fin de période, celui-ci pouvant être recalculé directement par les organismes destinataires à partir des informations individuelles transmises sur les salariés.
-
-Données mensuelle: meilleur suivi des changements infra-annuels
-Auparavant, les entreprises transmettaient des données multiples à diverses échéances et à différents organismes, globalisées par établissement.
-
-la DSN n’a pas vocation à servir un besoin spécifique, mais au contraire à couvrir différents usages.
-Adminstrations utilisatrices (Insee, DARES, Pole Emploi, etc.) : Tous ces systèmes d’informations reçoivent une liste spécifique de données, fixée par arrêté selon leurs missions et doivent se synchroniser au fur et à mesure de l’élargissement du périmètre
-Dès 2019, la DSN sera le support du prélèvement à la source pour les salariés.
-
-### Challenge
-
-Volumétrie conséquente
-
-DSN transfère une partie de la charge des entreprises vers les systèmes d’information en aval.
-Volumétrie: environ 1To par an, sans la fonction publique
-
-Relier le concept administratif à une réalité économique
-éviter l'"artefact" au sens de Bourdieu
-
-## Sirene
-
-L’utilité du numéro SIRET est multiple. S’il constitue avant tout la preuve juridique de l’existence d’un établissement, il permet également d’effectuer un certain nombre de démarches commerciales et administratives. 
-
-Ainsi, il sert à : 
-
-    Émettre des factures, mais aussi des documents commerciaux. En effet, il est obligatoire de faire apparaître le numéro sur chacun de ces documents. En outre, si l’entreprise à un site internet, le numéro doit apparaître dans les mentions légales.
-    Obtenir des informations officielles sur les sociétés. Grâce au SIRET, tout prestataire ou client peut vérifier la fiabilité des données que l’entreprise lui fournit, via une recherche sur internet notamment.
-    Prouver l’existence légale de la compagnie. Ce numéro permet en effet de l’identifier auprès de ses clients, prestataires, co-contractants et par l’administration fiscale.
-    Produire des statistiques à partir de la base SIRENE et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
-
-
+Ces données soulèvent de nouveaux défis pour la statistique publique. 
+En premier lieu, elles amènent à redéfinir le rôle du métier
+dans le processus de production de la donnée. Ceci est vrai dans le
+monde de la donnée administrative mais aussi dans le domaine des
+données privées. 
+Comme l'utilisateur de données ne contrôle pas le champ ou la
+définition du concept mesuré, c'est le concentrateur, cet acteur
+dont l'activité est spécialisée autour de la collecte et de 
+la gestion du flux, qui intervient à cet étape. Il peut ainsi
+être amené à faire évoluer le champ, la définition du phénomène
+mesuré ou encore le formulaire sans
+que l'analyste de donnée n'ait son mot à dire.
+Pour reprendre l'exemple des données quotidiennes, l'apparition de
+variants à plusieurs reprises a amené à des évolutions, parfois
+sans préavis, du type de donnée collectée, enregistrée.
+Les données déjà collectées n'ayant pas vocation à intégrer
+ces informations qui n'avaient pas de sens au moment de la collecte,
+c'est à l'analyste de données de faire des choix méthodologiques pour
+reconstruire une série cohérente.
+Le statisticien, parce qu'il intervient plus en aval, change donc de rôle.
+Les données administratives n'étant pas construites pour mesurer un
+phénomène qui a du sens pour le statisticien public (ou l'analyste de la 
+donnée privée), c'est à lui de reconstruire à partir de l'information
+de gestion la réalité statistique derrière [@salgado]. Le travail
+de l'analyse de données va au donc au delà de la simple reconstruction
+de variable, ou du contrôle qualité, il est également nécessaire
+de réfléchir au concept mesuré pour ne pas construire d'"artefact", 
+au sens de Bourdieu. 
+Cette problématique se pose, de la même manière,
+à la recherche et à l'exploitation
+de données privées.
 
 
 # References
