@@ -49,16 +49,60 @@ Ce chapitre propose un panorama très incomplet de l'apport
 des données non structurées, principalement textuelles, 
 pour la statistique et l'analyse de données. Nous évoquerons
 plusieurs sources ou méthodes de collecte. Nous ferons
-quelques
+quelques détours par des exemples pour aller plus
+loin.
 
 
 webscraping, réseaux sociaux, champs textuels (enquête, production automatisée, données privées), modèles de langage (GPT-3) et tchatbot 
 
 # Webscraping
 
+
+## Présentation
+
+
 Le _webscraping_ est une méthode de collecte de données qui repose
 sur le moissonnage d'objets à grande dimension (des pages web)
 afin d'en extraire des informations ponctuelles (du texte, des nombres...).
+
+Le [webscraping](https://fr.wikipedia.org/wiki/Web_scraping) désigne les techniques d'extraction du contenu des sites internet. C'est une pratique très utile pour toute personne souhaitant travailler sur des informations disponibles en ligne, mais n'existant pas forcément sous la forme d'un tableau *Excel*.
+
+## Enjeux pour la statistique publique
+
+Le *webscraping* a un certain nombre d'enjeux en termes de légalité, qui ne seront pas enseignés dans ce cours. En particulier, la CNIL a publié en 2020 de nouvelles directives sur le *webscraping* reprécisant que toute donnée ne peut être réutilisée à l'insu de la personne à laquelle ces données appartiennent.
+
+Le *webscraping* est un domaine où la reproductibilité est compliquée à mettre en oeuvre. Une page *web* évolue
+potentiellement régulièrement et d'une page web à l'autre, la structure peut
+être très différente ce qui rend certains codes difficilement exportables.
+Par conséquent, la meilleure manière d'avoir un programme fonctionnel est
+de comprendre la structure d'une page web et dissocier les éléments exportables
+à d'autres cas d'usages des requêtes *ad hoc*.
+
+Un code qui fonctionne aujourd'hui peut ainsi très bien ne plus fonctionner
+au bout de quelques semaines. Il apparaît
+préférable de privilégier les API
+qui sont un accès en apparence plus compliqué mais en fait plus fiable à moyen terme.
+Cette difficulté à construire une extraction de données pérenne par
+_webscraping_ une illustration du principe _"there is no free lunch"_.
+La donnée est au cœur du business model de nombreux acteurs, il est donc logique qu'ils essaient de restreindre la moisson de leurs données. 
+
+Les APIs sont un mode d'accès de plus en plus généralisé à des données.
+Cela permet un lien direct entre fournisseurs et utilisateurs de données,
+un peu sous la forme d'un contrat. Si les données sont ouvertes avec restrictions, on utilise des clés d'authentification.
+Avec les API, on structure sa demande de données sous forme de requête paramétrée (source désirée, nombre de lignes, champs...) et le fournisseur de données y répond, généralement sous la forme d'un résultat au format JSON. 
+Pour plus de détails, vous pouvez explorer le
+[chapitre sur les API dans le cours de `Python` de l'ENSAE](https://pythonds.linogaliana.fr/api/).
+On n'est pas à l'abri de mauvaise surprise avec les
+APIs (indisponibilité, limite atteinte de requêtes...) mais cela permet un lien plus direct avec la dernière donnée publiée par un producteur et plus fiable que le webscraping.
+
+
+## Utilisation 
+
+`Python` est le langage le plus utilisé
+par les _scrappers_. 
+`BeautifulSoup` sera suffisant quand vous voudrez travailler sur des pages HTML statiques. Dès que les informations que vous recherchez sont générées via l'exécution de scripts [Javascript](https://fr.wikipedia.org/wiki/JavaScript), il vous faudra passer par des outils comme [Selenium](https://selenium-python.readthedocs.io/).
+De même, si vous ne connaissez pas l'URL, il faudra passer par un framework comme [Scrapy](https://scrapy.org/), qui passe facilement d'une page à une autre ("crawl"). Scrapy est plus complexe à manipuler que BeautifulSoup : si vous voulez plus de détails, rendez-vous sur la page du [tutoriel Scrapy](https://doc.scrapy.org/en/latest/intro/tutorial.html).
+Pour plus de détails, voir le [TP sur le webscraping en 2e année de l'ENSAE](https://pythonds.linogaliana.fr/webscraping/)
 
 
 # Les modèles de langage 
