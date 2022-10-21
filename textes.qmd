@@ -137,9 +137,43 @@ utilise des éléments contextuels, en information numérique compréhensible
 par un ordinateur. Il s'agit ainsi de transformer des éléments d'un corpus,
 par exemple des mots, en un vecteur multidimensionnel sur lequel on pourra
 appliquer des opérations arithmétiques. 
-
 Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots
 ou la similarité de sens entre deux phrases.
+
+## Du bag of words aux modèles de langage
+
+L'objetif du _Natural Langage Processing_ (NLP)
+est de transformer une information à très haute
+dimension (une langue est un objet éminément complexe)
+en information à dimension plus limitée qui peut
+être exploitée par un ordinateur.
+
+La première approche pour entrer dans l'analyse d'un 
+texte est généralement l'approche bag of words ou topics modelling.
+Dans la première, il s'agit
+de formaliser un texte sous forme d'un ensemble de mots
+où on va piocher plus ou moins fréquemment dans un sac de 
+mots possibles. 
+Dans la seconde, il s'agit de modéliser le processus de choix
+de mots en deux étapes (modèle de mélange): d'abord un choix
+de thème puis, au sein de ce thème, un choix de mots plus ou
+moins fréquents selon le thème. 
+
+Dans ces deux approches, l'objet central est la matrice document-terme. 
+Elle formalise les fréquences d'occurrence de mots dans des textes ou
+des thèmes. Néanmoins, il s'agit d'une matrice très creuse: même
+un texte au vocabulaire très riche n'explore qu'une petite partie
+du dictionnaire des mots possibles. 
+
+L’idée derrière les _embeddings_ est de proposer une informaiton plus
+condensée qui permet néanmoins de capturer les grandes structures
+d'un texte. Il s'agit par exemple de résumer l'ensemble
+d'un corpus en un nombre relativement restreint de dimensions. Ces
+dimensions ne sont pas prédéterminées mais plutôt inférées
+par un moèdle qui essaie de trouver la meilleure partition 
+des dimensions pour rapprocher les termes équivalents. 
+Techniquement,
+au lieu de représenter les documents par des vecteurs sparse de très grande dimension (la taille du vocabulaire) comme on l’a fait jusqu’à présent, on va les représenter par des vecteurs dense (continus) de dimension réduite (en général, autour de 100-300).
 
 BERT, GPT-3 et Bloom sont des modèles de langage. 
 
