@@ -3,7 +3,336 @@ title: "Données textuelles et non structurées"
 ---
 
 
-webscraping, réseaux sociaux, champs textuels (enquête, production automatisée, données privées), modèles de langage (GPT-3) et tchatbot 
+La collecte et l'utilisation accrue
+de données textuelles est l'un
+des moteurs de la prolifération
+de données émergentes.
+L'utilisation accrue de services
+sur le _web_ associée à des méthodes
+pour collecter et traiter ces 
+traces numériques particulières
+a relancé l'usage de ces données pour en
+faire, aujourd'hui, l'une des sources les 
+plus prometteuses de la statistique publique
+et l'un des champs les plus actifs de la recherche
+en _data science_.
+En effet, une partie des méthodes textuelles qui entrent 
+dans la palette des compétences des _data-scientists_
+spécialistes du traitement de données textuelles sont assez
+anciennes. 
+Par exemple, la distance de Levensthein a été proposée
+pour la première fois en 1965, l'ancêtre des réseaux
+de neurone actuels est le perceptron qui date de 1957...
+Néanmoins, le fait que certaines entreprises du net
+basent leur _business model_ sur le traitement
+et la valorisation de la donnée
+textuelle, notamment Google, Facebook et Twitter, a amené 
+à renouveler le champ. 
+
+La statistique publique s'appuie également sur la collecte
+et le traitement de données textuelles. Les collectes
+de données officielles ne demandent jamais exclusivement
+des données numériques. Les premières informations
+demandées sont généralement un état civil, une adresse...
+Ensuite, en fonction du thème de l'enquête, d'autres
+informations textuelles seront collectées: un nom
+d'entreprise, un titre de profession... Les données
+administratives elles-aussi présentent beaucoup d'informations
+textuelles. Ces données défient l'analyse statistique car
+cette dernière, qui vise à détecter des grandes structures
+à partir d'observations multiples, doit s'adapter à la différence
+des données textuelles: le langage est un champ où
+certaines des notions usuelles de la statistique (distance, similarité...)
+doivent être revues.
+
+Ce chapitre propose un panorama très incomplet de l'apport
+des données non structurées, principalement textuelles, 
+pour la statistique et l'analyse de données. Nous évoquerons
+plusieurs sources ou méthodes de collecte. Nous ferons
+quelques détours par des exemples pour aller plus
+loin.
+
+
+réseaux sociaux, champs textuels (enquête, production automatisée, données privées), modèles de langage (GPT-3) et tchatbot 
+
+# Webscraping
+
+
+## Présentation
+
+
+Le _webscraping_ est une méthode de collecte de données qui repose
+sur le moissonnage d'objets à grande dimension (des pages web)
+afin d'en extraire des informations ponctuelles (du texte, des nombres...).
+
+Le [webscraping](https://fr.wikipedia.org/wiki/Web_scraping) désigne les techniques d'extraction du contenu des sites internet. C'est une pratique très utile pour toute personne souhaitant travailler sur des informations disponibles en ligne, mais n'existant pas forcément sous la forme d'un tableau *Excel*.
+
+## Enjeux pour la statistique publique
+
+Le *webscraping* a un certain nombre d'enjeux en termes de légalité, qui ne seront pas enseignés dans ce cours. En particulier, la CNIL a publié en 2020 de nouvelles directives sur le *webscraping* reprécisant que toute donnée ne peut être réutilisée à l'insu de la personne à laquelle ces données appartiennent.
+
+Le *webscraping* est un domaine où la reproductibilité est compliquée à mettre en oeuvre. Une page *web* évolue
+potentiellement régulièrement et d'une page web à l'autre, la structure peut
+être très différente ce qui rend certains codes difficilement exportables.
+Par conséquent, la meilleure manière d'avoir un programme fonctionnel est
+de comprendre la structure d'une page web et dissocier les éléments exportables
+à d'autres cas d'usages des requêtes *ad hoc*.
+
+Un code qui fonctionne aujourd'hui peut ainsi très bien ne plus fonctionner
+au bout de quelques semaines. Il apparaît
+préférable de privilégier les API
+qui sont un accès en apparence plus compliqué mais en fait plus fiable à moyen terme.
+Cette difficulté à construire une extraction de données pérenne par
+_webscraping_ une illustration du principe _"there is no free lunch"_.
+La donnée est au cœur du business model de nombreux acteurs, il est donc logique qu'ils essaient de restreindre la moisson de leurs données. 
+
+Les APIs sont un mode d'accès de plus en plus généralisé à des données.
+Cela permet un lien direct entre fournisseurs et utilisateurs de données,
+un peu sous la forme d'un contrat. Si les données sont ouvertes avec restrictions, on utilise des clés d'authentification.
+Avec les API, on structure sa demande de données sous forme de requête paramétrée (source désirée, nombre de lignes, champs...) et le fournisseur de données y répond, généralement sous la forme d'un résultat au format JSON. 
+Pour plus de détails, vous pouvez explorer le
+[chapitre sur les API dans le cours de `Python` de l'ENSAE](https://pythonds.linogaliana.fr/api/).
+On n'est pas à l'abri de mauvaise surprise avec les
+APIs (indisponibilité, limite atteinte de requêtes...) mais cela permet un lien plus direct avec la dernière donnée publiée par un producteur et plus fiable que le webscraping.
+
+## Exemples dans la statistique publique
+
+
+
+## Implémentations
+
+`Python` est le langage le plus utilisé
+par les _scrappers_. 
+`BeautifulSoup` sera suffisant quand vous voudrez travailler sur des pages HTML statiques. Dès que les informations que vous recherchez sont générées via l'exécution de scripts [Javascript](https://fr.wikipedia.org/wiki/JavaScript), il vous faudra passer par des outils comme [Selenium](https://selenium-python.readthedocs.io/).
+De même, si vous ne connaissez pas l'URL, il faudra passer par un framework comme [Scrapy](https://scrapy.org/), qui passe facilement d'une page à une autre ("crawl"). Scrapy est plus complexe à manipuler que BeautifulSoup : si vous voulez plus de détails, rendez-vous sur la page du [tutoriel Scrapy](https://doc.scrapy.org/en/latest/intro/tutorial.html).
+Pour plus de détails, voir le [TP sur le webscraping en 2e année de l'ENSAE](https://pythonds.linogaliana.fr/webscraping/)
+
+Les utilisateurs de `R` privilégieront `httr` and `rvest` qui sont les plus
+utilisés. 
+Il est intéressant d'accorder de l'attention à 
+[`polite`](https://github.com/dmi3kno/polite). Ce package vise à récupérer
+des données en suivant les [recommandations de bonnes pratiques](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01) sur 
+le sujet, notamment de respecter les instructions dans
+`robots.txt` (_"The three pillars of a polite session are seeking permission, taking slowly and never asking twice"_).
+
+# Réseaux sociaux
+
+Les réseaux sociaux sont l'une des sources textuelles
+les plus 
+communes. C'est leur usage à des fins commerciales
+qui a amené les entreprises du net à renouveler
+le champ de l'analyse textuelles qui bénéficie
+au-delà de leur champ d'origine. 
+
+Ces données sont notamment très utilisées dans le champ
+de l'analyse de sentiment. 
+Citer des recherches
+
+
+# Les modèles de langage 
+
+Un modèle de langage est un modèle statistique qui modélise la distribution de séquences de mots, plus généralement de séquences de symboles discrets (lettres, phonèmes, mots), dans une langue naturelle. L'objectif d'un modèle statistique est ainsi 
+de transformer un objet à grande dimension comme le langage, qui de plus
+utilise des éléments contextuels, en information numérique compréhensible
+par un ordinateur. Il s'agit ainsi de transformer des éléments d'un corpus,
+par exemple des mots, en un vecteur multidimensionnel sur lequel on pourra
+appliquer des opérations arithmétiques. 
+Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots
+ou la similarité de sens entre deux phrases.
+
+## Du bag of words aux modèles de langage
+
+L'objetif du _Natural Langage Processing_ (NLP)
+est de transformer une information à très haute
+dimension (une langue est un objet éminément complexe)
+en information à dimension plus limitée qui peut
+être exploitée par un ordinateur.
+
+La première approche pour entrer dans l'analyse d'un 
+texte est généralement l'approche bag of words ou topics modelling.
+Dans la première, il s'agit
+de formaliser un texte sous forme d'un ensemble de mots
+où on va piocher plus ou moins fréquemment dans un sac de 
+mots possibles. 
+Dans la seconde, il s'agit de modéliser le processus de choix
+de mots en deux étapes (modèle de mélange): d'abord un choix
+de thème puis, au sein de ce thème, un choix de mots plus ou
+moins fréquents selon le thème. 
+
+Dans ces deux approches, l'objet central est la matrice document-terme. 
+Elle formalise les fréquences d'occurrence de mots dans des textes ou
+des thèmes. Néanmoins, il s'agit d'une matrice très creuse: même
+un texte au vocabulaire très riche n'explore qu'une petite partie
+du dictionnaire des mots possibles. 
+
+L’idée derrière les _embeddings_ est de proposer une informaiton plus
+condensée qui permet néanmoins de capturer les grandes structures
+d'un texte. Il s'agit par exemple de résumer l'ensemble
+d'un corpus en un nombre relativement restreint de dimensions. Ces
+dimensions ne sont pas prédéterminées mais plutôt inférées
+par un moèdle qui essaie de trouver la meilleure partition 
+des dimensions pour rapprocher les termes équivalents. 
+Chacune de ces dimensions va représenter un facteur latent, c’est à dire une variable inobservée, de la même manière que les composantes principales produites par une ACP.
+Techniquement,
+au lieu de représenter les documents par des vecteurs sparse de très grande dimension (la taille du vocabulaire) comme on l’a fait jusqu’à présent, on va les représenter par des vecteurs dense (continus) de dimension réduite (en général, autour de 100-300).
+
+## Intérêt des modèles de langage
+
+Par exemple, un humain sait qu'un document contenant le mot _"Roi"_
+et un autre document contenant le mot _"Reine"_ ont beaucoup de chance
+d'aborder des sujets semblables.
+
+![](https://raw.githubusercontent.com/linogaliana/python-datascientist/master/content/course/NLP/04_word2vec/w2v_vecto.png)
+
+Pourtant, une vectorisation de type comptage ou TF-IDF
+ne permet pas de saisir cette similarité :
+le calcul d'une mesure de similarité (norme euclidienne ou similarité cosinus)
+entre les deux vecteurs ne prendra en compte la similarité des deux concepts, puisque les mots utilisés sont différents.
+
+A l'inverse, un modèle `word2vec` bien entraîné va capter
+qu'il existe un facteur latent de type _"royauté"_,
+et la similarité entre les vecteurs associés aux deux mots sera forte.
+
+La magie va même plus loin : le modèle captera aussi qu'il existe un
+facteur latent de type _"genre"_,
+et va permettre de construire un espace sémantique dans lequel les
+relations arithmétiques entre vecteurs ont du sens ;
+par exemple :
+
+$$\text{king} - \text{man} + \text{woman} ≈ \text{queen}$$
+
+Chaque mot est représenté par un vecteur de taille fixe (comprenant $n$ nombres),
+de façon à ce que deux mots dont le sens est proche possèdent des représentations numériques proches. Ainsi les mots « chat » et « chaton » devraient avoir des vecteurs de plongement assez similaires, eux-mêmes également assez proches de celui du mot « chien » et plus éloignés de la représentation du mot « maison ».
+
+
+_Comment ces modèles sont-ils entraînés ?__
+Via une tâche de prédiction résolue par un réseau de neurones simple.
+
+L'idée fondamentale est que la signification d'un mot se comprend
+en regardant les mots qui apparaissent fréquemment dans son voisinage.
+
+Pour un mot donné, on va donc essayer de prédire les mots
+qui apparaissent dans une fenêtre autour du mot cible.
+
+En répétant cette tâche de nombreuses fois et sur un corpus suffisamment varié,
+on obtient finalement des *embeddings* pour chaque mot du vocabulaire,
+qui présentent les propriétés discutées précédemment
+
+
+![Illustration du word embedding](https://raw.githubusercontent.com/InseeFrLab/ssphub/main/content/post/word-embedding/word_embedding.png)
+
+## Les modèles de langage aujourd'hui
+
+La méthode de construction d’un plongement lexical présentée ci-dessus est celle de l’algorithme [`Word2Vec`](https://fr.wikipedia.org/wiki/Word2vec).
+Il s’agit d’un modèle _open-source_ développé par une équipe de `Google` en 2013.
+`Word2Vec` a été le pionnier en termes de modèles de plongement lexical.
+
+Le modèle [`GloVe`](https://nlp.stanford.edu/projects/glove/) constitue un autre exemple[^3]. Développé en 2014 à Stanford,
+ce modèle ne repose pas sur des réseaux de neurones mais sur la construction d’une grande matrice de co-occurrences de mots. Pour chaque mot, il s’agit de calculer les fréquences d’apparition des autres mots dans une fenêtre de taille fixe autour de lui. La matrice de co-occurrences obtenue est ensuite factorisée par une décomposition en valeurs singulières.
+Il est également possible de produire des plongements de mots à partir du [modèle de langage `BERT`](https://jalammar.github.io/illustrated-bert/), développé par `Google` en 2019, dont il existe des déclinaisons dans différentes langues, notamment en Français (les
+modèles [`CamemBERT`](https://camembert-model.fr/) ou [`FlauBERT`](https://github.com/getalp/Flaubert))
+
+[^3]: Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014. GloVe: Global Vectors for Word Representation
+
+Enfin, le modèle [`FastText`](https://fasttext.cc/), développé en 2016 par une équipe de `Facebook`, fonctionne de façon similaire à `Word2Vec` mais se distingue particulièrement sur deux points :
+
+*   En plus des mots eux-mêmes, le modèle apprend des représentations pour les n-grams de caractères (sous-séquences de caractères de taille \\(n\\), par exemple _« tar »_, _« art »_ et _« rte »_ sont les trigrammes du mot _« tarte »_), ce qui le rend notamment robuste aux variations d’orthographe ;
+*   Le modèle a été optimisé pour que son entraînement soit particulièrement rapide.
+
+Le modèle `GPT-3` (acronyme de Generative Pre-trained Transformer 3)
+a le vent en poupe. Celui-ci 
+a été développé par la société `OpenAI` et rendu 
+public en 2020 [@brown2020language]. 
+GPT-3 est le plus gros modèle de langage jamais entraîné avec 175 milliards de paramètres. Il sert de brique de base à plusieurs applications
+utilisant l'analyse textuelle pour synthétiser, à partir d'une 
+intrusction, des éléments importants et
+proposer un texte cohérent. `Github Copilot` l'utilise pour transformer
+une instruction en proposition de code, à partir d'un grand
+corpus de code opensource. `Algolia` l'utilise pour transformer une 
+instruction en mots clés de recherche afin d'améliorer
+la pertinence des résultats.
+
+En ce moment, le champ du _prompt engineering_ est en effervescence. 
+Les modèles de langage comme GPT-3 permettent en effet d'extraire
+les éléments qui permettent de mieux discriminer les thèmes
+d'un texte. 
+
+
+## Utilisation dans un processus de créatoin de contenu créatif 
+
+La publication par l'organisation [Open AI](https://openai.com/) de
+son modèle de génération de contenu créatif [Dall-E-2](https://openai.com/dall-e-2/)
+(un jeu de mot mélangeant Dali et Wall-E) a créé un bruit inédit dans
+le monde de la _data-science_.
+Un compte twitter ([@Weird Dall-E Mini Generations](https://twitter.com/weirddalle))
+propose de nombreuses générations de contenu drôles ou incongrues. 
+Le bloggeur tech Casey Newton a pu parler d'une 
+[révolution créative dans le monde de l'IA](https://www.platformer.news/p/how-dall-e-could-power-a-creative).
+
+
+Voici par exemple l'une des productions possibles de DALL-E-2
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/2b/A_Shiba_Inu_dog_wearing_a_beret_and_black_turtleneck_DALLE2.jpg)
+
+_"A Shiba Inu dog wearing a beret and black turtleneck"_
+
+Les modèles générateurs d'image
+`DallE` et `Stable Diffusion` peuvent, schématiquement,
+être décomposés en deux niveaux de réseaux de neurone:
+
+- le contenu de la phrase est analysé par un modèle de langage comme `GPT-3` ;
+- les éléments importants de la phrase (recontextualisés) sont ensuite transformés en image à partir de
+modèles entraînés à reconnaître des images
+
+![](https://raw.githubusercontent.com/patrickvonplaten/scientific_images/master/stable_diffusion.png)
+
+`Stable Diffusion` est une version plus ouverte que `DALL-E` pour les
+utilisateurs de `Python`.
+
+![](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_12_1.png)
+
+Si vous êtes intéressés par ce type de modèle, vous pouvez
+[tester les exemples du cours de Python de l'ENSAE](https://pythonds.linogaliana.fr/dalle/). Vous pouvez tester
+__"Chuck Norris fighting against Zeus on Mount Olympus in an epic Mortal Kombat scene"__
+pour générer une image comme celle-ci dessous ou chercher à obtenir
+l'image de votre choix:
+
+![](https://pythonds.linogaliana.fr/dalle/featured.png)
+
+
+
+# Modèles de langage dans la statistique publique
+
+L'analyse textuelle dans la statistique publique intervient 
+principalement à deux niveaux:
+
+- pour apparier des sources à partir de champs textuels qui
+ne sont pas nécessairement identiques ;
+- pour catégoriser des données dans une nomenclature normalisée
+à partir de champs libres.
+
+## Catégorisation
+
+A `l’Insee`, plusieurs modèles de classification de libellés textuels dans des nomenclatures reposent sur l’algorithme de plongement lexical [`FastText`](https://fasttext.cc/). 
+Les derniers mis en oeuvre sont les suivants:
+
+1. catégorisation des professions dans la nomenclature des PCS
+2. catégorisation des entreprises dans la nomenclature d'activité APE
+3. catégorisation des produits dans la nomenclature des COICOP
+
+Les deux premiers devraient servir prochainement à la production de statistiques
+officielles. Le troisième est une expérimentation encore en cours. 
+
+## Appariements
+
+![](https://www.linogaliana.fr/publication/2022-jms/featured.png)
+
+@galiana2022
+
+https://dl.acm.org/doi/10.1145/3524458.3547244
+
+
+# Conclusion
 
 
 # References
