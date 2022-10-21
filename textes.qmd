@@ -239,20 +239,79 @@ Enfin, le modèle [`FastText`](https://fasttext.cc/), développé en 2016 par un
 *   En plus des mots eux-mêmes, le modèle apprend des représentations pour les n-grams de caractères (sous-séquences de caractères de taille \\(n\\), par exemple _« tar »_, _« art »_ et _« rte »_ sont les trigrammes du mot _« tarte »_), ce qui le rend notamment robuste aux variations d’orthographe ;
 *   Le modèle a été optimisé pour que son entraînement soit particulièrement rapide.
 
+Le modèle `GPT-3` (acronyme de Generative Pre-trained Transformer 3)
+a le vent en poupe. Celui-ci 
+a été développé par la société `OpenAI` et rendu 
+public en 2020 [@brown2020language]. 
+GPT-3 est le plus gros modèle de langage jamais entraîné avec 175 milliards de paramètres. Il sert de brique de base à plusieurs applications
+utilisant l'analyse textuelle pour synthétiser, à partir d'une 
+intrusction, des éléments importants et
+proposer un texte cohérent. `Github Copilot` l'utilise pour transformer
+une instruction en proposition de code, à partir d'un grand
+corpus de code opensource. `Algolia` l'utilise pour transformer une 
+instruction en mots clés de recherche afin d'améliorer
+la pertinence des résultats.
+
+En ce moment, le champ du _prompt engineering_ est en effervescence. 
+Les modèles de langage comme GPT-3 permettent en effet d'extraire
+les éléments qui permettent de mieux discriminer les thèmes
+d'un texte. 
+
+
+## Utilisation dans un processus de créatoin de contenu créatif 
+
+La publication par l'organisation [Open AI](https://openai.com/) de
+son modèle de génération de contenu créatif [Dall-E-2](https://openai.com/dall-e-2/)
+(un jeu de mot mélangeant Dali et Wall-E) a créé un bruit inédit dans
+le monde de la _data-science_.
+Un compte twitter ([@Weird Dall-E Mini Generations](https://twitter.com/weirddalle))
+propose de nombreuses générations de contenu drôles ou incongrues. 
+Le bloggeur tech Casey Newton a pu parler d'une 
+[révolution créative dans le monde de l'IA](https://www.platformer.news/p/how-dall-e-could-power-a-creative).
+
+
+Voici par exemple l'une des productions possibles de DALL-E-2
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/2b/A_Shiba_Inu_dog_wearing_a_beret_and_black_turtleneck_DALLE2.jpg)
+
+_"A Shiba Inu dog wearing a beret and black turtleneck"_
+
+Les modèles générateurs d'image
+`DallE` et `Stable Diffusion` peuvent, schématiquement,
+être décomposés en deux niveaux de réseaux de neurone:
+
+- le contenu de la phrase est analysé par un modèle de langage comme `GPT-3` ;
+- les éléments importants de la phrase (recontextualisés) sont ensuite transformés en image à partir de
+modèles entraînés à reconnaître des images
+
+![](https://raw.githubusercontent.com/patrickvonplaten/scientific_images/master/stable_diffusion.png)
+
+`Stable Diffusion` est une version plus ouverte que `DALL-E` pour les
+utilisateurs de `Python`.
+
+![](https://huggingface.co/blog/assets/98_stable_diffusion/stable_diffusion_12_1.png)
+
+Si vous êtes intéressés par ce type de modèle, vous pouvez
+[tester les exemples du cours de Python de l'ENSAE](https://pythonds.linogaliana.fr/dalle/). Vous pouvez tester
+__"Chuck Norris fighting against Zeus on Mount Olympus in an epic Mortal Kombat scene"__
+pour générer une image comme celle-ci dessous ou chercher à obtenir
+l'image de votre choix:
+
+![](https://pythonds.linogaliana.fr/dalle/featured.png)
+
+
+
+# Modèles de langage dans la statistique publique
+
+
 A `l’Insee`, plusieurs modèles de classification de libellés textuels dans des nomenclatures reposent sur l’algorithme de plongement lexical [`FastText`](https://fasttext.cc/). 
 
 
-BERT, GPT-3 et Bloom sont des modèles de langage. 
-
-GPT-3 (acronyme de Generative Pre-trained Transformer 3) est un modèle de langage développé par la société OpenAI, annoncé le 28 mai 2020, ouvert aux utilisateurs via l'API d'OpenAI en juillet 2020. 
-GPT-3 est le plus gros modèle de langage jamais entraîné avec 175 milliards de paramètres.
-
-@brown2020language
 
 champs textuels:
 libellés: appariement et modélisation
 
-NLP
+
 
 # References
 
