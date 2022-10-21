@@ -232,7 +232,6 @@ ce modèle ne repose pas sur des réseaux de neurones mais sur la construction d
 Il est également possible de produire des plongements de mots à partir du [modèle de langage `BERT`](https://jalammar.github.io/illustrated-bert/), développé par `Google` en 2019, dont il existe des déclinaisons dans différentes langues, notamment en Français (les
 modèles [`CamemBERT`](https://camembert-model.fr/) ou [`FlauBERT`](https://github.com/getalp/Flaubert))
 
-
 Enfin, le modèle [`FastText`](https://fasttext.cc/), développé en 2016 par une équipe de `Facebook`, fonctionne de façon similaire à `Word2Vec` mais se distingue particulièrement sur deux points :
 
 *   En plus des mots eux-mêmes, le modèle apprend des représentations pour les n-grams de caractères (sous-séquences de caractères de taille \\(n\\), par exemple _« tar »_, _« art »_ et _« rte »_ sont les trigrammes du mot _« tarte »_), ce qui le rend notamment robuste aux variations d’orthographe ;
