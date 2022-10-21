@@ -111,7 +111,7 @@ Les utilisateurs de `R` privilégieront `httr` and `rvest` qui sont les plus
 utilisés. 
 Il est intéressant d'accorder de l'attention à 
 [`polite`](https://github.com/dmi3kno/polite). Ce package vise à récupérer
-des données en suivant les recommandations de bonnes pratiques sur 
+des données en suivant les [recommandations de bonnes pratiques](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01) sur 
 le sujet, notamment de respecter les instructions dans
 `robots.txt` (_"The three pillars of a polite session are seeking permission, taking slowly and never asking twice"_).
 
@@ -131,7 +131,15 @@ Citer des recherches
 
 # Les modèles de langage 
 
-un modèle de langage est un modèle statistique qui modélise la distribution de séquences de mots, plus généralement de séquences de symboles discrets (lettres, phonèmes, mots), dans une langue naturelle. Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots.
+Un modèle de langage est un modèle statistique qui modélise la distribution de séquences de mots, plus généralement de séquences de symboles discrets (lettres, phonèmes, mots), dans une langue naturelle. L'objectif d'un modèle statistique est ainsi 
+de transformer un objet à grande dimension comme le langage, qui de plus
+utilise des éléments contextuels, en information numérique compréhensible
+par un ordinateur. Il s'agit ainsi de transformer des éléments d'un corpus,
+par exemple des mots, en un vecteur multidimensionnel sur lequel on pourra
+appliquer des opérations arithmétiques. 
+
+Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots
+ou la similarité de sens entre deux phrases.
 
 BERT, GPT-3 et Bloom sont des modèles de langage. 
 
