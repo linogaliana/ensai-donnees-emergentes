@@ -172,8 +172,75 @@ d'un corpus en un nombre relativement restreint de dimensions. Ces
 dimensions ne sont pas prédéterminées mais plutôt inférées
 par un moèdle qui essaie de trouver la meilleure partition 
 des dimensions pour rapprocher les termes équivalents. 
+Chacune de ces dimensions va représenter un facteur latent, c’est à dire une variable inobservée, de la même manière que les composantes principales produites par une ACP.
 Techniquement,
 au lieu de représenter les documents par des vecteurs sparse de très grande dimension (la taille du vocabulaire) comme on l’a fait jusqu’à présent, on va les représenter par des vecteurs dense (continus) de dimension réduite (en général, autour de 100-300).
+
+## Intérêt des modèles de langage
+
+Par exemple, un humain sait qu'un document contenant le mot _"Roi"_
+et un autre document contenant le mot _"Reine"_ ont beaucoup de chance
+d'aborder des sujets semblables.
+
+![](https://raw.githubusercontent.com/linogaliana/python-datascientist/master/content/course/NLP/04_word2vec/w2v_vecto.png)
+
+Pourtant, une vectorisation de type comptage ou TF-IDF
+ne permet pas de saisir cette similarité :
+le calcul d'une mesure de similarité (norme euclidienne ou similarité cosinus)
+entre les deux vecteurs ne prendra en compte la similarité des deux concepts, puisque les mots utilisés sont différents.
+
+A l'inverse, un modèle `word2vec` bien entraîné va capter
+qu'il existe un facteur latent de type _"royauté"_,
+et la similarité entre les vecteurs associés aux deux mots sera forte.
+
+La magie va même plus loin : le modèle captera aussi qu'il existe un
+facteur latent de type _"genre"_,
+et va permettre de construire un espace sémantique dans lequel les
+relations arithmétiques entre vecteurs ont du sens ;
+par exemple :
+
+$$\text{king} - \text{man} + \text{woman} ≈ \text{queen}$$
+
+Chaque mot est représenté par un vecteur de taille fixe (comprenant $n$ nombres),
+de façon à ce que deux mots dont le sens est proche possèdent des représentations numériques proches. Ainsi les mots « chat » et « chaton » devraient avoir des vecteurs de plongement assez similaires, eux-mêmes également assez proches de celui du mot « chien » et plus éloignés de la représentation du mot « maison ».
+
+
+_Comment ces modèles sont-ils entraînés ?__
+Via une tâche de prédiction résolue par un réseau de neurones simple.
+
+L'idée fondamentale est que la signification d'un mot se comprend
+en regardant les mots qui apparaissent fréquemment dans son voisinage.
+
+Pour un mot donné, on va donc essayer de prédire les mots
+qui apparaissent dans une fenêtre autour du mot cible.
+
+En répétant cette tâche de nombreuses fois et sur un corpus suffisamment varié,
+on obtient finalement des *embeddings* pour chaque mot du vocabulaire,
+qui présentent les propriétés discutées précédemment
+
+
+![Illustration du word embedding](https://raw.githubusercontent.com/InseeFrLab/ssphub/main/content/post/word-embedding/word_embedding.png)
+
+## Les modèles de langage aujourd'hui
+
+La méthode de construction d’un plongement lexical présentée ci-dessus est celle de l’algorithme [`Word2Vec`](https://fr.wikipedia.org/wiki/Word2vec).
+Il s’agit d’un modèle _open-source_ développé par une équipe de `Google` en 2013.
+`Word2Vec` a été le pionnier en termes de modèles de plongement lexical.
+
+Le modèle [`GloVe`](https://nlp.stanford.edu/projects/glove/) constitue un autre exemple[^3]. Développé en 2014 à Stanford,
+ce modèle ne repose pas sur des réseaux de neurones mais sur la construction d’une grande matrice de co-occurrences de mots. Pour chaque mot, il s’agit de calculer les fréquences d’apparition des autres mots dans une fenêtre de taille fixe autour de lui. La matrice de co-occurrences obtenue est ensuite factorisée par une décomposition en valeurs singulières.
+Il est également possible de produire des plongements de mots à partir du [modèle de langage `BERT`](https://jalammar.github.io/illustrated-bert/), développé par `Google` en 2019, dont il existe des déclinaisons dans différentes langues, notamment en Français (les
+modèles [`CamemBERT`](https://camembert-model.fr/) ou [`FlauBERT`](https://github.com/getalp/Flaubert))
+
+[^3]: Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014. GloVe: Global Vectors for Word Representation
+
+Enfin, le modèle [`FastText`](https://fasttext.cc/), développé en 2016 par une équipe de `Facebook`, fonctionne de façon similaire à `Word2Vec` mais se distingue particulièrement sur deux points :
+
+*   En plus des mots eux-mêmes, le modèle apprend des représentations pour les n-grams de caractères (sous-séquences de caractères de taille \\(n\\), par exemple _« tar »_, _« art »_ et _« rte »_ sont les trigrammes du mot _« tarte »_), ce qui le rend notamment robuste aux variations d’orthographe ;
+*   Le modèle a été optimisé pour que son entraînement soit particulièrement rapide.
+
+A `l’Insee`, plusieurs modèles de classification de libellés textuels dans des nomenclatures reposent sur l’algorithme de plongement lexical [`FastText`](https://fasttext.cc/). 
+
 
 BERT, GPT-3 et Bloom sont des modèles de langage. 
 
