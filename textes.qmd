@@ -303,14 +303,34 @@ l'image de votre choix:
 
 # Modèles de langage dans la statistique publique
 
+L'analyse textuelle dans la statistique publique intervient 
+principalement à deux niveaux:
+
+- pour apparier des sources à partir de champs textuels qui
+ne sont pas nécessairement identiques ;
+- pour catégoriser des données dans une nomenclature normalisée
+à partir de champs libres.
+
+## Catégorisation
 
 A `l’Insee`, plusieurs modèles de classification de libellés textuels dans des nomenclatures reposent sur l’algorithme de plongement lexical [`FastText`](https://fasttext.cc/). 
+Les derniers mis en oeuvre sont les suivants:
+
+1. catégorisation des professions dans la nomenclature des PCS
+2. catégorisation des entreprises dans la nomenclature d'activité APE
+3. catégorisation des produits dans la nomenclature des COICOP
+
+Les deux premiers devraient servir prochainement à la production de statistiques
+officielles. Le troisième est une expérimentation encore en cours. 
+
+## Appariements
+
+@galiana2022
+
+https://dl.acm.org/doi/10.1145/3524458.3547244
 
 
-
-champs textuels:
-libellés: appariement et modélisation
-
+# Conclusion
 
 
 # References
