@@ -325,6 +325,8 @@ officielles. Le troisième est une expérimentation encore en cours.
 
 ## Appariements
 
+![](https://www.linogaliana.fr/publication/2022-jms/featured.png)
+
 @galiana2022
 
 https://dl.acm.org/doi/10.1145/3524458.3547244

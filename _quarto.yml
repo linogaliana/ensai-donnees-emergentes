@@ -13,6 +13,8 @@ website:
         file: administratives.qmd
       - text: "Données géolocalisées"
         file: geolocalized_data.qmd
+      - text: "Données textuelles"
+        file: textes.qmd
       - text: "Images"
         file: images.qmd
   sidebar:
@@ -28,6 +30,9 @@ website:
       - section: "Analyse d'images"
         contents:
           - images.qmd
+      - section: "Analyse textuelle"
+        contents:
+          - textes.qmd
     tools:
       - icon: twitter
         href: https://twitter.com
