@@ -107,7 +107,13 @@ par les _scrappers_.
 De même, si vous ne connaissez pas l'URL, il faudra passer par un framework comme [Scrapy](https://scrapy.org/), qui passe facilement d'une page à une autre ("crawl"). Scrapy est plus complexe à manipuler que BeautifulSoup : si vous voulez plus de détails, rendez-vous sur la page du [tutoriel Scrapy](https://doc.scrapy.org/en/latest/intro/tutorial.html).
 Pour plus de détails, voir le [TP sur le webscraping en 2e année de l'ENSAE](https://pythonds.linogaliana.fr/webscraping/)
 
-Les utilisateurs de `R` privilégieront `rvest`
+Les utilisateurs de `R` privilégieront `httr` and `rvest` qui sont les plus
+utilisés. 
+Il est intéressant d'accorder de l'attention à 
+[`polite`](https://github.com/dmi3kno/polite). Ce package vise à récupérer
+des données en suivant les recommandations de bonnes pratiques sur 
+le sujet, notamment de respecter les instructions dans
+`robots.txt` (_"The three pillars of a polite session are seeking permission, taking slowly and never asking twice"_).
 
 # Réseaux sociaux
 
@@ -125,7 +131,7 @@ Citer des recherches
 
 # Les modèles de langage 
 
-un modèle de langage est un modèle statistique qui modélise la distribution de séquences de mots, plus généralement de séquences de symboles discrets (lettres, phonèmes, mots), dans une langue naturelle. Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots1.
+un modèle de langage est un modèle statistique qui modélise la distribution de séquences de mots, plus généralement de séquences de symboles discrets (lettres, phonèmes, mots), dans une langue naturelle. Un modèle de langage peut par exemple prédire le mot suivant une séquence de mots.
 
 BERT, GPT-3 et Bloom sont des modèles de langage. 
 
