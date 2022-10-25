@@ -1,0 +1,42 @@
+---
+title: "Nowcasting"
+---
+
+Les séries temporelles sont au coeur de la statistique publique depuis toujours. Une grande majorité des indicateurs publiés par l'Insee le sont à intervalle régulier et sont produits à méthodologie constante, ce qui en théorie assure une forme de comparabilité et permet de les considérer au cours du temps comme des séries temporelles.
+
+En raison de délais imposés par la collecte et le traitement des données, certains indicateurs supposés donner des informations sur la situation actuelle sont publiés avec du retard et ne peuvent pas jouer leur rôle dans la prise de décision publique. C'est pourquoi la statistique publique participe aussi à la réalisation de prévisions à court terme de valeurs d'indicateurs macro-économiques. De telles prévisions sont faites à l'Insee depuis longtemps. C'est le rôle du département de la conjoncture au sein de la Direction des études et synthèses économiques, qui utilise historiquement des données extérieures et qui en mobilise de plus en plus. Ces données extérieures sont en général des séries temporelles avec une fréquence temporelle "elevée".
+
+Dans ce cadre, l'Insee, QuantCube (une start‐up proposant des prévisions macroéconomiques fondées sur le Big Data et l'intelligence artificielle), Paris School of Economics, CANDRIAM (une société internationale de gestion d'actifs) et la Société Générale ont créé une Chaire de recherche **Mesures de l'économie, nowcasting ‐ au‐delà du PIB** en 2021. Cette Chaire a pour objectif de travailler sur l'amélioration des prévisions économiques, en particulier grâce à la mobilisation de nouvelles sources de données. Parmi ces nouvelles sources, on trouve les actualités [@bortoli-18], les médias sociaux, les données satellitaires, les réseaux professionnels et les avis de consommateurs, ainsi que les données sur le commerce international, la consommation d'électricité et le transport routier [@fornaro-20], le transport maritime, l'immobilier, l'hôtellerie et les télécommunications. Un autre objectif de la Chaire est de travailler sur la mesure de nouveaux indicateurs économiques, de bien-être ou de développement durable (**au‐delà du PIB**), ici encore en utilisant ces données nouvelles.
+
+Côté technique, des modèles autorégressifs de type *bridge models* ou *mixed-data sampling* [@schumacher-16], des *dynamic factor models* [@stock-10] ou plus récemment des modèles de Deep Learning de type LSTM [@hopp-21] sont souvent utilisés pour combiner des indicateurs de type *soft* comme le climat des affaires ou le sentiment des consommateurs avec des indicateurs *hard* comme la production industrielle, le commerce de détail, les prix de l’immobilier, etc. à différentes fréquences. La littérature fait particulièrement état de l'utilisation de deux sources de données massive permettant d'obtenir des indicateurs *soft* [@richardson-18], même si bien d'autres sources ont été expertisées :
+
+‑ les statistiques de recherches sur Internet basées sur la fréquence de recherche de mots‑clés ou de sujets spécifiques ;
+‑ les médias sociaux sur Internet (Twitter).
+
+### Statistiques de recherches sur Internet
+
+L'idée derrière l'utilisation de ces données est la suivante : les recherches sur Internet sont devenues un moyen répandu pour les agents économiques d’obtenir des informations pertinentes sur leur situation et leurs décisions économiques immédiates. Ainsi elles se reflètent dans leur comportement et peuvent être corrélées à des statistiques macro-économiques. Google a mis en place des services permettant l'accès à des statistiques sur les recherches effectuées via son moteur de recherche : [Google Trends](https://trends.google.fr/trends/).
+
+L'apport de données de Google Trends dans le cadre de prédictions économiques a été évaluée concernant le marché du travail et le chômage, la consommation, le marché du logement, le tourisme et les anticipations d’inflation, ainsi que d'autres études macro-économiques. Dans la plupart des cas, les auteurs constatent une amélioration de la précision prédictive mais cette dernière est souvent assez limitée et n'est pas toujours robuste.
+
+### Données de réseaux sociaux
+
+Les données de réseaux sociaux (en particulier Twitter) présentent des avantages par rapport aux données de recherches sur Internet :
+
+- ces données sont beaucoup plus riches, avec beaucoup d'information associée à chaque observation (contenu textuel du tweet, informations sur l'utilisateur, etc.) ;
+- ces données permettent une approche stratifiée, en utilisant les informations de groupes d’utilisateurs bien définis ;
+- l’absence de préparation par les propriétaires des données (comme c'est le cas pour Google Trends), qui peut en réalité constituer un avantage ou un inconvénient.
+
+Des données issues de Twitter ont été testées dans des études de prévisions du comportement des marchés financiers et du marché du travail (utililsation d'indicateurs dérivés de la fréquence d'utilisation des termes de perte et de recherche d'emploi dans des échantillons de tweets) entre autres.
+
+Comme pour les données de Google Trends, les résultats sont mitigés, ce qui est naturel si on réfléchit aux biais qui limitent le potentiel de ces données. Tout d'abord, pour pouvoir récupérer les tweets pertinents concernant un certain sujet, il est nécessaire de mettre au point des bonnes méthodes de recherche sur de grands ensembles d’entrées. On constate d'ailleurs une forte sensibilité au choix des mots-clés ou en général à la spécification de la recherche. Les jeux de données récupérés sont sujets à un fort biais de sélection : les utilisateurs de Twitter qui communiquent sur un sujet ne sont pas représentatifs de la population générale. Il faut en outre pouvoir correctement interpréter le contenu des textes, ce qui représente en général une tâche difficile (les progrès récents en NLP ont permis des fortes avancées sur ce point).
+
+### Le *nowcasting* à l'Insee
+
+L'Insee a travaillé de manière particulièrement intensive sur le *nowcasting* au cours de la crise sanitaire liée au Covid-19, moment auquel le travail des conjoncturistes de l'Insee a été réorienté pour mesurer au mieux, à chaque instant, la chute de l'activité économique.
+
+Pour réaliser cette évaluation, l'Insee a recueilli de l'information de la part d'entreprises ou de branches professionnelles, directement ou via des partenaires (par exemple la Banque de France ou des instituts de conjoncture). Cette information a été traitée, secteur par secteur, pour donner un ordre de grandeur de perte d'activité à hauteur d'un tiers du PIB. Pour consolider ce résultat, il a été choisi d'exploiter d'autres sources de données disponibles à haute fréquence. Ont été envisagées mais écartées plusieurs pistes : consommation d'électricité, indicateurs de pollution, Google Trends, vocabulaire utilisé dans la presse, etc. Finalement, des statistiques issues des transactions par cartes bancaires fournies par le Groupement des Cartes Bancaires CB, ont été privilégiées.
+
+Ces données ont permis de confirmer l'ordre de grandeur d'une chute d'un tiers pour la consommation. Le 26 mars, l'Insee publie donc une estimation de chute de PIB (en instantané par rapport à un régime normal) de 35 % et de chute de la consommation des ménages du même ordre de grandeur. Cet ordre de grandeur s'est révélé assez fiable. Il a été confirmé par deux mises à jour ultérieures et par des évaluations de la Banque de France et des instituts de conjoncture nationaux.
+
+Des données de téléphonie mobile à haute fréquence ont également été utilisées pour mesurer les déplacements de populations au moment des confinement et déconfinement (voir chapitre sur les données géolocalisées).
