@@ -17,7 +17,7 @@ website:
         file: textes.qmd
       - text: "Images"
         file: images.qmd
-      - text: "Séries temporelles"
+      - text: "Nowcasting"
         file: series_temporelles.qmd
   sidebar:
     style: "docked"
@@ -38,7 +38,7 @@ website:
       - section: "Analyse d'images"
         contents:
           - images.qmd
-      - section: "Séries temporelles"
+      - section: "Nowcasting"
         contents:
           - series_temporelles.qmd
     tools:
