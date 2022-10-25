@@ -1,0 +1,10 @@
+---
+title: "Application"
+---
+
+L'objectif de ce TP est de montrer comment récupérer des données à partir de l'API de Twitter
+et de montrer un début d'exemple d'exploitation de ces données.
+
+Le TP peut être lancé sur le `SSP Cloud` en cliquant sur le bouton suivant:
+
+<a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fgit.lab.sspcloud.fr%2Ftseimandi%2Ftwitter-donnees-emergentes%2F-%2Fraw%2Fmaster%2Finit-jupyter.sh%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a>
