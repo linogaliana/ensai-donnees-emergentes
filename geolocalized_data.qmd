@@ -5,9 +5,30 @@ bibliography: references.bib
 
 ### Introduction
 
-Disposer de données géolocalisées pour produire de la statistique publique est un besoin qui se fait de plus en plus fort. Pour cause, un intérêt croissant est accordé aux caractéristiques spatiales des phénomènes que la statistique publique a pour rôle de décrire. Le comité d'experts des Nations Unies sur la gestion de l'information géospatiale mondiale (UN-GGIM) a d'ailleurs *reconnu l’importance cruciale d’intégrer les informations géospatiales aux statistiques et aux données socio-économiques et le développement d’une infrastructure statistique géospatiale*.
+Disposer de données géolocalisées pour produire de la statistique publique est un besoin qui se fait de plus en plus fort. Pour cause, un intérêt croissant est accordé aux caractéristiques spatiales des phénomènes que la statistique publique a pour rôle de décrire. Le comité d'experts des Nations Unies sur la gestion de l'information géospatiale mondiale (`UN-GGIM`) a d'ailleurs *reconnu l’importance cruciale d’intégrer les informations géospatiales aux statistiques et aux données socio-économiques et le développement d’une infrastructure statistique géospatiale*.
 
-Un premier apport fondamental des données géolocalisées est qu'elles permettent de calculer des indicateurs avec une granularité spatiale plus fine que les découpages administratifs ou historiques classiques. On parle de données carroyées, publiées sur des carreaux pouvant aller de 200 mètres à plusieurs kilomètres de côté (voir @fig-carroyees). Une telle granularité permet de capter certains phénomènes démographiques ou socio-économiques qui ne sont pas détectables au niveau de l'IRIS ou de la commune.
+La production et la diffusion accrue de données géolocalisées dépasse le cadre de la statistique publique.
+La généralisation
+de traces numériques géolocalisées (données mobile, GPS, localisation d'adresses IP...) a entraîné une 
+multiplication des acteurs valorisant des données spatiales. Certains acteurs de l'écosystème
+de la donnée sont spécialisés dans la collecte ou la valorisation de sources géolocalisées
+collectées par d'autres. 
+
+Un premier apport fondamental des données géolocalisées
+est qu'elles permettent de calculer des indicateurs avec
+une granularité spatiale plus fine que les découpages administratifs ou historiques classiques.
+Cette approche permet d'éclairer des phénomènes socio-économiques locaux comme les problématiques
+de mixité [@galiana2020segregation]. 
+L'Insee met à disposition en _open-data_ des données très fines sur une grande variété
+de facteur. Les sites officiels [geoportail](https://www.geoportail.gouv.fr/) et
+[statistiques-locales.insee.fr](https://statistiques-locales.insee.fr) ou encore
+les sites faits par des tiers comme [celui d'Etienne Côme](https://www.comeetie.fr/galerie/francepixels/)
+ou [hubblo](https://www.hubblo.fr/) permettent d'explorer la richesse des sources fines
+mises à disposition. 
+Pour désigner les sources les plus fines, on parle de données carroyées, publiées sur des carreaux pouvant aller de 200 mètres à plusieurs kilomètres de côté (voir @fig-carroyees). Une telle granularité permet de capter certains phénomènes démographiques ou socio-économiques qui ne sont pas détectables au niveau de l'IRIS ou de la commune[^1].
+
+[^1]: Le [projet `gridviz`](https://github.com/eurostat/gridviz) porté par `Eurostat` vise à proposer un
+outil facilitant la construction de mosaiques agrégées à partir de données spatiales. 
 
 ::: {#fig-carroyees}
 ![](img/geolocalized_data/carte_densite.png){ width=70% }
@@ -19,13 +40,13 @@ Carte des densités de population sur des carreaux de largeur d'un kilomètre à
 
 Plusieurs grands répertoires de données de l'Insee sont ainsi géolocalisés aujourd'hui :
 
-- Filosofi (pour Fichier localisé social et fiscal) est un fichier de synthèse de sources fiscales (déclarations de revenus des ménages, taxe d'habitation, fichier d'imposition des personnes) enrichi par les données sur les prestations sociales fournies par les organismes sociaux, pour un peu plus de 26 millions de ménages fiscaux en France. Les résidences des ménages y sont géolocalisées ;
-- Fidéli (pour Fichier démographique sur les logements et les individus) peut se définir comme une base annuelle exhaustive de données statistiques sur les logements - qui sont géolocalisés - et de leurs occupants ;
-- La Base Permanente des Equipements (BPE) est une source qui fournit le niveau de services rendus à la population sur un territoire, en répertoriant un large éventail d'équipements et de services accessibles au public sur l'ensemble de la France au 1er janvier de chaque année. La plupart des types d'équipement (commerce, services, santé, etc.) sont géolocalisés dans la base accessible en *open data* ;
-- Les établissements du répertoire Sirene sont géolocalisés (hors Mayotte) et ces données sont mises à disposition des utilisateurs en *open data*. La géolocalisation des établissements actifs de 200 salariés ou plus a été systématiquement vérifiée par des gestionnaires de reprise de géolocalisation, ainsi que celle des établissements de 20 à 199 salariés pour lesquels la géolocalisation automatique est incertaine ;
-- Le Recensement de la Population conduit aujourd'hui à une publication de statistiques à la maille des IRIS. Une première diffusion de données carroyées à partir du recensement suite à une phase de géolocalisation est prévue pour 2024.
+- `Filosofi` (pour __Fichier localisé social et fiscal__) est un fichier de synthèse de sources fiscales (déclarations de revenus des ménages, taxe d'habitation, fichier d'imposition des personnes) enrichi par les données sur les prestations sociales fournies par les organismes sociaux, pour un peu plus de 26 millions de ménages fiscaux en France. Les résidences des ménages y sont géolocalisées ;
+- `Fidéli` (pour Fichier démographique sur les logements et les individus) peut se définir comme une base annuelle exhaustive de données statistiques sur les logements - qui sont géolocalisés - et de leurs occupants ;
+- La `Base Permanente des Equipements (BPE)` est une source qui fournit le niveau de services rendus à la population sur un territoire, en répertoriant un large éventail d'équipements et de services accessibles au public sur l'ensemble de la France au 1er janvier de chaque année. La plupart des types d'équipement (commerce, services, santé, etc.) sont géolocalisés dans la base accessible en *open data* ;
+- Les établissements du répertoire `Sirene` sont géolocalisés (hors Mayotte) et ces données sont mises à disposition des utilisateurs en *open data*. La géolocalisation des établissements actifs de 200 salariés ou plus a été systématiquement vérifiée par des gestionnaires de reprise de géolocalisation, ainsi que celle des établissements de 20 à 199 salariés pour lesquels la géolocalisation automatique est incertaine ;
+- Le `Recensement de la Population` conduit aujourd'hui à une publication de statistiques à la maille des IRIS. Une première diffusion de données carroyées à partir du recensement suite à une phase de géolocalisation est prévue pour 2024.
 
-En général, la géolocalisation est réalisée par une combinaison d'un appariement avec un référentiel d’adresses géolocalisées construit à partir du Répertoire d’Immeubles Localisés (RIL) pour les besoins du Recensement de la Population dans les communes de plus de 10 000 habitants, et de la géolocalisation des parcelles cadastrales. Une reprise manuelle peut être faite dans les cas où la géolocalisation n'est pas possible ou s'est faite avec un faible niveau de confiance.
+En général, la géolocalisation est réalisée par une combinaison d'un appariement avec un référentiel d’adresses géolocalisées construit à partir du `Répertoire d’Immeubles Localisés (RIL)` pour les besoins du Recensement de la Population dans les communes de plus de 10 000 habitants, et de la géolocalisation des parcelles cadastrales. Ce sont ainsi ces deux répertoires administratifs qui permettent de géolocaliser de nombreuses autres sources. Une reprise manuelle peut être faite dans les cas où la géolocalisation n'est pas possible ou s'est faite avec un faible niveau de confiance.
 
 L'appariement entre les grands répertoires géolocalisés et d'autres sources peut donner naissance à des bases de données extrêmement riches et ainsi à des études de phénomènes socio-économiques à des échelles spatiales très faibles. Par exemple, @andre-21 constituent une base exhaustive rassemblant les caractéristiques des ménages et la description détaillée de leur patrimoine immobilier, à partir de différentes sources administratives (le cadastre, le fichier Fidéli, les revenus fiscaux et sociaux, les transactions immobilières et des données sur les sociétés civiles immobilières). Cette base permet d'analyser finement la concentration de la propriété immobilière en fonction du niveau de vie ou encore le profil redistributif de la taxe foncière (part de cette taxe dans le revenu disponible en fonction de ce dernier).
 
@@ -99,19 +120,22 @@ Les réseaux sociaux sont une autre source privée d'informations parfois géolo
 
   - En complément des données de téléphonie mobile, elles peuvent participer à l'estimation de populations présentes en temps réel, avec un apport particulier pour le tourisme. Pour cause, les touristes sont souvent absents des données de téléphonie mobile et ont tendance à être très actifs sur les réseaux sociaux ;
   - Elles peuvent servir à estimer le niveau de bien-être de la population à partir de méthodes d'analyse de sentiment ;
-  - Elles peuvent servir à analyser l'opinion publique à propos de sujets ou d'évènements particulier. Par exemple, CBS (INS des Pays-Bas) utilise un indicateur de sentiment calculé à partir de données issues de réseaux sociaux pour complémenter un indicateur de confiance des consommateurs lui calculé à partir de données d'enquête [@brakel-17].
+  - Elles peuvent servir à analyser l'opinion publique à propos de sujets ou d'évènements particulier. Par exemple, `CBS` (INS des Pays-Bas) utilise un indicateur de sentiment calculé à partir de données issues de réseaux sociaux pour complémenter un indicateur de confiance des consommateurs lui calculé à partir de données d'enquête [@brakel-17].
 
-Aujourd'hui plusieurs réseaux sociaux fournissent des interfaces pour accéder à leurs données. Par exemple, Twitter propose une API qui permet de récupérer des tweets à partir de requêtes simples à construire. Il est ainsi possible de récupérer tous les tweets contenant un ou plusieurs mots clés, en excluant les retweets et les tweets sans information de géolocalisation. Tous les tweets ne contiennent pas d'information sur la position de l'appareil utilisé au moment de l'envoi : il faut que l'utilisateur ait activé cette fonctionnalité. On peut avec de telles requêtes de connaître la position et l'heure exactes de l'envoi des tweets - géolocalisés - portant sur un sujet.
+Aujourd'hui plusieurs réseaux sociaux fournissent des interfaces pour accéder à leurs données. Par exemple, `Twitter` propose une API qui permet de récupérer des tweets à partir de requêtes simples à construire. Il est ainsi possible de récupérer tous les tweets contenant un ou plusieurs mots clés, en excluant les retweets et les tweets sans information de géolocalisation.
+Tous les _tweets_ ne contiennent pas d'information sur la position de l'appareil utilisé au moment de l'envoi : il faut que l'utilisateur ait activé cette fonctionnalité. On peut avec de telles requêtes de connaître la position et l'heure exactes de l'envoi des tweets - géolocalisés - portant sur un sujet.
 
 :::{.callout-note}
-Des forts biais de sélection peuvent exister lorsque l'on exploite les données de réseaux sociaux. Dans le cas de Twitter par exemple, les personnes qui tweetent, et a fortiori les personnes qui tweetent en partageant leur localisation ne constituent a priori pas un échantillon représentatif de la population générale. C'est encore davantage le cas sur un sujet en particulier. A priori, les gens qui communiquent sur ce sujet sont plus souvent concernés directement que la population générale. 
+Des forts biais de sélection peuvent exister lorsque l'on exploite les données de réseaux sociaux.
+Dans le cas de `Twitter` par exemple, les personnes qui tweetent, et a fortiori les personnes qui tweetent en partageant leur localisation ne constituent a priori pas un échantillon représentatif de la population générale. C'est encore davantage le cas sur un sujet en particulier.
+A priori, les gens qui communiquent sur ce sujet sont plus souvent concernés directement que la population générale. 
 
 Pour publier des indicateurs relevant de la statistique publique et calculés entièrement à partir de données de réseaux sociaux, il est nécessaire d'adopter un cadre de contrôle qualité très strict, en commençant par dresser une liste exhaustive des différents biais possibles [@olteanu-19].
 :::
 
 ### Données de suivi de navires ou de vols
 
-Les données AIS sont des données de localisation de navires. AIS fait référence au système d'identification automatique utilisé par les navires partout dans le monde, utilisé à l'origine pour les échanges d'information entre navires équipés de terminaux AIS. Les données AIS sont générées et transmises de manière automatique, toutes les 2 à 10 secondes en fonction de la position et de la vitesse du navire. Lorsque ce dernier est à l'arrêt, des informations sont transmises toutes les 6 minutes. Les données transmises incluent :
+Les données `AIS` sont des données de localisation de navires. AIS fait référence au système d'identification automatique utilisé par les navires partout dans le monde, utilisé à l'origine pour les échanges d'information entre navires équipés de terminaux AIS. Les données AIS sont générées et transmises de manière automatique, toutes les 2 à 10 secondes en fonction de la position et de la vitesse du navire. Lorsque ce dernier est à l'arrêt, des informations sont transmises toutes les 6 minutes. Les données transmises incluent :
 
 - Des données sur les caractéristiques des navires : identifiant, nom, type de vaisseau, taille, nationalité, etc. 
 - Des données géospatiales : localisation, vitesse, etc.
