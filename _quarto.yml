@@ -42,6 +42,7 @@ website:
       - section: "Analyse d'images"
         contents:
           - images.qmd
+          - images_exemples.qmd
       - section: "Nowcasting"
         contents:
           - series_temporelles.qmd
