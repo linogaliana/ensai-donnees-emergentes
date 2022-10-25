@@ -2,17 +2,24 @@
 title: "Images"
 ---
 
-### Introduction
+# Introduction
 
-Les images sont des données qui sont utilisées depuis longtemps de manière automatique. Une image pour une ordinateur est représentée par un tableau en 2 ou 3 dimensions (images en nuances de gris et images en couleur respectivement). En 2 dimensions, l'image a ainsi une longueur L et une largeur W : elle est constituée de $L \times W$ pixels, chacun associé à une valeur entière comprise entre 0 et 255 (ou parfois à une valeur décimale comprise entre 0 et 1), comme illustré en @fig-image-nb.
+Les images sont des données qui sont utilisées depuis longtemps de manière automatique.
+Une image pour un ordinateur est représentée par un tableau en 2 ou 3 dimensions (images en nuances de gris et images en couleur respectivement). 
+En 2 dimensions, l'image a ainsi une longueur $L$ et une largeur $W$ :
+elle est constituée de $L \times W$ pixels, chacun associé à une valeur entière comprise entre 0 et 255
+(ou parfois à une valeur décimale comprise entre 0 et 1),
+comme illustré en @fig-image-nb.
 
 ::: {#fig-image-nb}
 ![](img/images/python_pixels.png){ width=50% }
 
-Représentation du logo de `Python` en nuances de gris avec une faible résolution. La valeur de chaque pixel (entier allant de 0 pour un pixel complètement noir à 255 pour un pixel complètement blanc) figure à l'emplacement de ce dernier. 
+Représentation du logo de `Python` en nuances de gris avec une faible résolution.
+La valeur de chaque pixel (entier allant de 0 pour un pixel complètement noir à 255 pour un pixel complètement blanc) figure à l'emplacement de ce dernier. 
 :::
 
-Une image en couleur est constituée de 3 canaux (RGB pour *Red*, *Green* et *Blue*). Chacun des $L \times W$ pixels de l'image est ainsi associé à 3 valeurs entières comprises entre 0 et 225 (ou à 3 valeurs décimales comprises entre 0 et 1), comme illustré en @fig-image-couleur.
+Une image en couleur est constituée de 3 canaux (RGB pour *Red*, *Green* et *Blue*).
+Chacun des $L \times W$ pixels de l'image est ainsi associé à 3 valeurs entières comprises entre 0 et 225 (ou à 3 valeurs décimales comprises entre 0 et 1), comme illustré en @fig-image-couleur.
 
 ::: {#fig-image-couleur layout="[[-26,14,-26], [-8,16,-1,16,-1,16,-8]]"}
 ![](img/images/rgb_image.png)
@@ -23,10 +30,15 @@ Une image en couleur est constituée de 3 canaux (RGB pour *Red*, *Green* et *Bl
 
 ![](img/images/python_blue.png)
 
-Représentation du logo de `Python` en couleurs. L'image du haut correspond à la superposition des trois canaux représentés sur la rangée inférieure.
+Représentation du logo de `Python` en couleurs. L'image du haut correspond
+à la superposition des trois canaux représentés sur la rangée inférieure.
 :::
 
-Le domaine de la vision par ordinateur (*computer vision*) a vu le jour dans les années 1960 avec le développement des premiers algorithmes cherchant à extraire de l'information d'images. Par exemple, @sobel-73 introduit la méthode suivante pour faire de la détection de contours sur une image $A$. On calcule 
+Le domaine de la vision par ordinateur (*computer vision*) a vu le jour dans les années 1960
+avec le développement des premiers algorithmes cherchant à extraire de l'information d'images.
+Par exemple, @sobel-73 introduit la méthode suivante pour faire de la détection de contours sur une image $A$. 
+
+On calcule 
 
 $$
 G_x = \begin{bmatrix}
@@ -40,7 +52,9 @@ G_x = \begin{bmatrix}
 \end{bmatrix} \star A
 $$
 
-où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en @fig-convol). Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ fournit une représentation des contours de l'image $A$. Une illustration de l'application de cette méthode est donnée en @fig-sobel.
+où $\star$ est l'opérateur de convolution 2-dimensionnel en traitement du signal (illustré en @fig-convol). 
+
+Alors l'image $G = \sqrt{G_x^2 + G_y^2}$ fournit une représentation des contours de l'image $A$. Une illustration de l'application de cette méthode est donnée en @fig-sobel.
 
 ::: {#fig-sobel layout="[-3,10,-1,10,-3]"}
 ![](img/images/bike.jpg)
@@ -56,23 +70,54 @@ L'image de droite est obtenue par application sur l'image de gauche de la métho
 Illustration de l'opérateur de convolution 2-dimensionnel $\star$. Le noyau (matrice en bleu sur le dessin) est multiplié par -1 et *glisse* sur la matrice de gauche. Une multiplication élément par élément est faite sur chaque sous-matrice de la taille du noyau. Pour chacune de ces multiplication, les coefficients sont ensuite sommés pour donner une valeur de sortie unique. Par exemple ici, la valeur du pixel en vert correspond au calcul $3 = 1*(-1) + 1*1 + 1*2 + 1*1$.
 :::
 
-### La révolution du Deep Learning
+# La révolution du Deep Learning
 
-Dans les dernières années, l'apprentissage profond a permis une véritable révolution dans le domaine de la vision par ordinateur [@voulodimos-18], en introduisant des modèles complexes qui parviennent à apprendre et à représenter des données sur plusieurs niveaux d'abstraction, à l'image de la manière dont le cerveau perçoit et comprend les informations multi-modales. 
+Dans les dernières années, l'apprentissage profond a permis une véritable révolution dans le domaine de la vision par ordinateur [@voulodimos-18].
+Les réseaux de neurone ont permis l'introduction de
+modèles complexes qui parviennent à apprendre et à représenter des données
+sur plusieurs niveaux d'abstraction,
+à l'image de la manière dont le cerveau perçoit et comprend les informations multi-modales. 
 
-Ainsi, les performance *state-of-the-art* ont été largement améliorées pour une multitude de tâches différentes : classification d'image, segmentation sémantique, reconnaissance faciale et détection d'objets (changeant complètement la donne en robotique par exemple ou encore rendant possible la conduite de véhicules autonomes).
+Ainsi, les performance *state-of-the-art* ont été largement améliorées pour une multitude de tâches différentes :
+classification d'image, segmentation sémantique, reconnaissance faciale et détection d'objets...
+Par exemple, dans le domaine de la robotique ou de la voiture autonome, ces modèles ont
+changé la donne en permettant que certaines opérations d'analyse et de décisions soient néanmoins
+applicables dans une grande diversité de scénarios. 
 
-Une architecture de modèles a joué un rôle particulièrement important dans cette révolution : les réseaux de neurones convolutifs [voir @lecun-89 pour un des articles fondateurs]. Ces réseaux de neurones sont constitués d'un enchaînement de couches convolutives, chacune composée de trois étapes :
+## Réseaux de neurone convolutifs
 
-- Une étape de *convolution* utilisant l'opérateur $\star$ décrit ci-dessus qui transforme un tenseur 3-dimensionnel de taille $(H, W, C)$ en entrée en un tenseur de taille $(H', W', C')$ ou $H'$, $W'$ et $C'$ dépendent de la taille du noyau de convolution choisi ;
-- Une étape de *détection* où une fonction non-linéaire est appliquée au tenseur obtenu en sortie de l'étape de convolution ;
-- Une étape de *pooling* où chaque canal du tenseur en entrée voit sa hauteur et largeur réduite à l'aide une fonction qui remplace chaque valeur par une statistique impliquant les valeurs des pixels voisins (fréquemment, la valeur maximale dans un voisinage rectangulaire : c'est l'opération de *max pooling*).
+Une architecture de modèles a joué un rôle particulièrement important dans cette révolution : les __réseaux de neurones convolutifs__ [voir @lecun-89 pour un des articles fondateurs].
+Ces réseaux de neurones sont constitués d'un enchaînement de couches convolutives, chacune composée de trois étapes :
 
-Les tenseurs obtenus en sortie des couches convolutives sont appelés *activation maps* ou *feature maps*. Chaque *feature map* peut s'interpréter comme une carte qui indique les endroits où on peut trouver une *feature* particulière (par exemple un bord, une texture, une partie d'un objet, etc.) au sein de l'image. Les features pertinentes (c'est-à-dire les coefficients des filtres de convolution utilisés) sont apprises par le réseau de neurones au cours de la phase d'entraînement.
+- __Une étape de *convolution*__ utilisant l'opérateur $\star$ décrit ci-dessus qui transforme un [tenseur](https://fr.wikipedia.org/wiki/Tenseur_(math%C3%A9matiques))
+3-dimensionnel de taille $(H, W, C)$ en entrée en un tenseur de taille $(H', W', C')$ ou $H'$, $W'$ et $C'$ dépendent de la taille du noyau de convolution choisi ;
+- Une __étape de *détection*__ où une fonction non-linéaire est appliquée au tenseur obtenu en sortie de l'étape de convolution ;
+- Une __étape de *pooling*__ où chaque canal du tenseur en entrée voit sa hauteur et largeur réduite à l'aide une fonction qui remplace chaque valeur par une statistique impliquant les valeurs des pixels voisins (fréquemment, la valeur maximale dans un voisinage rectangulaire : c'est l'opération de *max pooling*).
 
-Les réseaux de neurones convolutifs présentent plusieurs caractéristiques essentielles pour des tâches de vision par ordinateur, qui expliquent en partie leur succès : une invariance (relative) à la translation, la rotation et à l'échelle. Ces caractéristiques permettent aux modèles d'abstraire l'identité d'un objet de détails spécifiques aux images données en entrée tels que la position et l'orientation de cet objet par rapport à la caméra.
+La succession de ces opérations est résumée dans la @fig-nn-convol
 
-### Segmentation sémantique
+::: {#fig-nn-convol}
+
+![](https://editor.analyticsvidhya.com/uploads/59954intro%20to%20CNN.JPG)
+
+Illustration d'une succession de séquences d'un réseau convolutionnel.
+Emprunté à https://www.analyticsvidhya.com/blog/2022/01/convolutional-neural-network-an-overview/
+
+:::
+
+Les tenseurs obtenus en sortie des couches convolutives sont appelés *activation maps* ou *feature maps*.
+Chaque *feature map* peut s'interpréter comme une carte qui indique les endroits où on peut trouver une *feature* particulière (par exemple un bord, une texture, une partie d'un objet, etc.) au sein de l'image.
+Les _features_ pertinentes (c'est-à-dire les coefficients des filtres de convolution utilisés)
+sont apprises par le réseau de neurones au cours de la phase d'entraînement.
+On peut voir ces _features_ comme des structures latentes qui combinées ensemble génèrent un objet sur 
+l'image
+finale. 
+
+
+Les réseaux de neurones convolutifs présentent plusieurs caractéristiques essentielles pour des tâches de vision par ordinateur, qui expliquent en partie leur succès : une invariance (relative) à la translation, la rotation et à l'échelle.
+Ces caractéristiques permettent aux modèles d'abstraire l'identité d'un objet de détails spécifiques aux images données en entrée tels que la position et l'orientation de cet objet par rapport à la caméra.
+
+## Segmentation sémantique
 
 La segmentation sémantique est une tâche de vision par ordinateur qui consiste à associer une étiquette ou une catégorie à chaque pixel d'une image (illustration en @fig-segmentation). Plusieurs architectures de réseaux de neurones convolutifs entraînées sur des gros jeux d'entraînement obtiennent des performances très élevées sur des jeux de données d'évaluation de référence, comme l'architecture `DeepLabV3` [@chen-17]. Les principaux frameworks de Deep Learning fournissent des implémentations de modèles de segmentation sémantique (avec ou sans coefficients pré-entraînés) : c'est le cas du package `Python` [`torchvision`](https://pytorch.org/vision/) par exemple qui propose une implémentation des modèles `DeepLabV3`, `FCN` et `LRASPP`.
 
@@ -83,6 +128,15 @@ La segmentation sémantique est une tâche de vision par ordinateur qui consiste
 
 Segmentation sémantique effectuée sur une photo de chat (partie gauche de la Figure). Sur le masque de segmentation (partie droite de la Figure), les pixels verts sont associés à la classe *chat* tandis que les pixels roses sont associés à la classe *arrière-plan*. Source : [Hugging Face](https://huggingface.co/tasks/image-segmentation).
 :::
+
+::: {#fig-segmentation}
+
+![](https://nanonets.com/blog/content/images/2020/08/1_Hz6t-tokG1niaUfmcysusw.jpeg)
+
+
+Un autre exemple de segmentation sémantique, issu de ce [blog](https://nanonets.com/blog/semantic-image-segmentation-2020/)
+:::
+
 
 ### Application à la statistique publique : utilisation de données d'observation satellitaire
 
