@@ -418,8 +418,7 @@ structurée, n'est qu'un prolongement de cette
 dynamique. Ces dernières permettent d'enrichir
 l'information dont dispose l'administration
 avec des informations collectées dans
-le cadre d'activités économiques qui n'ont
-pas lieu avec l'administration.
+le cadre d'activités économiques détachées de l'administration.
 
 Les avantages des données administratives sont multiples. 
 En premier lieu, la collecte automatisée de celle-ci,
@@ -428,18 +427,18 @@ sur un champ d'unités statistiques bien définies (usuellement
 par le biais d'un décret), une forme d'exhaustivité.
 Cette dernière permet de construire des statistiques plus 
 fines. Si aujourd'hui il est possible pour des chercheurs
-de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty...), 
+de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty), 
 c'est parce que l'aspect exhaustif des données permet
 d'avoir des groupements suffisamment nombreux pour assurer la confidentialité
 de ces groupes. 
 
-Une fois payé le coût d'investtisement pour automatiser la production statistique
+Une fois payé le coût d'investissement pour automatiser la production statistique
 à partir de données de gestion, les données administratives
 ouvrent la voie à la production à plus haute fréquence
 de statistiques officielles.
 La production annuelle ou infra-annuelle de statistiques
-n'est possible qu'avec un nombre restreint d'enquêtes, dont
-les résultats peuvent être connus avec retard. 
+n'est possible qu'avec un nombre restreint d'enquêtes - dans la plupart des cas,
+les résultats d'enquêtes sont connus avec du retard. 
 La publication quotidienne par le service statistique du Ministère de la Santé
 (la DREES) et Santé Publique France d'indicateurs sur la pandémie
 est un bon exemple de l'intérêt de ces données. Ces dernières ont permis
@@ -465,7 +464,7 @@ dont l'activité est spécialisée autour de la collecte et de
 la gestion du flux, qui intervient à cet étape. Il peut ainsi
 être amené à faire évoluer le champ, la définition du phénomène
 mesuré ou encore le formulaire sans
-que l'analyste de donnée n'ait son mot à dire.
+que l'analyste de données n'ait son mot à dire.
 Pour reprendre l'exemple des données quotidiennes, l'apparition de
 variants à plusieurs reprises a amené à des évolutions, parfois
 sans préavis, du type de donnée collectée, enregistrée.
@@ -477,7 +476,7 @@ Le statisticien, parce qu'il intervient plus en aval, change donc de rôle.
 Les données administratives n'étant pas construites pour mesurer un
 phénomène qui a du sens pour le statisticien public (ou l'analyste de la 
 donnée privée), c'est à lui de reconstruire à partir de l'information
-de gestion la réalité statistique derrière [@salgado]. Le travail
+de gestion la réalité statistique derrière [@salgado-20]. Le travail
 de l'analyse de données va au donc au delà de la simple reconstruction
 de variable, ou du contrôle qualité, il est également nécessaire
 de réfléchir au concept mesuré pour ne pas construire d'"artefact", 

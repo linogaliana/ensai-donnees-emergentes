@@ -7,10 +7,10 @@ title: "Quelques exemples approfondis de données administratives"
 
 4 exemples de nature différente:
 
-- la DSN: base de gestion transmise à l'Insee et la DARES pour la production
-- SIRENE: répertoire géré par l'Insee, utilisé par d'autres acteurs
-- Fideli: agrégation et mise en ochérent de plusieurs sources
-- SNDS: mise en cohérence de données de gestion hospitalières et assurance maladie, enjeu encore plus fort de confidentialité
+- la DSN: base de gestion transmise à l'Insee et la DARES pour la production ;
+- Sirene: répertoire géré par l'Insee, utilisé par d'autres acteurs ;
+- Fidéli: agrégation et mise en cohérence de plusieurs sources ;
+- SNDS: mise en cohérence de données de gestion hospitalières et de l'assurance maladie, enjeu encore plus fort de confidentialité ;
 
 
 :::{.callout-note}
@@ -86,10 +86,10 @@ L’utilité du numéro SIRET est multiple. S’il constitue avant tout la preuv
 
 Ainsi, il sert à : 
 
-    Émettre des factures, mais aussi des documents commerciaux. En effet, il est obligatoire de faire apparaître le numéro sur chacun de ces documents. En outre, si l’entreprise à un site internet, le numéro doit apparaître dans les mentions légales.
-    Obtenir des informations officielles sur les sociétés. Grâce au SIRET, tout prestataire ou client peut vérifier la fiabilité des données que l’entreprise lui fournit, via une recherche sur internet notamment.
-    Prouver l’existence légale de la compagnie. Ce numéro permet en effet de l’identifier auprès de ses clients, prestataires, co-contractants et par l’administration fiscale.
-    Produire des statistiques à partir de la base SIRENE et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
+- Émettre des factures, mais aussi des documents commerciaux. En effet, il est obligatoire de faire apparaître le numéro sur chacun de ces documents. En outre, si l’entreprise à un site internet, le numéro doit apparaître dans les mentions légales ;
+- Obtenir des informations officielles sur les sociétés. Grâce au SIRET, tout prestataire ou client peut vérifier la fiabilité des données que l’entreprise lui fournit, via une recherche sur internet notamment ;
+- Prouver l’existence légale de la compagnie. Ce numéro permet en effet de l’identifier auprès de ses clients, prestataires, co-contractants et par l’administration fiscale ;
+- Produire des statistiques à partir de la base SIRENE et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
 
 
 
