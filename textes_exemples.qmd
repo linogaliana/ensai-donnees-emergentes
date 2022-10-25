@@ -1,0 +1,15 @@
+---
+title: "Application"
+---
+
+L'objectif de ce TP est d'explorer les aspects suivants du traitement
+du langage naturel:
+
+- _Preprocessing_
+- `ElasticSearch`: indexation et requêtage
+
+Il est disponible sur [cette page](https://pythonds.linogaliana.fr/elastic/) en version _web_ 
+et peut être ouvert sur l'environnement
+`SSPCloud` où `ElasticSearch` est disponible en cliquant sur le bouton suivant:
+
+<a href="https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&amp;onyxia.friendlyName=%C2%ABpython-datascience%C2%BB&amp;init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-jupyter.sh%C2%BB&amp;init.personalInitArgs=%C2%ABmodern-ds%20elastic_intro%C2%BB&amp;security.allowlist.enabled=false" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/SSPcloud-Tester%20via%20SSP--cloud-informational&amp;color=yellow?logo=Python" alt="Onyxia"></a>
