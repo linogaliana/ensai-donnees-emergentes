@@ -138,30 +138,78 @@ Un autre exemple de segmentation sémantique, issu de ce [blog](https://nanonets
 :::
 
 
-### Application à la statistique publique : utilisation de données d'observation satellitaire
+# Application à la statistique publique
 
-Les données issues de satellites (on parle souvent de données d'*Earth Observation*, ce qui comprend aussi les images issues de radars ou les orthophotographies par exemple) permettent d'observer les territoires et potentiellement d'en tirer des enseignements à diffuser sous la forme de statistiques publiques. Par exemple, l'utilisation de données satellitaires peut permettre d'améliorer la granularité spatiale et temporelles de statistiques publiées aujourd'hui sur la production agricole. 
+La statistique publique, et plus largement l'administration, 
+peut désirer tirer parti des méthodes de vision par ordinateur
+de plusieurs manières. 
+La suite de ce chapitre va développer quelques cas d'usages,
+non exhaustifs, des données satellites pour la statistique
+publique. Les cas d'usage sont très nombreux et ne seront 
+pas tous évoqués. Par exemple, pour en savoir 
+plus sur la production des données LIDAR de l'IGN, 
+il est recommandé de lire [cette page](https://geoservices.ign.fr/lidarhd).
 
-De manière générale, ces données ont beaucoup de potentiel lorsqu'elles sont utilisées en combinaison avec d'autres sources de données lorsqu'il s'agit de pallier des insuffisances ou des manques concernant les données traditionnellement utilisées pour la statistique publique [voir par exemple les travaux de @steele-17 qui combinent données de satellites et données de téléphonie mobile pour estimer des taux de pauvreté]. En France, les départements et régions d'outre-mer sont particulièrement concernés. Par exemple, les parcelles cadastrales y sont parfois mal identifiées ou mises à jour. Les données satellitaires peuvent être utilisées pour fiabiliser cette information.
+
+## Utilisation de données d'observation satellitaire
+
+### Nature de la donnée
+
+Dans le domaine des données d'*Earth Observation*, 
+qui regroupent en fait différentes sources de données (radars, [orthophotographies](http://geoconfluences.ens-lyon.fr/glossaire/orthophotographie)...), les données photographiques
+issues de satellites ont une place de choix. 
+Celles-ci
+permettent d'observer les territoires, que ce soit leur topologie
+ou leur usage
+et potentiellement d'en tirer des enseignements à diffuser sous la forme de statistiques publiques.
+Par exemple, l'utilisation de données satellitaires peut permettre d'améliorer la granularité spatiale et temporelles de statistiques publiées aujourd'hui sur la production agricole (part du territoire cultivé, nature des cultures...). 
+
+De manière générale, ces données ont beaucoup de potentiel lorsqu'elles sont utilisées en combinaison avec d'autres sources de données lorsqu'il s'agit de pallier des insuffisances ou des manques concernant les données traditionnellement utilisées pour la statistique publique. Par exemple, @steele-17 combinent données de satellites et données de téléphonie mobile pour estimer des taux de pauvreté.
+En France, les départements et régions d'outre-mer sont particulièrement concernés.
+Les données satellites permettraient d'y combler des imperfections des données administratives.
+Par exemple, les parcelles cadastrales y sont parfois mal identifiées ou rarement mises à jour. Les données satellitaires peuvent être utilisées pour fiabiliser cette information.
 
 :::{.callout-note}
 Les données d'*Earth Observation* présentent des difficultés d'utilisation non-négligeables dans un contexte de production statistique :
 
 - Il faut au moment de la production de la statistique désirée s'assurer que l'on parvient à des résultats statistiquement robustes ;
 - Produire des statistiques de manière récurrente à partir d'une source de données demande d'avoir du recul sur le fonctionnement de la chaîne de traitement en production. Comme les données d'*Earth Observation* ne sont aujourd'hui utilisées que par peu d'instituts statistiques, il est difficile d'avoir un tel recul sans soi-même avoir une chaîne de traitement qui tourne depuis plusieurs années ;
-- Pour de nombreuses applications, on souhaite utiliser des images avec une résolution élevée mais aussi exploiter la haute fréquence temporelle de passage de certains satellites. Dans un tel cadre les données d'*Earth Observation* ont souvent un volume très important. Entraîner des modèles pertinents (les modèles de Deep Learning  *state-of-the-art* sont complexes) demande d'avoir des ressources informatiques adaptées à disposition.
+- Pour de nombreuses applications, on souhaite utiliser des images avec une résolution élevée mais aussi exploiter la haute fréquence temporelle de passage de certains satellites. Dans un tel cadre les données d'*Earth Observation* ont souvent un volume très important. Entraîner des modèles pertinents (les modèles de _Deep Learning_  *state-of-the-art* sont complexes) demande d'avoir des ressources informatiques adaptées à disposition ;
+- Selon les besoins, la résolution disponible peut ne pas correspondre aux besoins de la statistique.
 :::
+
+### Fournisseurs de données
 
 Des acteurs publient des données satellitaires en *open data* :
 
-- La NASA à travers son programme historique [Landsat](https://landsat.gsfc.nasa.gov/data/). Les dernières générations des satellites Landsat recueillent des images dans une dizaine de bandes spectrales (bandes visibles mais aussi bandes infrarouges) avec une résolution spatiale de 30 mètres (pour les bandes visibles) ;
-- L'Agence spatiale européenne a lancé le programme [Sentinel-2](https://sentinel.esa.int/web/sentinel/sentinel-data-access) en 2015. Les images des satellites Sentinel-2 sont aussi disponibles en *open data*, sur 12 bandes avec une résolution spatiale de 10 mètres, plus fine que celle des images de Landsat. La périodicité de la couverture des satellites Sentinel-2 est relativement faible : ces derniers repassent au-dessus des mêmes zones tous les cinq jours. 
+- La `NASA` à travers son programme historique [`Landsat`](https://landsat.gsfc.nasa.gov/data/). Les dernières générations des satellites Landsat recueillent des images dans une dizaine de bandes spectrales (bandes visibles mais aussi bandes infrarouges) avec une résolution spatiale de 30 mètres (pour les bandes visibles) ;
+- L'`Agence spatiale européenne (ESA)` a lancé le programme [`Sentinel-2`](https://sentinel.esa.int/web/sentinel/sentinel-data-access) en 2015. Les images des satellites `Sentinel-2` sont aussi disponibles en *open data*, sur 12 bandes avec une résolution spatiale de 10 mètres, plus fine que celle des images de `Landsat`. La périodicité de la couverture des satellites `Sentinel-2` est relativement faible : ces derniers repassent au-dessus des mêmes zones tous les cinq jours. 
 
-Des entreprises privées collectent aussi des images avec leurs propres satellites, parfois avec des meilleures résolutions que les images disponibles en libre accès, ce qui peut être nécessaire en fonction du cas d'usage envisagé. De manière générale, il y a toutefois un arbitrage à faire entre le détail local des mesures (résolution radiométrique, nombre de bandes spectrales) et la résolution spatiale des images. La richesse des images issues de satellites réside plutôt dans la première dimensions, alors que les orthophotographies par exemple sont à privilégier si on désire une plus haute résolution spatiale.
+Des entreprises privées collectent aussi des images avec leurs propres satellites,
+parfois avec des meilleures résolutions que les images disponibles en libre accès,
+ce qui peut être nécessaire en fonction du cas d'usage envisagé.
+De manière générale,
+il y a toutefois un arbitrage à faire entre le détail local des mesures
+(résolution radiométrique, nombre de bandes spectrales) et la résolution spatiale des images.
+La richesse des images issues de satellites réside plutôt dans la première dimensions,
+alors que les orthophotographies par exemple sont à privilégier si on désire une plus haute résolution spatiale.
 
-Le traitement d'images de satellites se divise de manière classique en trois parties [@plan-sat] : d'abord vient le pré-traitement des données, qui inclut le stockage, le *data managment*, le contrôle de la qualité des données, l'inclusion d'autres sources et l'identification d'outils appropriés pour l'analyse. Ce pré-traitement est suivi par une phase d'analyse, où l'on définit les indicateurs à calculer, les données à utiliser et où l'on applique la méthode analytique choisie. Enfin, au cours de la phase d'évaluation, on collecte et on interprète les résultats de l'analyse.
+### Pipeline
 
-Des méthodes historiques existent pour analyser des images de satellites (pour *in fine* produire des statistiques) : par exemple l'utilisation de modèle physiques pour prédire la valeur d'une variable d'intérêt à partir de l'observation empirique de certaine bandes, ou encore de méthodes d'analyse d'images traditionnelles où des informations spatiales, relatives à des motifs, à des textures, etc. sert à segmenter l'image sous supervision humaine (OBIA). Récemment, le Machine Learning (et en particulier le Deep Learning) a fourni des outils d'analyse puissants facilement applicables aux images satellites.
+Le traitement d'images de satellites se divise de manière classique en trois parties [@plan-sat] :
+
+- d'abord vient le __pré-traitement__ des données, qui inclut le stockage, le *data managment*, le contrôle de la qualité des données, l'inclusion d'autres sources et l'identification d'outils appropriés pour l'analyse.
+- Ce pré-traitement est suivi par une __phase d'analyse__, où l'on définit les indicateurs à calculer, les données à utiliser et où l'on applique la méthode analytique choisie.
+- Enfin, au cours de la __phase d'évaluation__, on collecte et on interprète les résultats de l'analyse.
+
+Des méthodes historiques existent pour analyser des images de satellites (pour *in fine* produire des statistiques).
+Par exemple, l'utilisation de modèle physiques
+pour prédire la valeur d'une variable d'intérêt à partir de l'observation empirique de certaine bandes,
+ou encore de méthodes d'analyse d'images traditionnelles où des informations spatiales,
+relatives à des motifs, à des textures, etc. sert à segmenter l'image sous supervision humaine (OBIA).
+Récemment, le Machine Learning (et en particulier le Deep Learning) a fourni des outils d'analyse puissants facilement applicables aux images satellites.
+
+### Cas d'usage
 
 Les cas d'usage potentiels d'utilisation de ces données pour la statistique publique touchent de nombreux thèmes, qui incluent :
 
@@ -169,19 +217,24 @@ Les cas d'usage potentiels d'utilisation de ces données pour la statistique pub
 - L'urbanisation et les infrastructures ;
 - La pollution environnementale et la qualité de l'air atmosphérique ;
 
-En particulier, l'analyse d'images satellite peut permettre de calculer des indicateurs comme la proportion de surface agricole en agriculture intensive ou en agriculture durable, le pourcentage de masses d'eau présentant une bonne qualité de l'eau ambiante, la couverture forestière dans le cadre d'une gestion forestière durable, la perte nette permanente de forêts, etc.
+En particulier, l'analyse d'images satellite peut permettre de calculer des indicateurs comme la proportion de surface agricole en agriculture intensive ou en agriculture durable,
+le pourcentage de masses d'eau présentant une bonne qualité de l'eau ambiante,
+la couverture forestière dans le cadre d'une gestion forestière durable,
+la perte nette permanente de forêts, etc.
+
+
 
 Plusieurs cas d'usage précis ont été ciblés aujourd'hui pour la statistique publique en France et donnent ou vont donner lieu à des travaux expérimentaux. 
 
-1. Un des cas d'usage identifiés depuis un moment déjà est l'utilisation d'images satellites pour calculer les statistiques sur l'occupation et l'usage des sols sur le territoire français. Aujourd'hui, ces statistiques sont tirées de l'enquête Teruti conduite par le Bureau des statistiques structurelles environnementales et forestières du SSP (Ministère de l'agriculture).
+1. Un des cas d'usage identifiés depuis un moment déjà est l'utilisation d'images satellites pour calculer les __statistiques sur l'occupation et l'usage des sols sur le territoire français__. Aujourd'hui, ces statistiques sont tirées de l'enquête `Teruti` conduite par le Bureau des statistiques structurelles environnementales et forestières du SSP (Ministère de l'Agriculture).
 
     Un échantillon de points est observé sur le terrain sur un cycle de 3 ans permettant d'estimer l’occupation des sols avec une précision qui reste satisfaisante à l'échelon départemental. L'échantillonnage des points se fait à partir de sources multiples, dont des données satellitaires (satellite SPOT) et des orthophotographies de l'IGN. En outre, une phase de validation des résultats de l'enquête est réalisée à partir d'une couche d'exploitation du sol issue de données de Sentinel-2 et réalisée de manière automatique est le Centre d'Etudes Spatiales sur la BIOsphere à Toulouse.
 
     Des travaux sont actuellement en cours pour encore davantage améliorer la phase d'échantillonnage à l'aide d'images satellitaires. En outre, une méthode automatique donnant des couches d'exploitation des sols avec une précision suffisante pour les besoins de la statistique publique pourrait permettre de diffuser des statistiques plus régulièrement qu'avec l'enquête Teruti et avec une granularité territoriale plus fine. 
 
-2. Les parcelles cadastrales sont parfois mal identifiées dans les départements et région d'outre-mer, en particulier en Guyane et à Mayotte. Or ces parcelles sont utilisées pour des tirages d'échantillon par l'Insee, pour le recensement de la population par exemple. 
+2. Les __parcelles cadastrales__ sont parfois mal identifiées dans les départements et région d'outre-mer, en particulier en Guyane et à Mayotte. Or ces parcelles sont utilisées pour des tirages d'échantillon par l'Insee, pour le recensement de la population par exemple. 
 
-    Ici encore, des modèles de segmentation retournant des couches d'exploitation et d'usage des sols peuvent être utilisés pour consolider l'information disponible sur les parcelles cadastrales. Dans le cadre d'une expérimentation, un modèle de segmentation `U-Net` [@ronneberger-15] pré-entraîné sur le jeu de données [ImageNet](https://www.image-net.org/) a été fine-tuné sur un sous-échantillon du jeu annoté S2GLC (Sentinel-2 Global Land Cover). Ce modèle prend en entrée une image satellite et renvoie une prédiction pixel par pixel de la catégorie de terrain (en 10 classes), comme illustré en @fig-satellite. S'il est assez précis sur la catégorie *surfaces artificielles et construction*, ses prédictions pourraient servir à consolider les données cadastrales.
+    Ici encore, des modèles de segmentation retournant des couches d'exploitation et d'usage des sols peuvent être utilisés pour consolider l'information disponible sur les parcelles cadastrales. Dans le cadre d'une expérimentation, un modèle de segmentation `U-Net` [@ronneberger-15] pré-entraîné sur le jeu de données [`ImageNet`](https://www.image-net.org/) a été fine-tuné sur un sous-échantillon du jeu annoté `S2GLC` (`Sentinel-2 Global Land Cover`). Ce modèle prend en entrée une image satellite et renvoie une prédiction pixel par pixel de la catégorie de terrain (en 10 classes), comme illustré en @fig-satellite. S'il est assez précis sur la catégorie *surfaces artificielles et construction*, ses prédictions pourraient servir à consolider les données cadastrales.
 
 ::: {#fig-satellite layout="[-1,10,-1,10,-1,10,-1]"}
 ![](img/images/image_satellite.png)
@@ -193,7 +246,7 @@ Plusieurs cas d'usage précis ont été ciblés aujourd'hui pour la statistique 
 À gauche : image satellite issue de Sentinel-2. Au milieu : segmentation prédite par le modèle U-Net. À droite : vraie segmentation de l'image.
 :::
 
-3. L'enquête sur la structure des exploitations agricoles (Bureau des statistiques structurelles environnementales et forestières du SSP) dont la prochaine édition aura lieu en 2023 pose des questions sur les vergers. Il n'existe aujourd'hui pas de source administrative permettant de consolider les résultats de l'enquête sur cette thématique.Ainsi, un projet d'expérimentation utilisant des orthophotographies pour dénombrer le nombre d'arbres et la surface associée est envisagé. La librairie [`DeepForest`](https://github.com/weecology/DeepForest-pytorch) propose des modèles pré-entraînés pour faire de la détection d'arbres (voir @fig-detection) et pourra servir de point de départ pour cette expérimentation. 
+3. L'__enquête sur la structure des exploitations agricoles__ (Bureau des statistiques structurelles environnementales et forestières du SSP) dont la prochaine édition aura lieu en 2023 pose des questions sur les vergers. Il n'existe aujourd'hui pas de source administrative permettant de consolider les résultats de l'enquête sur cette thématique.Ainsi, un projet d'expérimentation utilisant des orthophotographies pour dénombrer le nombre d'arbres et la surface associée est envisagé. La librairie [`DeepForest`](https://github.com/weecology/DeepForest-pytorch) propose des modèles pré-entraînés pour faire de la détection d'arbres (voir @fig-detection) et pourra servir de point de départ pour cette expérimentation. 
 
 ::: {#fig-detection}
 ![](img/images/detection_arbre.png)
@@ -209,24 +262,43 @@ Plusieurs questions méthodologiques essentielles se posent lorsqu'on exploite d
 - Pré-traitements sur les images : détection et suppression de nuages, amélioration de la résolution ;
 - Transférabilité des modèles : est-ce qu'un modèle entraîné sur des images provenant d'un satellite fonctionnera correctement avec des images provenant d'un autre satellite ? Ou avec un réentraînement minimal ?
 
-Un enjeu majeur est l'obtention de données annotées (même si le pré-entraînement de modèles sur des jeux de données énormes réduit le besoin de données annotées pour la tâche considérée). Pour des tâches de prédiction de l'utilisation du sol, on peut par exemple mobiliser la base de données géographiques [CORINE Land Cover](https://www.statistiques.developpement-durable.gouv.fr/corine-land-cover-0), un inventaire biophysique qui fournit une photographie complète de l’occupation des sols, à des fréquences régulières.
+Un enjeu majeur est l'obtention de __données annotées__ (même si le pré-entraînement de modèles sur des jeux de données énormes réduit le besoin de données annotées pour la tâche considérée). Pour des tâches de prédiction de l'utilisation du sol, on peut par exemple mobiliser la base de données géographiques [`CORINE Land Cover`](https://www.statistiques.developpement-durable.gouv.fr/corine-land-cover-0), un inventaire biophysique qui fournit une photographie complète de l’occupation des sols, à des fréquences régulières.
 
 Elle est issue de l'interprétation visuelle d'images satellitaires, avec des données complémentaires d'appui. Les classes d'occupation correspondent à une nomenclature comportant 44 postes.
 :::
 
-### La reconnaissance optique de caractères
+## La reconnaissance optique de caractères
 
-La reconnaissance optique de caractères (souvent abrégée par OCR pour *Optical character recognition*) désigne la tâche de conversion de texte manuscrit ou imprimé en texte encodé par un ordinateur. C'est une tâche essentielle pour exploiter des documents disponibles sous la forme d'images numériques.
+L'administration française a été historiquement une grande productrice
+de fichiers sous format papier. Même si la numérisation des sources
+de collectes administratives réduit le volume de production papier,
+ce dernier mode de collecte est encore d'usage. Afin de réduire
+le temps de numérisation, il est donc utile de mettre en oeuvre
+des routines automatisées. Dans la même veine, l'administration
+a longtemps mis en oeuvre des publications (tableaux ou graphiques)
+sous format papier. Être en mesure de valoriser ce patrimoine
+de connaissance est un enjeu pour la recherche.
 
-Développer son propre moteur d'OCR est une tâche très complexe mais heureusement des moteurs *open source* existent. [Tesseract](https://github.com/tesseract-ocr/tesseract) est un logiciel pour la reconnaissance de caractères *open source* depuis 2015. Tesseract offre plusieurs moteurs depuis sa version 4 : en plus du moteur historique, un moteur basé sur le Deep Learning (réseaux de neurones LSTM) est aujourd'hui disponible.
+La reconnaissance optique de caractères (souvent abrégée par `OCR` pour *Optical character recognition*) désigne la tâche de conversion de texte manuscrit ou imprimé en texte encodé par un ordinateur. C'est une tâche essentielle pour exploiter des documents disponibles sous la forme d'images numériques.
+
+Développer son propre moteur d'OCR est une tâche très complexe mais heureusement des moteurs *open source* existent. [`Tesseract`](https://github.com/tesseract-ocr/tesseract) est un logiciel pour la reconnaissance de caractères *open source* depuis 2015. `Tesseract` offre plusieurs moteurs depuis sa version 4 : en plus du moteur historique, un moteur basé sur le Deep Learning (réseaux de neurones LSTM) est aujourd'hui disponible.
 
 ### Application : extraction d'informations de documents scannés photographiés
 
-Des documents scannés ou photographies peuvent souvent constituer une source d'information précieuse pour la production de statistiques publiques.
+Des documents scannés ou photographies peuvent souvent constituer
+une source d'information précieuse pour la production de statistiques publiques.
 
-Par exemple, la Direction des Statistiques d'Entreprises à l'Insee effectue de manière périodique un *profilage* des groupes de sociétés. Pour la statistique publique la notion d'entreprise est souvent associée à une définition purement juridique, c'est-à-dire à la notion d'unité légale inscrite au répertoire Sirene. Toutefois, aujourd'hui certaines unités légales sont détenues par d’autres et peuvent ainsi perdre une partie de leur autonomie. Le *profilage* consiste à identifier au sein des groupes les entreprises au sens économique, puis à collecter et calculer des statistiques sur ces nouveaux contours.
+Par exemple, la Direction des Statistiques d'Entreprises (DSE) à l'Insee effectue de manière périodique un *profilage* des groupes de sociétés.
+Pour la statistique publique la notion d'entreprise est souvent associée à une définition purement juridique,
+c'est-à-dire à la notion d'unité légale inscrite au répertoire Sirene.
+Toutefois, aujourd'hui certaines unités légales sont détenues par d’autres et peuvent ainsi perdre une partie de leur autonomie.
+Le *profilage* consiste à identifier au sein des groupes les entreprises au sens économique,
+puis à collecter et calculer des statistiques sur ces nouveaux contours.
 
-La plupart des catégories de sociétés ont l'obligation de déposer annuellement leurs comptes sociaux au Registre du commerce et des sociétés (RCS), afin d'en garantir la transparence. Les documents à déposer incluent les comptes annuels (bilan actif et passif, compte de résultats et annexes), le rapport de gestion pour les sociétés cotées, les documents portant sur l'affectation du résultat, etc. Dans le cas où une société possède des filiales ou participations au moins à hauteur de 10\% du capital, elle doit inclure dans ses comptes sociaux un tableau *des filiales et participations* (voir @fig-filiales-ex) offrant une vision financière synthétique des différentes filiales et participations détenues. Ce tableau est très utile pour consolider le profilage d'un groupe, car il centralise des informations qui sont difficiles à obtenir par ailleurs.
+La plupart des catégories de sociétés ont l'obligation de déposer annuellement leurs comptes sociaux au Registre du commerce et des sociétés (RCS), afin d'en garantir la transparence.
+Les documents à déposer incluent les comptes annuels (bilan actif et passif, compte de résultats et annexes), le rapport de gestion pour les sociétés cotées, les documents portant sur l'affectation du résultat, etc.
+Dans le cas où une société possède des filiales ou participations au moins à hauteur de 10\% du capital,
+elle doit inclure dans ses comptes sociaux un tableau *des filiales et participations* (voir @fig-filiales-ex) offrant une vision financière synthétique des différentes filiales et participations détenues. Ce tableau est très utile pour consolider le profilage d'un groupe, car il centralise des informations qui sont difficiles à obtenir par ailleurs.
 
 ::: {#fig-filiales-ex}
 ![](img/images/filiales_ex.png){ width=60% }
@@ -234,7 +306,13 @@ La plupart des catégories de sociétés ont l'obligation de déposer annuelleme
 Exemple d'un tableau *des filiales et participations* figurant dans les comptes sociaux d'une société.
 :::
 
-Aujourd'hui, les profileurs de la DSE utilisent les comptes sociaux de manière manuelle. Ils récupèrent les comptes sociaux, souvent sous la forme de documents scannés, depuis une interface de programmation mise à disposition par l'Institut National de la Propriété Industrielle (INPI) et pour chaque groupe qui les intéresse, cherchent eux-mêmes l'emplacement du tableau *des filiales et participations* dans le document puis récupèrent les informations pertinentes pour la consolidation. La reconnaissance optique de caractères peut permettre de traiter automatiquement (au moins en partie) les comptes sociaux, ce qui permettrait à la fois de dégager du temps aux profileurs pour des activités à plus forte valeur ajoutée, mais aussi de consolider plus de comptes.
+Aujourd'hui, les profileurs de la DSE utilisent les comptes sociaux de manière manuelle.
+Ils récupèrent les comptes sociaux,
+souvent sous la forme de documents scannés, depuis une interface de programmation mise à disposition par l'Institut National de la Propriété Industrielle (INPI) et pour chaque groupe qui les intéresse,
+cherchent eux-mêmes l'emplacement du tableau *des filiales et participations* dans le document puis récupèrent les informations pertinentes pour la consolidation.
+La reconnaissance optique de caractères peut permettre de traiter automatiquement (au moins en partie) les comptes sociaux,
+ce qui permettrait à la fois de dégager du temps aux profileurs pour des activités à plus forte valeur ajoutée,
+mais aussi de consolider plus de comptes.
 
 Une chaîne de traitement complète envisagée pour l'extraction d'un tableaux filiales et participations est décrite ci-dessous :
 
@@ -257,7 +335,18 @@ Une chaîne de traitement complète envisagée pour l'extraction d'un tableaux f
 Exemple de masques bruts obtenus en sortie de TableNet. À gauche, le masque indiquant l'emplacement de la table. À droite, le masque indiquant l'emplacement des colonnes.
 :::
 
-Un autre exemple d'extraction d'informations de documents photographiés qui peut servir à la statistique publique est l'extraction du contenu de tickets de caisse. Un cas d'usage existe aujourd'hui à l'Insee. La Direction des statistiques démographiques et sociales réalise l'enquête Budget de famille dont la prochaine édition aura lieu en 2026. Cette enquête vise à reconstituer toute la comptabilité des ménages et en particulier leurs dépenses. Pour ce faire, les ménages enquêtés se voient confier un carnet de dépenses qu'ils doivent remplir pendant une certaine période. Pour certaines dépenses les carnets sont renseignés à la main par un membre du ménage. Pour d'autres, le ménage a la possibilité d'inclure dans le carnet des tickets de caisse. Jusqu'à présent les enquêteurs étaient chargés de recopier le contenu des tickets de caisse pour rendre ces données exploitables. Toutefois, il existe aujourd'hui des méthodes pour automatiser cette extraction en utilisant des moteurs de reconnaissance optique de caractères.
+### Extraction d'information de tickets de caisse
+
+L'enquête Budget des Familles, réalisée par 
+la Direction des statistiques démographiques et sociales (DSDS) de l'Insee, 
+repose traditionnellement sur la collecte de tickets de caisse dont les
+champs sont
+manuellement repris et numérisés par les enquêteurs[^1]. 
+Toutefois, il existe aujourd'hui des méthodes pour automatiser cette extraction en utilisant des moteurs de reconnaissance optique de caractères.
+
+[^1]: Plus précisément, les ménages enquêtés se voient confier un carnet de dépenses qu'ils doivent remplir pendant une certaine période. Pour certaines dépenses les carnets sont renseignés à la main par un membre du ménage. Pour d'autres, le ménage a la possibilité d'inclure dans le carnet des tickets de caisse. Jusqu'à présent les enquêteurs étaient chargés de recopier le contenu des tickets de caisse pour rendre ces données exploitables. 
+
+
 
 Une première idée envisageable est d'utiliser un moteur d'OCR pour récupérer ligne par ligne le texte figurant sur un ticket de caisse puis d'extraire l'information sous forme structurée avec une approche basée sur des règles. Les tickets de caisse se ressemblant en général beaucoup, cette approche fonctionne convenablement sur cette tâche quelque soit le ticket, mais elle présente tout de même des défauts de généralisabilité. Une approche *Deep Learning end-to-end* est préférable, même si elle nécessite des données annotées. De telles méthodes ont été testées dans le cadre de compétitions (notamment sur les jeux de données [SROIE 2019](https://rrc.cvc.uab.es/?ch=13&com=introduction) et [Cord](https://github.com/clovaai/cord)) et ont donné de bons résultats.
 
