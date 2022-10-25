@@ -15,12 +15,18 @@ website:
           - administratives_exemples.qmd
       - text: "Données géolocalisées"
         file: geolocalized_data.qmd
-      - text: "Données textuelles"
-        file: textes.qmd
-      - text: "Images"
-        file: images.qmd
+      - text: "Analyse textuelle"
+        menu:
+          - textes.qmd
+          - textes_exemples.qmd
+      - text: "Analyse d'images"
+        menu:
+          - images.qmd
+          - images_exemples.qmd
       - text: "Nowcasting"
-        file: series_temporelles.qmd
+        menu:
+          - series_temporelles.qmd
+          - nowcasting_exemples.qmd
   sidebar:
     style: "docked"
     search: true
@@ -46,6 +52,7 @@ website:
       - section: "Nowcasting"
         contents:
           - series_temporelles.qmd
+          - nowcasting_exemples.qmd
     tools:
       - icon: twitter
         href: https://twitter.com
