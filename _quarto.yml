@@ -7,28 +7,23 @@ website:
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Introduction"
-        file: introduction.qmd
-      - text: "Données administratives"
-        file: administratives.qmd
-      - text: "Données géolocalisées"
-        file: geolocalized_data.qmd
-      - text: "Données textuelles"
-        file: textes.qmd
-      - text: "Images"
-        file: images.qmd
-      - text: "Nowcasting"
-        file: series_temporelles.qmd
+      - sidebar:tutorials
+      - sidebar:howto
+      - sidebar:fundamentals
+      - sidebar:reference
+
   sidebar:
     style: "docked"
     search: true
-    contents:
-      - section: "Introduction"
-        contents:
-          - introduction.qmd
-      - section: "Données administratives"
-        contents:
-          - administratives.qmd
+    - id: introduction
+      title: "Introduction"
+      contents:
+        - section: "Introduction"
+    - id: admin
+      title: "Données administratives"
+      contents:
+        - administratives.qmd
+        - administratives_exemples.qmd
       - section: "Données géolocalisées"
         contents:
           - geolocalized_data.qmd
