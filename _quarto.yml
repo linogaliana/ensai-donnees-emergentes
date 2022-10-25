@@ -10,7 +10,9 @@ website:
       - text: "Introduction"
         file: introduction.qmd
       - text: "Données administratives"
-        file: administratives.qmd
+        menu:
+          - administratives.qmd
+          - administratives_exemples.qmd
       - text: "Données géolocalisées"
         file: geolocalized_data.qmd
       - text: "Données textuelles"
@@ -29,12 +31,14 @@ website:
       - section: "Données administratives"
         contents:
           - administratives.qmd
+          - administratives_exemples.qmd
       - section: "Données géolocalisées"
         contents:
           - geolocalized_data.qmd
       - section: "Analyse textuelle"
         contents:
           - textes.qmd
+          - textes_exemples.qmd
       - section: "Analyse d'images"
         contents:
           - images.qmd
