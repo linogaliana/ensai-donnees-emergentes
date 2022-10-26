@@ -4,7 +4,6 @@ title: "Quelques exemples approfondis de données administratives"
 
 # Exemples 
 
-
 4 exemples de nature différente:
 
 - la DSN: base de gestion transmise à l'Insee et la DARES pour la production ;
@@ -12,10 +11,11 @@ title: "Quelques exemples approfondis de données administratives"
 - Fidéli: agrégation et mise en cohérence de plusieurs sources ;
 - SNDS: mise en cohérence de données de gestion hospitalières et de l'assurance maladie, enjeu encore plus fort de confidentialité ;
 
-
 :::{.callout-note}
 ## Les autres répertoires de la statistique publique
 
+- Filosofi (Fichier localisé social et fiscal): répertoire de synthèse des sources fiscales ;
+- La Base permanente des équipements (BPE): répertoire d'équipements et services.
 :::
 
 ## La DSN
@@ -23,64 +23,47 @@ title: "Quelques exemples approfondis de données administratives"
 :::{.callout-note}
 ## Les DADS et la DSN
 
-https://www.insee.fr/fr/metadonnees/source/serie/s1163
-https://www.insee.fr/fr/information/3647025?sommaire=3647035
+Descriptions sur le site de l'Insee de la [Déclaration annuelle de données sociales](https://www.insee.fr/fr/metadonnees/source/serie/s1163) (DADS) et de la [Déclaration sociale nominative](https://www.insee.fr/fr/information/3647025?sommaire=3647035) (DSN).
 :::
 
-
-
-@Humbert2018
-@Renne2018
-
-adossant la collecte des données au processus générateur de la collecte des cotisations sociales, c’est-à-dire le processus de paie, elle garantit une bien meilleure qualité de l’information recueillie.
-projet de simplification administrative qui s’est étalé sur près de dix ans.
-environ 96  % des entreprises du secteur privé.
-
-satisfaire le plus grand nombre possible d’obligations déclaratives existant dans le champ social au sens large, tout en réduisant le nombre de demandes d’informations distinctes auxquelles sont confrontées les entreprises
+La Déclaration sociale nominative est aujourd'hui le mode d'échanges de données sociales des entreprises vers l'administration, et concerne toutes les entreprises du secteur privé. Elle résulte d'un projet de simplification administrative qui s’est étalé sur près de dix ans : la collecte des données est adossée au processus générateur de la collecte des cotisations sociales, c’est-à-dire au processus de paie [@Humbert2018]. En plus de réduire la charge imposée aux entreprise, la DSN garantit une bien meilleure qualité et l'exhaustivité de l’information recueillie.
 
 ### Avant la DNS
 
-DADS
-déclarations sociales font partie des tâches administratives imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017
+Les déclarations sociales font partie des tâches administratives historiquement imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017.
 
-Les déclarations sociales reposaient sur des formulaires Cerfa dont le contenu était fixé par les textes fondant la collecte des données utiles aux organismes de protection sociale et à l’administration pour l’exercice de leurs missions. Non seulement les déclarants étaient amenés à fournir plusieurs fois la même information, mais ils devaient surtout fournir une information qui n’était pas naturellement produite par leur système de gestion, ce qui était source d’incohérences et d’erreurs dans les déclarations. La DSN met en œuvre une logique fondamentalement différente : elle s’approche au plus près du fait générateur des rémunérations et cotisations sociales dans le domaine de la protection sociale, la paie. Elle repose sur un modèle unique de cette dernière et un échange de données primaires de gestion entre l’émetteur, qui fait la paie, et tous les organismes et administrations qui ont besoin de ces données sociales pour recouvrer des cotisations et servir des droits. Elle opère donc un déplacement de la charge de traitement des données de l’amont (l’entreprise déclarante) vers l’aval
+Les déclarations sociales reposaient auparavant sur des formulaires Cerfa dont le contenu était fixé par les textes fondant la collecte des données utiles aux organismes de protection sociale et à l’administration pour l’exercice de leurs missions. Non seulement les déclarants étaient amenés à fournir plusieurs fois la même information, mais ils devaient surtout fournir une information qui n’était pas naturellement produite par leur système de gestion, ce qui était source d’incohérences et d’erreurs dans les déclarations. La DSN met en œuvre une logique fondamentalement différente : elle s’approche au plus près du fait générateur des rémunérations et cotisations sociales dans le domaine de la protection sociale, la paie. Elle repose sur un modèle unique de cette dernière et un échange de données primaires de gestion entre l’émetteur, qui fait la paie, et tous les organismes et administrations qui ont besoin de ces données sociales pour recouvrer des cotisations et servir des droits. Elle opère donc un déplacement de la charge de traitement des données de l’amont (l’entreprise déclarante) vers l’aval.
 
-principe clé : chaque salarié de l’établissement déclaré doit apparaître dans la DSN.
+La DSN se fait au niveau de chaque établissement avec un principe clé : chaque salarié doit apparaître dans la déclaration. Cette dernière se fait de manière mensuelle et reflète la paie du mois $M-1$, avec certaines possibilités de correction.
 
-déclaration mensuelle unique, reflet de la paie M-1
-possibilité de correction
-
+::: {#fig-image-nb}
 ![](img/images/dsn-diff.png)
-From @Humbert2018
 
+Schéma explicatif des changements apportés par la DSN. Source : @Humbert2018.
+:::
 
-### Avantage
+### Avantages
 
-Source unique cohérente entre administrations
-Par exemple, avec la DSN, on est sûr que les employeurs et les salariés sont identifiés de la même façon quel que soit l’organisme destinataire de l’information
-[@Rennes2018]
+La DSN présente de nombreux avantages. Elle constitue une source unique et cohérente entre administrations. Avec la DSN, on est sûr que les employeurs et les salariés sont identifiés de la même façon quel que soit l’organisme destinataire de l’information [@Renne2018].
 
-Réduction charge pour entreprises ("dites le nous bien une seule fois")
-ex @Rennes2018: Par exemple, depuis janvier 2018, les entreprises n’ont plus obligation de fournir leur effectif salarié de fin de période, celui-ci pouvant être recalculé directement par les organismes destinataires à partir des informations individuelles transmises sur les salariés.
+Elle a aussi permis une forte réduction des charges pour les entreprisess ("dites le nous bien une seule fois"). Par exemple, depuis janvier 2018, les entreprises n’ont plus obligation de fournir leur effectif salarié de fin de période, celui-ci pouvant être recalculé directement par les organismes destinataires à partir des informations individuelles transmises sur les salariés [@Renne2018].
 
-Données mensuelle: meilleur suivi des changements infra-annuels
-Auparavant, les entreprises transmettaient des données multiples à diverses échéances et à différents organismes, globalisées par établissement.
+La fréquence mensuelle de transmission des données permet un meilleur suivi des changements infra-annuels. Auparavant, les entreprises transmettaient des données multiples à diverses échéances et à différents organismes, globalisées par établissement.
 
-la DSN n’a pas vocation à servir un besoin spécifique, mais au contraire à couvrir différents usages.
-Adminstrations utilisatrices (Insee, DARES, Pole Emploi, etc.) : Tous ces systèmes d’informations reçoivent une liste spécifique de données, fixée par arrêté selon leurs missions et doivent se synchroniser au fur et à mesure de l’élargissement du périmètre
-Dès 2019, la DSN sera le support du prélèvement à la source pour les salariés.
+La DSN n’a pas vocation à servir un besoin spécifique, mais au contraire à couvrir différents usages. Les systèmes d'informations des administrations utilisatrices (Insee, DARES, Pole Emploi, etc.) reçoivent une liste spécifique de données, fixée par arrêté selon leurs missions et se sont synchronisés au fur et à mesure de l’élargissement du périmètre. Depuis 2019, la DSN est le support du prélèvement à la source pour les salariés.
 
-### Challenge
+### Challenges
 
-Volumétrie conséquente
+Plusieurs challenges se posent au moment d'utiliser les données issues de la DSN à des fins statistiques. Tout d'abord, les données sont complexes, ce qui implique un certain coût d'entrée. Elles sont aussi volumineuses (environ 1To par an, sans la fonction publique) et leur traitement requiert ainsi des ressources informatiques conséquentes et des outils adaptés. On constate bien un transfert d'une partie de la charge des entreprises vers les systèmes d’information en aval.
 
-DSN transfère une partie de la charge des entreprises vers les systèmes d’information en aval.
-Volumétrie: environ 1To par an, sans la fonction publique
+Autres challenges liés à l'exploitation statistique:
 
-Relier le concept administratif à une réalité économique
-éviter l'"artefact" au sens de Bourdieu
+- parvenir à relier les concepts administratifs à des réalités économiques ;
+- éviter les "artefacts" au sens de Bourdieu.
 
 ## Sirene
+
+Le Système national d’identification et du répertoire des entreprises et de leurs établissements (Sirene) est un répertoire administré par l’Insee qui centralise de l'information sur chacun des 32 millions d'établissements (dont 13 millions d'établissements actifs) existant en France. En particulier, il attribue un numéro SIREN aux entreprises, organismes et associations ainsi qu'un numéro SIRET aux établissements de ces entités.
 
 L’utilité du numéro SIRET est multiple. S’il constitue avant tout la preuve juridique de l’existence d’un établissement, il permet également d’effectuer un certain nombre de démarches commerciales et administratives. 
 
@@ -89,10 +72,72 @@ Ainsi, il sert à :
 - Émettre des factures, mais aussi des documents commerciaux. En effet, il est obligatoire de faire apparaître le numéro sur chacun de ces documents. En outre, si l’entreprise à un site internet, le numéro doit apparaître dans les mentions légales ;
 - Obtenir des informations officielles sur les sociétés. Grâce au SIRET, tout prestataire ou client peut vérifier la fiabilité des données que l’entreprise lui fournit, via une recherche sur internet notamment ;
 - Prouver l’existence légale de la compagnie. Ce numéro permet en effet de l’identifier auprès de ses clients, prestataires, co-contractants et par l’administration fiscale ;
-- Produire des statistiques à partir de la base SIRENE et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
+- Produire des statistiques à partir de la base Sirene et du numéro SIRET. En effet, ces deux éléments donnent accès à des informations capitales que l’INSEE peut réutiliser et analyser.  
 
+Pour la statistique publique, Sirene met à disposition des utilisateurs un code APE (pour activité principale exercée) choisi dans la Nomenclature d'activité française (NAF) pour chaque établissement (APET) et pour chaque entreprise (APEN), ainsi que sa localisation, sa catégorie juridique, son effectif salarié et l’historique des mouvements (création, cessation, etc.). Le répertoire SIRENE est aussi la base de référence pour toutes les études et enquêtes statistiques sur les entreprises. 
 
+## Fidéli
 
+Le Fichier démographique sur les logements et les individus (Fidéli) est une base annuelle exhaustive de données statistiques sur les logements et de leurs occupants. Fidéli est en réalité un assemblage raisonné de données administratives conçu pour répondre à des finalités en matière de statistiques démographiques.
+
+Cet appariement met en regard:
+
+- des données d'origine fiscale: fichier de la taxe d'habitation, fichier des propriétés bâties, fichiers d'imposition des personnes et fichier des déclarations de revenus. Ces données sont de nature démographique pour les personnes et la structure des ménages, ainsi que sur les revenus perçus au sein des foyers;
+- des données contextuelles pour décrire les adresses: coordonnées, appartenance à des mailles géographiques (IRIS, quartiers de la ville), etc. ;
+- des informations sur les agrégats de revenus déclarés et les montants de prestations sociales reçues.
+
+Fidéli fournit des possibilités d'études poussées sur des sujets extrêmement variés et à des échelles géographiques fines. Des exemples de projets de recherche récents :
+
+- Dynamiques de l’organisation du territoire et des inégalités spatiales en milieux urbains pollués ;
+- Caractérisation spatiale de la vulnérabilité sociale à la hausse des températures en milieu urbain ;
+- Evaluation de l’impact de la majoration de la taxe d’habitation sur les résidences secondaires...
+
+## SNDS
+
+Le Système national des données de santé (SNDS) est un entrepôt de données médico-administratives pseudonymisées couvrant l'ensemble de la population française et contenant l'ensemble des soins présentés au remboursement. Le SNDS peut être vu comme un appariement des grandes bases médico-administratives nationales, notamment :
+
+- les données de l'assurance maladie (base SNIIRAM) ;
+- les données des hôpitaux (base PMSI) ;
+- les causes médicales de décès (base du CépiDC de l'Inserm).
+
+Le SNDS est un dispositif quasiment sans équivalent en Europe ou dans le monde. Il contient un flux annuel de 1,2 milliards de feuilles de soins, 11 millions de séjours hospitaliers et 500 millions d'actes (plus de 3000 variables) qui représentes 450 To de données.
+
+Une des grandes forces du SNDS est qu'il fait le lien entre médecine de ville et médecine hospitalière, ce qui permet de travailler sur les parcours de soin complets des patients pour des études, recherches ou évaluations présentant un caractère d'intérêt public. Les finalités autorisées pour les traitements sont :
+
+- l'information sur la santé et l'offre de soins ;
+- l'évaluation des politiques de santé ;
+- l'évaluation des dépenses de santé ;
+- l'information des professionnels de santé sur leur activité ;
+- la veille et la sécurité sanitaires ;
+- la recherche, les études, l'évaluation et l'innovation en santé.
+
+:::{.callout-note}
+## Mise à disposition des données
+Créé par la Loi du 24 juillet 2019 relative à l’organisation et la transformation du système de santé, le Health Data Hub est un groupement d’intérêt public qui associe 56 parties prenantes, en grande majorité issues de la puissance publique (CNAM, CNRS, Haute Autorité de santé, France Assos Santé, etc.). Le Health Data Hub est en charge de mettre en œuvre les grandes orientations stratégiques relatives au Système National des Données de Santé fixées par l’Etat.
+
+L'offre du Health Data Hub s'articule autour de 4 enjeux stratégiques:
+
+- mettre en valeur le patrimoine des données de santé, en appuyant leur collecte, leur standardisation et leur documentation, en fournissant un hébergement à l’état de l’art sécurisé et un accompagnement dans la mise en conformité RGPD ;
+- faciliter l'usage des données, en proposant un catalogue de données documentées, ainsi qu'une plateforme d'analyse et des outils à l’état de l’art ;
+- protéger les données et les citoyens, en garantissant un très haut niveau de sécurité à travers une démarche éthique de protection des données et de transparence ;
+- innover avec l'ensemble des acteurs, en développant des partenariats académiques et industriels, et en appuyant la dynamique de développement d’outils open source et de l’open data.
+:::
+
+:::{.callout-note}
+## Confidentialité et données de santé
+Pour protéger l'identité des patients et garantir la confidentialité des données, chaque patient est repéré dans l'ensemble du SNDS par un pseudonyme, obtenu par l'application au NIR d'un procédé cryptographique irréversible appelé FOIN. Les données du SNDS sont conservées pour une durée totale de 20 ans, puis archivées pour une durée de 10 ans.
+
+L'accès aux données du SNDS et leur analyse ne peut se faire que dans un cadre d'hébergement très restrictif respectant le référentiel de sécurité du SNDS, afin de garantir la traçabilité des accès et des traitements, la confidentialité des données et leur intégrité.
+:::
+
+### L'EDP-Santé
+
+L'EDP-Santé est un enrichissement des données de l’[échantillon démographique permanent](https://www.insee.fr/fr/metadonnees/source/serie/s1166) (EDP) avec des informations issues du SNDS sur les années 2008-2022. Ce traitement a fait l’objet d’une autorisation de la CNIL et s’inscrit dans le cadre du règlement général sur la protection des données (RGPD), ainsi que la loi relative à l’informatique, aux fichiers et aux libertés (n° 78-17 du 6 janvier 1978 modifiée). Constitué dans le cadre de la stratégie nationale de santé 2018-2022, les données ne sont exploitables que par les personnes habilitées au sein de la DREES et sont conservées pour une période de 5 ans.
+
+L'EDP-Santé contient :
+
+- les données issues de l’EDP concernent l’état civil, la situation familiale, la vie professionnelle (diplôme, situation professionnelle, données relatives à l’activité salariée) et des informations d’ordre économique (revenus, situation fiscale) ;
+- les données issues du SNDS sur les recours aux soins et les données issues des certificats de décès.
 
 # References
 

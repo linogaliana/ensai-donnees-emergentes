@@ -310,8 +310,10 @@ La @tbl-autorites-centralisatrices donne quelques
 exemples de plateformes centralisatrices. Ces dernières ne se contentent
 pas de centraliser ou mettre à disposition la donnée, elles ont aussi
 en charge la normalisation de celle-ci à partir de systèmes d'informations
-divers.
-
+divers. La normalisation est un enjeu majeur car elle seule permet
+l'exploitation des données: la collecte étant en général réalisée automatiquement
+via des auto-déclarations, les plateformes centralisatrices récupèrent
+des informations aux contenus hétérogènes.
 
 | Donnée | Autorité centralisatrice |
 |------|------|
@@ -321,18 +323,14 @@ divers.
 
 : Exemples d'autorités centralisatrices [@riviere2018] {#tbl-autorites-centralisatrices}
 
-L'image ci-dessous, empruntée à XXX,
-résume la place du GIP-MDS dans le processus de 
+La @fig-dsn résume la place du GIP-MDS dans le processus de 
 production de la DSN:
 
-::: {}
+::: {#fig-dsn}
 ![](./img/images/dsn-schema.png)
+
+Schéma de la place du GIP-MDS dans la production de la DSN. Source: @Humbert2018.
 :::
-
-Changement mode collecte: automatique via (auto)déclaration
-
-enjeu normalisation
-
 
 ## Usage de la donnée administrative
 
@@ -379,11 +377,10 @@ concentrer ceux-ci sur des informations qui
 ne sont pas disponibles dans les sources
 administratives.
 
-importance pour appariements (CSNS)
-https://www.insee.fr/fr/information/5388962
-Enjeu du NIR haché
-
-
+:::{.callout-note}
+## Le CSNS
+Un enjeu fort existe autour de la production d'un [code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique. La version finale est prévue pour la fin de l'année 2022.
+:::
 
 ### Un changement de la place de l'analyste de la donnée
 
@@ -403,8 +400,6 @@ entre différentes sources. A cet égard, les données administratives
 scandinaves sont parmi les données les plus utilisées par les chercheurs sur
 le marché du travail car elles constituent une source depuis longtemps 
 centralisée et mise à disposition de manière anonymisée. 
-
-
 
 
 ## En conclusion, quels avantages et inconvénients ?
