@@ -168,9 +168,10 @@ Par exemple, un humain sait qu'un document contenant le mot _"Roi"_
 et un autre document contenant le mot _"Reine"_ ont beaucoup de chance
 d'aborder des sujets semblables.
 
-::: {#fig-image-nb}
+::: {#fig-word2vec}
 ![](https://raw.githubusercontent.com/linogaliana/python-datascientist/master/content/course/NLP/04_word2vec/w2v_vecto.png)
 
+Schéma illustratif de `word2vec`.
 :::
 
 Pourtant, une vectorisation de type comptage ou TF-IDF
@@ -178,7 +179,7 @@ ne permet pas de saisir cette similarité :
 le calcul d'une mesure de similarité (norme euclidienne ou similarité cosinus)
 entre les deux vecteurs donnera une valeur très faible, puisque les mots utilisés sont différents.
 
-A l'inverse, un modèle `word2vec` (voir @fig-image-nb) bien entraîné va capter
+A l'inverse, un modèle `word2vec` (voir @fig-word2vec) bien entraîné va capter
 qu'il existe un facteur latent de type _"royauté"_,
 et la similarité entre les vecteurs associés aux deux mots sera forte.
 
