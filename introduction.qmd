@@ -5,14 +5,14 @@ title: "Introduction"
 ## Les données émergentes dans le temps long
 
 L'histoire de la statistique est une suite d'évolutions
-de la discipline afin que des données émergentes deviennent
-traditionnelles. 
+de la discipline où les données émergentes un jour deviennent
+le lendemain traditionnelles.
 Le XIXe siècle, qui est celui
 où la statistique s'est constituée en temps
 que discipline autonome et s'est dotée d'une partie
-des concepts qui en font aujourd'hui le fondement,
+des concepts qui en font aujourd'hui les fondements,
 est ainsi une période où de nombreuses données
-ont émergées et ont pu entraîner des révolutions scientifiques. 
+ont émergé et ont pu entraîner des révolutions scientifiques. 
 Parmi celles-ci, la construction de la loi normale,
 qui constitue aujourd'hui l'objet central
 de la statistique, correspond au besoin de construire
@@ -23,7 +23,7 @@ La manière dont Gauss a collecté et
 synthétisé un ensemble d'observations 
 astronomiques a ainsi permis de construire 
 la méthode des moindres carrés et 
-le concept de loi normale, appréhendée
+le concept de loi normale, appréhendé
 à partir des erreurs d'observations.
 
 L'accès à des recensements par des universitaires
@@ -35,11 +35,11 @@ Les registres de décès ont ainsi permis
 à Durkheim de participer aux débats sociologiques
 sur le suicide et de proposer une
 interprétation sociologique
-de ses causes à rebourd des 
+de ses causes à rebours des 
 approches psychologisantes qui 
 étaient fréquentes à l'époque. 
 Avant Durkheim, l'usage novateur
-des monographies (XXX) a permis de
+des monographies a permis de
 dessiner les prémisses de la sociologie en
 temps que discipline autonome.
 Les avancées de la statistique au cours
@@ -74,10 +74,9 @@ développent les innovations dans le domaine de
 la _data-science_
 est d'une ampleur inédite du fait
 de la multiplicité des données collectées
-et des acteurs impliqués.
+et des acteurs impliqués. IBM estimait en effet que 2.5 quintillions d'octets de données étaient générés chaque jour il y a environ 10 ans.
+Dans un ouvrage sur l'histoire de la statistique, @hacking-90 parle déjà en 1990 du début d'une "avalanche de chiffres".
 
-IBM estimated that about 2.5 quintillion bytes of data are generated each day (Yakbuksi, 2013).
-n his brilliant history of statistics, Taming Chance, Ian Hacking (1990: 45) speaks of the beginning of an ‘avalanche of numbers’.
 
 ## La production renouvelée de données de la puissance publique
 
@@ -89,15 +88,14 @@ de données très appréciée des
 historiens. Si elles n'atteignent 
 pas les volumétries actuelles, 
 ces sources sont néanmoins
-les ancètres de nos données administratives actuelles.
+les ancêtres de nos données administratives actuelles.
 Les recensements de population sont également
-une des productoins historiques de données. 
+une des productions historiques de données. 
 Le comptage de la population et des impôts
 fait partie intégrante du processus
 de constitution de la puissance
-publique centralisatrice (Desrosières). 
-
-Curiously enough, the Kish tablet from the Sumerian empire (ca 3500 bC), one of the earliest examples of human writing, seems to be an administrative record for statistical purposes
+publique centralisatrice [@desrosieres2016politique]. 
+Curieusement, la tablette Kish de l'empire sumérien (environ 3500 av. J.-C.), l'un des plus anciens exemples d'écriture humaine, semble être un document administratif destiné à des fins statistiques.
 
 
 La 
@@ -105,12 +103,12 @@ statistique publique, si elle est aujourd'hui
 entendue beaucoup plus largement que par le passé,
 et qu'elle dispose d'une indépendance vis-à-vis
 d'autres branches de l'Etat,
-est un élément essentiel pour 
-pour permettre un bon fonctionnement de l'économie et de la démocratie.
+c'est parce qu'elle est un élément essentiel pour 
+pour permettre le bon fonctionnement de l'économie et de la démocratie.
 Le slogan de l'Insee, _"mesurer pour comprendre"_,
-correspond bien à cette idée.  
+correspond bien à cette idée.
 Les statistiques officielles essaient d'objectiver les phénomènes
-socioéconomiques par la collecte de données et la construction
+socio-économiques par la collecte de données et la construction
 de concepts cohérents avec le phénomène mesuré. 
 
 Les enquêtes sont historiquement une
@@ -139,20 +137,20 @@ sont des sources de gestion par lesquelles chaque individu communique
 un certain nombre d'informations sur lui. On parle
 de données administratives pour regrouper cet ensemble
 de sources qui sont produites par la puissance publique
-mais dont la collecte répond à des enjeux de 
+et dont la collecte répond à des enjeux de 
 gestion mais pas à des besoins de statistique publique.
 La définition qu'en donnait @desrosieres2004, 
-résume bien ceci: _"une source administrative est issue d'une instituion dont la finalité n'est pas de produire une telle information, mais dont les activités de gestion impliquent la tenue, selon des règles générales, de fichiers ou de registres individuels, dont l'agrégation n'est qu'un sous-produit"_.
+résume bien ceci: _"une source administrative est issue d'une institution dont la finalité n'est pas de produire une telle information, mais dont les activités de gestion impliquent la tenue, selon des règles générales, de fichiers ou de registres individuels, dont l'agrégation n'est qu'un sous-produit"_.
 Les besoins de la statistique publique 
 ne sont donc pas à la source de la collecte mais on peut utiliser celle-ci
 comme opportunité pour enrichir la connaissance de phénomènes 
-socio-économiques. 
-[citer Connelly et al. et Einav et al. ]
+socio-économiques
+(Connelly et al., Einav et al.).
 Certaines informations disponibles dans ces données sont très
 génériques et communes à de nombreuses bases de gestion (l'état civil notamment), 
 ce qui peut faciliter l'association entre elles, 
 alors que d'autres sont propres à chaque source. Outre la possibilité de
-disposer d'information sur une population plus importante, la différence
+disposer d'informations sur une population plus importante, la différence
 principale entre ces
 sources de données,
 historiquement collectées
@@ -176,9 +174,9 @@ celles-ci, a accéléré
 le mouvement de constitution de grands répertoires 
 administratifs. Parmi les principaux exploités par la statistique
 publique :
-la DSN, Fideli, le SNDS... La construction de ces sources,
+la DSN, Fidéli, le SNDS... La construction de ces sources,
 car celles-ci nécessitent pour leur usage à des fins
-statistiques une recnstruction, 
+statistiques une reconstruction, 
 implique également un changement des institutions collectant
 la donnée. Ce n'est plus l'Insee qui collecte directement la
 donnée (que ce soit à son compte ou pour le compte d'autres 
@@ -190,11 +188,11 @@ retravaillée de celle-ci.
 Par exemple, la Direction Générale des Finances Publiques (DGFiP)
 est, par son rôle de collecte des impôts, un acteur central
 dans la constitution de bases sur les revenus qui permettent
-de produire de nombreuses statistiques socioéconomiques.
+de produire de nombreuses statistiques socio-économiques.
 De même, la Caisse Nationale d'Assurance Maladie (CNAM)
 est, par son rôle de gestionnaire du système français de sécurité sociale,
 un élément central dans la constitution 
-du système national des données de santé (SNDS).
+du Système national des données de santé (SNDS).
 
 La multiplication de traces numériques collectées non plus
 seulement par les acteurs publics mais aussi par des 
@@ -216,8 +214,8 @@ auquel elle accédait déjà. Parmi ces trois facteurs, nous
 allons principalement nous concentrer sur le deuxième, 
 c'est-à-dire la valorisation de nouvelles sources de données, qu'il
 s'agisse de données produites par l'administration ou de données
-privées. Le premier point - l'innvation dans les méthodes de collecte
-traditionnelles - renvoie, entre autres, à la question du multimode [refs?].
+privées. Le premier point - l'innovation dans les méthodes de collecte
+traditionnelles - renvoie, entre autres, à la question du multimode.
 Enfin, en ce qui concerne le troisième élément - la rénovation des processus
 de production - il y a des éléments connexes à notre problématique
 (certaines méthodes sont intrinsèquement liées à de nouvelles sources) mais
@@ -228,11 +226,10 @@ ceux-ci bien qu'il se peut que nous évoquions à plusieurs reprises ces enjeux.
 
 Les nouvelles données permettent ainsi de faire évoluer la production statistique
 en amenant à essayer d'objectiver des phénomènes qui l'étaient difficilement
-par le passé.  
-Le fait qu'elles n'aient pas été produites initialement pour être traitées à 
+par le passé. Le fait qu'elles n'aient pas été produites initialement pour être traitées à 
 des fins de statistique publique implique un surcroit de travail et de précautions
 méthodologiques pour en assurer la qualité et l'exploitation.
-Il est également nécessaire de travailler sur les métadonnées, c'est-à-dire XXXX,
+Il est également nécessaire de travailler sur les métadonnées (description des données)
 pour répondre aux exigences de la statistique publique. 
 
 La volumétrie et la (dé)structuration des nouvelles sources de données 
@@ -265,8 +262,7 @@ ponctuels. Les données de caisse, c'est-à-dire
 les données de supermarchés qui sont collectées 
 automatiquement en caisse, sont une exception. Une réglementation
 européenne imposant leur usage pour la constitution des statistiques
-d'inflation et des séries de prix, l'accès pérenne à celles-ci a été
-nécessaire [lien vers site/publi insee ?].
+d'inflation et des séries de prix, [l'accès pérenne à celles-ci a été nécessaire](https://www.insee.fr/fr/information/4318285).
 
 Pour construire ces partenariats durables,
 il est nécessaire de respecter les intérêts des entreprises qui détiennent les données.
@@ -280,18 +276,15 @@ La responsabilité sociale doit constituer un moteur pour avancer.
 
 # Historique
 
-- Principes fondamentaux de la statistique publique établis par les Nations Unies : https://unstats.un.org/unsd/dnss/gp/fundprinciples.aspx
-- Le rôle des instituts de statistique est de fournir une image objective de la société pour faciliter les décisions informées;
-- Pour le moment, pas mal de résultats expérimentaux basés sur la réutilisation de données privées mais peu de statistiques officielles;
-- Règles de qualité fixées par le Code Européen de Bonnes Pratiques Statistiques (https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice).
+- [Principes fondamentaux de la statistique publique](https://unstats.un.org/unsd/dnss/gp/fundprinciples.aspx) établis par les Nations Unies ;
+- Règles de qualité fixées par le [Code Européen de Bonnes Pratiques Statistiques](https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice).
 
-Exemples: [Epicov](https://drees.solidarites-sante.gouv.fr/sources-outils-et-enquetes/enquete-epicov-epidemiologie-et-conditions-de-vie-sous-le-covid-19)
+# Futur
 
-Futur:
-- L'*Open Data Directive* adoptée en 2019 identifie des jeux de données open-source à forte valeur potentielle pour la statistique publique (https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1561563110433&uri=CELEX:32019L1024);
-- Le *Data Governance Act* (adopté en Mai 2022 et appliqué à partir de Septembre 2023) : promeut le partage de données personnelles et non-personnelles en mettant en place des structures d'intermédiation :
+- L'[*Open Data Directive*](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1561563110433&uri=CELEX:32019L1024) adoptée en 2019 identifie des jeux de données open-source à forte valeur potentielle pour la statistique publique ;
+- Le *Data Governance Act* (adopté en Mai 2022 et appliqué à partir de Septembre 2023) : promeut le partage de données personnelles et non-personnelles en mettant en place des structures d'intermédiation:
     - Assistance technique et légale pour faciliter la réutilisation de certaines données protégées du secteur publique;
     - Structures d'intermédiation de la donnée;
     - Certification pour les organisations qui pratiquent le *data altruism*.
-- Le *Data Act* (proposition en Février 2022) : règles sur qui peut accéder aux données générées au sein de l'UE dans chaque secteur économique, avec l'objectif de rendre les données plus accessibles pour tous;
-- Les textes vont dans une direction commune : encourager la réutilisation de données privées. Il est aussi nécessaire d'encourager une intensification des dialogues entre parties prenantes et la société entière;
+- Le *Data Act* (proposition en Février 2022): règles sur qui peut accéder aux données générées au sein de l'UE dans chaque secteur économique, avec l'objectif de rendre les données plus accessibles pour tous;
+- Les textes vont dans une direction commune: encourager la réutilisation de données privées. Il est aussi nécessaire d'encourager une intensification des dialogues entre parties prenantes et la société entière.
