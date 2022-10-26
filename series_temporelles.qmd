@@ -93,7 +93,7 @@ Cette information a été traitée, secteur par secteur, pour donner un ordre de
 Pour consolider ce résultat, il a été choisi d'exploiter d'autres sources de données disponibles à haute fréquence. Ont été envisagées mais écartées plusieurs pistes : consommation d'électricité, indicateurs de pollution, Google Trends, vocabulaire utilisé dans la presse, etc.
 Finalement, des statistiques issues des transactions par cartes bancaires fournies par le Groupement des Cartes Bancaires CB[^3], ont été privilégiées.
 
-[^3]: Expliquer
+[^3]: Dans le domaine de la monétique, le Groupement des cartes bancaires est un groupement d'intérêt économique privé qui réunit la plupart des établissements financiers français dans le but d'assurer l'interbancarité des cartes de paiement.
 
 Ces données ont permis, très tôt dans le confinement,
 de confirmer l'ordre de grandeur d'une chute d'un tiers pour la consommation.
