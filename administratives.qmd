@@ -4,7 +4,7 @@ title: "Données administratives"
 
 La 
 baisse généralisée au niveau
-européen des taux de réponse[^1] [@LuitenHoxde, @beck2022],
+européen des taux de réponse[^1] [@LuitenHoxde; @beck2022],
 qui accroît les coûts de collecte et
 rend plus difficile celle-ci sur certaines
 sous-populations, notamment les plus jeunes, 
@@ -12,18 +12,18 @@ nécessite de trouver des solutions pour
 répondre à la demande toujours accrue de 
 statistique officielle. 
 
-[^1]: Par exemple, le taux de réponse a baissé pour les enquêtes en face-à-face Cadre de vie et sécurité de 72 % à 66 % entre
-2012 et 2021. En ce qui concerne SRCV (statistiques sur les ressources et les conditions de vie), le taux 
+[^1]: Par exemple, le taux de réponse a baissé pour l'enquête en face-à-face Cadre de vie et sécurité de 72 % à 66 % entre
+2012 et 2021. En ce qui concerne SRCV (Statistiques sur les ressources et les conditions de vie), le taux 
 de réponse est passé de 85 % à 80 % entre 2010 et 2019. Des événements
 ponctuels comme la crise du Covid-19 peuvent de plus avoir des
 effets très forts sur le taux de réponse. 
-Par exemple, en 2020, à la date du 23 avril, le taux de réponse à l’enquête sur la production industrielle en mars, qui sert d'indicateur avancé de l'activité économique,
-était inférieur d’environ 20 points de pourcentage à ce qui est habituellement observé lors d’un mois habituel (voir [blog de l'Insee](https://blog.insee.fr/suivre-la-conjoncture-lorsque-les-entreprises-repondent-moins-aux-enquetes/)).
+Par exemple, en 2020, à la date du 23 avril, le taux de réponse à l'enquête sur la production industrielle en mars, qui sert d'indicateur avancé de l'activité économique,
+était inférieur d'environ 20 points de pourcentage à ce qui est observé lors d’un mois habituel (voir [blog de l'Insee](https://blog.insee.fr/suivre-la-conjoncture-lorsque-les-entreprises-repondent-moins-aux-enquetes/)).
 
 
 Comme développé dans l'introduction, les données
 administratives sont des données de gestion
-produite par l'administration. 
+produites par l'administration. 
 Le processus de production statistique, où la collecte
 de donnée est construite de manière à mesurer
 le plus objectivement possible un phénomène cible, 
@@ -38,7 +38,7 @@ fait que l'exploitant de la donnée se retrouve en aval
 de son processus de production, a tout de même des bénéfices : 
 l'exhaustivité sur une population cible et
 la plus haute fréquence de ces données. 
-Ceci explique que ces données deviennent de plus en plus importantes
+Ceci explique qu'elles deviennent de plus en plus importantes
 dans la production de statistique officielle. 
 
 Ce chapitre revient sur le contexte d'utilisation des données
@@ -49,7 +49,7 @@ de savoir statistique.
 
 # Contexte
 
-> In this world, nothing is certain except death and taxes
+> In this world, nothing is certain except death and taxes.
 > 
 > Benjamin Franklin
 
@@ -77,8 +77,8 @@ processus vivant. Les données sont généralement modifiables
 au cours d'un exercice de gestion voire au-delà. La
 donnée n'est stabilisée qu'après plusieurs cycles de gestion
 et sa continuité, au niveau de l'unité statistique, ne va
-pas de soi. Par exemple, une entreprise changeant de 
-SIRENE pour une raison
+pas de soi. Par exemple, une entreprise changeant d'identifiant 
+SIREN pour une raison
 liée à un changement administratif (par exemple une fusion)
 ne sera identifiable dans différents millésimes de données
 administratives que si on est en mesure de relier 
@@ -105,7 +105,7 @@ L'existence de ces moyens coercitifs permet d'anticiper
 une information exhaustive sur la sous-population concernée par la donnée et
 honnête[^3]. 
 
-[^2]: Obligation qui est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
+[^2]: Obligation est faite à un certain nombre d’entités (individus, entreprises, organismes publics) de fournir des informations respectant une certaine forme, selon certaines modalités (internet, papier) et temporalités.
 
 [^3]: Certaines enquêtes, reconnues d'utilité publique, comme l'enquête
 emploi, le recensement ou encore l'enquête ressources et conditions
@@ -141,7 +141,7 @@ Les entreprises du numérique
 ont pu centrer leur modèle économique
 autour de la collecte et de la valorisation
 de données justement parce que la collecte
-de nouvelles informations est d'un cût marginal 
+de nouvelles informations est d'un coût marginal 
 nul. 
 Il en va de même avec les données de gestion: la collecte
 d'une information supplémentaire sur une unité ou d'une unité
@@ -156,9 +156,7 @@ sur un tiers.
 
 Dès lors, la distinction entre données administratives et données
 numériques, telles qu'on peut formaliser le _buzzword_ "big-data",
-apparaît floue. La distinction entre les données "administratives"
-et les données numériques 
-revient en premier lieu à qualifier les données par leur origine.
+apparaît floue. La distinction correspond en premier lieu à l'origine des données.
 La donnée administrative est une donnée produite par
 la sphère administrative. Dans sa nature, son processus de
 production ne diffère pas de celui de la donnée privée. Dans les deux
@@ -175,9 +173,9 @@ Les données administratives sont généralement collectées à plus faible fré
 Par exemple, le rythme de collecte de nombreuses données est annuel pour 
 correspondre aux rythmes des campagnes fiscales. Mais certaines sources sont
 à des rythmes plus fréquents. Par exemple la DSN, sur laquelle nous reviendrons, 
-est collectée à un rythme annuel. Certaines données sont mêmes enregistrées
+est collectée à un rythme mensuel. Certaines données sont mêmes enregistrées
 à des rythmes qui n'ont pas grand chose à envier avec les traces numériques
-du _big data_. Par exemple, les systèmes d'information SIVIC et SIDEP, relativement
+du _big data_. Par exemple, les systèmes d'information SIVIC et SIDEP, respectivement
 celui de suivi des entrées à l'hôpital des personnes malades du Covid et celui des
 tests, étaient mis à jour quotidiennement. De même, le système
 d'information de l'assurance maladie est mis à jour en continu en fonction
@@ -217,14 +215,14 @@ communes dans différentes sources (état civil voire NIR)
 lorsque celle-ci est autorisée. 
 
 Les 5V du big-data, initialement listés dans un rapport de MacKinsey,
-ne sont en effet pas l'apanage des données privées. 
+ne sont pas l'apanage des données privées. 
 Il y a peut-être une différence de degré avec le big-data mais certainement pas 
 de nature:
 
 - _Volume_: certaines données administratives représentent des volumes conséquents.
 La DSN  représente ainsi plus d'1To de données par an ;
 - _Vélocité_: certaines données, notamment celles de l'assurance maladie, sont à haute fréquence ;
-- _Variété_: l'Etat collecte et exploite des données de nature très différente ;
+- _Variété_: l'Etat collecte et exploite des données de natures très différentes ;
 - _Véracité_: les données collectées par l'Etat ne sont pas à l'abri d'erreurs mais ces dernières,
 qu'elles soient volontaires ou non, pouvant être couteuses, les données sont normalement de meilleure
 qualité que celles auto-déclarées sans contrôle ex-post ;
@@ -237,7 +235,7 @@ sans valeur de marché mais avec une valeur sociale.
 Finalement, il y a peu de différence entre les données administratives
 et certaines données privées disponibles sous forme 
 structurée. Par exemple, les données générées par les paiements par
-cartes bancaires (données du GIE CB ) <!---- citer des publis ----->
+cartes bancaires (données du GIE CB) <!---- citer des publis ----->
 ne sont pas d'une nature très différente de données
 administratives. Comme celles-ci, il s'agit de données
 structurées issues d'un organisme centralisateur (le GIE CB)
@@ -250,7 +248,7 @@ de gestion,
 des données
 administratives peut les rendre, au niveau individuel, assez sensibles. 
 La question de la confidentialité et de la sensibilité
-des données fournie à l'administration n'est pas nouvelle,  
+des données fournie à l'administration n'est pas nouvelle,
 il s'agit de la raison d'être du secret statistique défini dans
 l'une des lois les plus importantes de la statistique
 publique, à savoir la loi de 1951.
@@ -262,7 +260,7 @@ la réidentification après la phase d'anonymisation.
 Avec les 
 données administratives, l'information fournie peut parfois être
 moins précise mais le caractère exhaustif de celles-ci fait
-qu'en combinant plusieurs sources de données la réindeitification
+qu'en combinant plusieurs sources de données la réindentification
 est facilitée. 
 
 La question de la confidentialité est donc, au même titre que pour
@@ -272,7 +270,7 @@ privées cette question ne se pose pas au même niveau.
 Au niveau de la collecte de données, c'est-à-dire de la
 transformation d'une activité en donnée de gestion, là
 où l'utilisateur d'un service numérique bénéficie d'une
-relative liberté dans les données collectées du fait du RGPD, 
+relative liberté sur le choix des données collectées du fait du RGPD, 
 ce n'est pas le cas pour l'utilisateur d'un service
 géré par l'Etat. Ce privilège de l'Etat s'appuie sur des
 décrets qui définissent des missions de service public.
@@ -280,18 +278,18 @@ Cependant, au niveau des traitements mis en oeuvre,
 du stockage puis de la diffusion de la donnée,
 des conditions restrictives s'appliquent aussi
 à l'Etat. 
-Exemple: SNDS
+Exemple: SNDS.
 
 
 :::{.callout-note}
 
 ## Cadre légal
 
-Cet encadré résume des éléments juridiques par @isnard2018
+Cet encadré résume des éléments juridiques listés par @isnard2018.
 
 Les membres du service statistique public (SSP)
 bénéficient d’une disposition importante qui facilite énormément le travail du statisticien.
-Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la __loi de 1951__. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge des répondants.
+Ce sont les seuls organismes à pouvoir mettre en œuvre l’article 7bis de la __loi de 1951__. Cet article leur permet de se faire communiquer, à des fins d’élaboration de statistiques publiques, tout fichier de gestion d’une administration ou d’une personne privée gérant un service public, dès lors que le Conseil national de l’information statistique a été consulté et que la demande émane du ministre chargé de l’économie (en pratique du directeur général de l’Insee). Cette mesure, insérée dans la loi du 7 juin 1951 par la loi du 26 décembre 1986, a permis une exploitation large des données administratives et ainsi un allègement de la charge de réponse aux enquêtes.
 
 L’utilisation de déclarations ou de sources administratives à des fins statistiques est préconisée par le code de bonnes pratiques de la statistique européenne dans le but d’alléger la charge statistique des déclarants. En France, ceci est rendu possible par la loi de 1951 relative à l’obligation, à la coordination et au secret en matière de statistique et a été réaffirmé récemment par la loi pour une République numérique (2016).
 
@@ -308,31 +306,31 @@ dans le modèle de production des données administratives [@riviere2018].
 Cet acteur doit être distingué de l'administration qui exploite le 
 flux, que ce soit à des fins de gestion ou d'exploitation statistique. 
 
-La Table @tbl-autorites-centralisatrices donne quelques
+La @tbl-autorites-centralisatrices donne quelques
 exemples de plateformes centralisatrices. Ces dernières ne se contentent
 pas de centraliser ou mettre à disposition la donnée, elles ont aussi
 en charge la normalisation de celle-ci à partir de systèmes d'informations
-diverses.
-
+divers. La normalisation est un enjeu majeur car elle seule permet
+l'exploitation des données: la collecte étant en général réalisée automatiquement
+via des auto-déclarations, les plateformes centralisatrices récupèrent
+des informations aux contenus hétérogènes.
 
 | Donnée | Autorité centralisatrice |
 |------|------|
 | DSN    |  Gip-MDS     | 
 | Données hospitalières    | ATIH-10    |
-| SI gestion eaux    | SANDRE12   |
+| SI gestion des eaux    | SANDRE12   |
 
 : Exemples d'autorités centralisatrices [@riviere2018] {#tbl-autorites-centralisatrices}
 
-Par exemple, l'image ci-dessous, empruntée à XXX,
-résume la place du GIP-MDS dans le processus de 
+La @fig-dsn résume la place du GIP-MDS dans le processus de 
 production de la DSN:
 
+::: {#fig-dsn}
 ![](./img/images/dsn-schema.png)
 
-Changement mode collecte: automatique via (auto)déclaration
-enjeu normalisation
-
-
+Schéma de la place du GIP-MDS dans la production de la DSN. Source: @Humbert2018.
+:::
 
 ## Usage de la donnée administrative
 
@@ -379,11 +377,10 @@ concentrer ceux-ci sur des informations qui
 ne sont pas disponibles dans les sources
 administratives.
 
-importance pour appariements (CSNS)
-https://www.insee.fr/fr/information/5388962
-Enjeu du NIR haché
-
-
+:::{.callout-note}
+## Le CSNS
+Un enjeu fort existe autour de la production d'un [code statistique non signifiant](https://www.insee.fr/fr/information/5388962) (CSNS) pour les besoins de mise en œuvre de traitements à finalité de statistique publique impliquant le numéro de sécurité sociale (NIR) ou des traits d’identité, en particulier les appariements au sein du Service statistique publique. La version finale est prévue pour la fin de l'année 2022.
+:::
 
 ### Un changement de la place de l'analyste de la donnée
 
@@ -405,8 +402,6 @@ le marché du travail car elles constituent une source depuis longtemps
 centralisée et mise à disposition de manière anonymisée. 
 
 
-
-
 ## En conclusion, quels avantages et inconvénients ?
 
 La production et l'usage de données administratives
@@ -418,8 +413,7 @@ structurée, n'est qu'un prolongement de cette
 dynamique. Ces dernières permettent d'enrichir
 l'information dont dispose l'administration
 avec des informations collectées dans
-le cadre d'activités économiques qui n'ont
-pas lieu avec l'administration.
+le cadre d'activités économiques détachées de l'administration.
 
 Les avantages des données administratives sont multiples. 
 En premier lieu, la collecte automatisée de celle-ci,
@@ -428,18 +422,18 @@ sur un champ d'unités statistiques bien définies (usuellement
 par le biais d'un décret), une forme d'exhaustivité.
 Cette dernière permet de construire des statistiques plus 
 fines. Si aujourd'hui il est possible pour des chercheurs
-de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty...), 
+de zoomer sur le très haut de la distribution de revenu (voir les travaux de Piketty), 
 c'est parce que l'aspect exhaustif des données permet
 d'avoir des groupements suffisamment nombreux pour assurer la confidentialité
 de ces groupes. 
 
-Une fois payé le coût d'investtisement pour automatiser la production statistique
+Une fois payé le coût d'investissement pour automatiser la production statistique
 à partir de données de gestion, les données administratives
 ouvrent la voie à la production à plus haute fréquence
 de statistiques officielles.
 La production annuelle ou infra-annuelle de statistiques
-n'est possible qu'avec un nombre restreint d'enquêtes, dont
-les résultats peuvent être connus avec retard. 
+n'est possible qu'avec un nombre restreint d'enquêtes - dans la plupart des cas,
+les résultats d'enquêtes sont connus avec du retard. 
 La publication quotidienne par le service statistique du Ministère de la Santé
 (la DREES) et Santé Publique France d'indicateurs sur la pandémie
 est un bon exemple de l'intérêt de ces données. Ces dernières ont permis
@@ -465,7 +459,7 @@ dont l'activité est spécialisée autour de la collecte et de
 la gestion du flux, qui intervient à cet étape. Il peut ainsi
 être amené à faire évoluer le champ, la définition du phénomène
 mesuré ou encore le formulaire sans
-que l'analyste de donnée n'ait son mot à dire.
+que l'analyste de données n'ait son mot à dire.
 Pour reprendre l'exemple des données quotidiennes, l'apparition de
 variants à plusieurs reprises a amené à des évolutions, parfois
 sans préavis, du type de donnée collectée, enregistrée.
@@ -477,7 +471,7 @@ Le statisticien, parce qu'il intervient plus en aval, change donc de rôle.
 Les données administratives n'étant pas construites pour mesurer un
 phénomène qui a du sens pour le statisticien public (ou l'analyste de la 
 donnée privée), c'est à lui de reconstruire à partir de l'information
-de gestion la réalité statistique derrière [@salgado]. Le travail
+de gestion la réalité statistique derrière [@salgado-20]. Le travail
 de l'analyse de données va au donc au delà de la simple reconstruction
 de variable, ou du contrôle qualité, il est également nécessaire
 de réfléchir au concept mesuré pour ne pas construire d'"artefact", 
