@@ -28,7 +28,7 @@ Descriptions sur le site de l'Insee de la [Déclaration annuelle de données soc
 
 La Déclaration sociale nominative est aujourd'hui le mode d'échanges de données sociales des entreprises vers l'administration, et concerne toutes les entreprises du secteur privé. Elle résulte d'un projet de simplification administrative qui s’est étalé sur près de dix ans : la collecte des données est adossée au processus générateur de la collecte des cotisations sociales, c’est-à-dire au processus de paie [@Humbert2018]. En plus de réduire la charge imposée aux entreprise, la DSN garantit une bien meilleure qualité et l'exhaustivité de l’information recueillie.
 
-### Avant la DNS
+### Avant la DSN
 
 Les déclarations sociales font partie des tâches administratives historiquement imposées aux entreprises françaises. La déclaration sociale nominative (DSN), née à la fin des années 2000, a été instituée par la loi de simplification du 22 mars 2012, dite loi Warsman. Elle est obligatoire pour toutes les entreprises depuis début 2017.
 
