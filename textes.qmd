@@ -15,16 +15,24 @@ dernières années.
 Une partie des méthodes d'analyse qui appartiennent
 à la palette des compétences des _data scientists_
 spécialistes du traitement de données textuelles sont en réalité assez
-anciennes. 
+anciennes.
 Par exemple, la [distance de Levensthein](https://en.wikipedia.org/wiki/Levenshtein_distance)
 a été proposée
 pour la première fois en 1965, l'ancêtre des réseaux
-de neurone actuels est le perceptron qui date de 1957, etc.
+de neurone actuels est le perceptron qui date de 1957, etc.[^1]
 Néanmoins, le fait que certaines entreprises du net
 basent leur _business model_ sur le traitement
 et la valorisation de la donnée
 textuelle, notamment Google, Facebook et Twitter, a amené 
 à renouveler le domaine. 
+
+[^1]: Pour remonter plus loin dans la ligne du temps des
+données textuelles, on peut penser
+au [`Soundex`](https://en.wikipedia.org/wiki/Soundex),
+un algorithme d'indexation des textes dans
+les annuaires dont l'objectif était de permettre
+de classer à la suite des noms qui ne déviaient que
+par une différence typographique et non sonore.
 
 La statistique publique s'appuie également sur la collecte
 et le traitement de données textuelles. Les collectes
