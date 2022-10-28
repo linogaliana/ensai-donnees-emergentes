@@ -87,11 +87,24 @@ La donnée est au cœur du business model de nombreux acteurs, il est donc logiq
 Les APIs sont un mode d'accès de plus en plus généralisé à des données.
 Cela permet un lien direct entre fournisseurs et utilisateurs de données,
 un peu sous la forme d'un contrat. Si les données sont ouvertes avec restrictions, on utilise des clés d'authentification.
-Avec les API, on structure sa demande de données sous forme de requête paramétrée (source désirée, nombre de lignes, champs...) et le fournisseur de données y répond, généralement sous la forme d'un résultat au format JSON. 
+Avec les API, on structure sa demande de données sous forme de requête paramétrée (source désirée, nombre de lignes, champs...)
+et le fournisseur de données y répond, généralement sous la forme d'un résultat au format `JSON`. 
+`Python` et `JavaScript` sont deux outils très populaires pour récupérer de la donnée
+selon cette méthode.
 Pour plus de détails, vous pouvez explorer le
 [chapitre sur les API dans le cours de `Python` de l'ENSAE](https://pythonds.linogaliana.fr/api/).
+
 On n'est pas à l'abri de mauvaises surprises avec les
-APIs (indisponibilité, limite atteinte de requêtes...) mais cela permet un lien plus direct avec la dernière donnée publiée par un producteur. La fiabilité est en général meilleure que lorsqu'on passe par du webscraping.
+APIs (indisponibilité, limite atteinte de requêtes...)
+mais cela permet un lien plus direct avec la dernière donnée publiée par un producteur.
+L'avantage de l'API est qu'il s'agit d'un service du fournisseur de données, qui en tant
+que service va amener un producteur à essayer de répondre à une
+demande dans la mesure du possible. 
+Le _webscraping_ étant un mode d'accès à la donnée plus opportuniste, 
+où le réel objectif du producteur de données n'est pas de fournir de la
+donnée mais une page _web_, il n'y a aucune garantie de service ou 
+de continuité. 
+
 
 ## Exemples dans la statistique publique
 
